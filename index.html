@@ -18,13 +18,13 @@
         <link rel="stylesheet" href="deps/HTML5-reset/_/css/style.css" />
         <style type="text/css">
             html {
-                background: #c4b3a6 url(./static/img/back.png) 0 513px repeat-y;    
+                background: #c4b3a6 url(./static/img/back.jpg) 0 513px repeat-y;    
             }
         
             header {
                 width: 1000px;
                 height: 513px;
-                background: #c4b3a6 url(./static/img/head.png) 0 0 no-repeat; 
+                background: #c4b3a6 url(./static/img/head2.jpg) 0 0 no-repeat; 
             }
             
             div {
@@ -38,15 +38,23 @@
     <body>
         <div>
             <header>
-                <h1>index</h1>
             </header>
-            <nav>
-                <p>
-                    <a href="/">Home</a>
-                </p>
-                <p>
-                    <a href="/contact">Contact</a>
-                </p>
+            <!-- for backwards compatibility HTML5 elements are given id/class attribute -->
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="/bio">Bio</a>
+                    </li>
+                    <li>
+                        <a href="/portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/Tweets">Tweets</a>
+                    </li>
+                    <li>
+                        <a href="/Contact">Contact</a>
+                    </li>
+                </ul>
             </nav>
 
             <div>
