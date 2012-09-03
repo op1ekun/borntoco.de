@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>hogan</title>
+        <meta name="description" content="" />
+        <meta name="author" content="Lucius" />
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        
+        <script src="deps/hogan/lib/hogan-wip.js"></script>
+        
+        <script>
+            var markup  = "<ul>{{#menu}}<li><a href='{{url}}'>{{label}}</a></li>{{/menu}}</ul>";
+            var json    = {
+                menu : [
+                    {
+                        url     : "/bio",
+                        label   : "Bio"
+                    },
+                    {
+                        url     : "/portfolio",
+                        label   : "Portfolio"
+                    },
+                    {
+                        url     : "/tweets",
+                        label   : "Tweets"
+                    },
+                    {
+                        url     : "/contact",
+                        label   : "Contact"
+                    }
+                ]    
+            };
+            
+            var tmpl    = Hogan.compile(markup, {asString : true});
+            console.log(tmpl);
+            
+            tmpl        = new Hogan.Template(tmpl);
+            console.log(tmpl);
+            
+            
+            console.log(tmpl.render(json));
+            
+            
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <header>
+                <h1>hogan</h1>
+            </header>
+            <nav>
+                <p>
+                    <a href="/">Home</a>
+                </p>
+                <p>
+                    <a href="/contact">Contact</a>
+                </p>
+            </nav>
+
+            <div>
+
+            </div>
+
+            <footer>
+                <p>
+                    &copy; Copyright  by Lucius
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

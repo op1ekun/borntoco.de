@@ -7,7 +7,7 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>index</title>
+        <title>borntoco.de</title>
         <meta name="description" content="" />
         <meta name="author" content="op1ekun" />
         <meta name="viewport" content="width=device-width; initial-scale=1.0" />
@@ -26,17 +26,81 @@
             }
         
             header {
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 1000px;
                 height: 513px;
-                background: #c4b3a6 url(./static/img/head2.jpg) 0 0 no-repeat; 
+                background: #c4b3a6 url(./static/img/head2.jpg) 0 0 no-repeat;
             }
+            
+            h1 {
+                position: relative;
+                top: 185px;
+                left: 270px;
+                width: 230px;
+            }
+            
+                h1 a:link, 
+                h1 a:visited,
+                h1 a:hover {
+                    width: 100%;
+                    height: 60px;
+                    text-indent: -9999px;
+                    display: block;       
+                }
+            
+            #nav,    
+            nav {
+                position: relative;
+                top: 292px;
+                left: 400px;
+                width: 550px;
+            }
+            
+                #nav ul,
+                nav ul {
+                    overflow: hidden;
+                }
+            
+                    #nav ul li,
+                    nav ul li {
+                        float: left;
+                    }
+                    
+                        #nav ul li a:link,
+                        #nav ul li a:visited,
+                        #nav ul li a:hover,
+                        nav ul li a:link,
+                        nav ul li a:visited,
+                        nav ul li a:hover {
+                            padding: 20px;
+                            display: block;
+                            border: 1px solid red;   
+                        }
+                        
+                        #nav ul li a.portfolio,
+                        nav ul li a.portfolio {
+                            margin: 8px 0 0 0;
+                        }
+                        
+                        #nav ul li a.tweets,
+                        nav ul li a.tweets {
+                            margin: 16px 0 0 0;
+                        }
+                        
+                        #nav ul li a.contact,
+                        nav ul li a.contact {
+                            margin: 26px 0 0 0;
+                        }
             
             div {
                 width: 900px;
             }
             
             a {
-                font-family: "Coalition", sans-serif;
+                font-family: "DottyShadow", sans-serif;
+                text-decoration: none;
                 font-size: larger;
             }
         </style>
@@ -45,28 +109,28 @@
     <body>
         <div>
             <header>
+                <h1><a href="index.html">borntoco.de</a></h1>
+                
+                <!-- for backwards compatibility HTML5 elements are given id/class attribute -->
+                <nav id="nav">
+                    <ul>
+                        <li>
+                            <a href="/bio.html" class="bio">Bio</a>
+                        </li>
+                        <li>
+                            <a href="/portfolio.html" class="portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="/tweets.html" class="tweets">Tweets</a>
+                        </li>
+                        <li>
+                            <a href="/contact.html" class="contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
-            <!-- for backwards compatibility HTML5 elements are given id/class attribute -->
-            <nav id="nav">
-                <ul>
-                    <li>
-                        <a href="/bio">Bio</a>
-                    </li>
-                    <li>
-                        <a href="/portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="/Tweets">Tweets</a>
-                    </li>
-                    <li>
-                        <a href="/Contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
 
             <div>
-            
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate sollicitudin turpis ut porta. Curabitur lacinia eros vitae orci faucibus euismod. Integer fermentum semper quam sit amet semper. Maecenas sed turpis mi. Morbi et sapien erat. Sed placerat vulputate justo, nec semper nibh aliquet a. Nullam dapibus, neque non venenatis sodales, metus ante congue nunc, eu laoreet nisi quam dignissim mauris. Cras ultrices eros in magna sollicitudin eu blandit ipsum egestas. Vivamus non ullamcorper risus. Donec condimentum congue nulla adipiscing vestibulum.
 
 Sed interdum nisi quam. Fusce sit amet diam sit amet odio congue consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam iaculis, urna et sollicitudin congue, quam sapien dapibus mi, non tempus dolor sem non augue. Proin sagittis ultrices turpis sit amet iaculis. Quisque quis velit tortor.
@@ -75,7 +139,27 @@ Integer scelerisque tellus ac ipsum suscipit eu hendrerit augue hendrerit. Cras 
 
 Mauris neque dui, ultricies nec lobortis ut, hendrerit vel eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse consectetur, quam ut auctor aliquam, ipsum mi feugiat sapien, in tristique nisl lacus at tellus. Proin faucibus egestas augue nec posuere. Cras ut porta justo. Sed pretium sem at sem vehicula nec varius mi bibendum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque nisl nibh, iaculis eget faucibus et, malesuada fermentum lacus. Phasellus lacinia semper adipiscing. Donec eget lectus purus. Phasellus nibh felis, posuere at congue varius, suscipit eget orci. Vestibulum ac lorem velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque ultrices eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur fringilla purus sit amet neque tincidunt nec tempus tortor pellentesque.
 
-Nullam sodales, neque sit amet venenatis tempus, lectus nisi pretium metus, vitae congue ligula leo vitae lorem. Nam sapien dolor, aliquet sit amet vulputate et, bibendum id dui. Pellentesque feugiat tincidunt velit in pellentesque. Nam sollicitudin justo a lectus porta ut tempus quam blandit. Duis libero enim, eleifend vel venenatis a, ornare a urna. Etiam sit amet mauris sapien, at lacinia nisi. Aliquam eu turpis sit amet tellus varius tempor sed vitae mi.     
+Nullam sodales, neque sit amet venenatis tempus, lectus nisi pretium metus, vitae congue ligula leo vitae lorem. Nam sapien dolor, aliquet sit amet vulputate et, bibendum id dui. Pellentesque feugiat tincidunt velit in pellentesque. Nam sollicitudin justo a lectus porta ut tempus quam blandit. Duis libero enim, eleifend vel venenatis a, ornare a urna. Etiam sit amet mauris sapien, at lacinia nisi. Aliquam eu turpis sit amet tellus varius tempor sed vitae mi.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate sollicitudin turpis ut porta. Curabitur lacinia eros vitae orci faucibus euismod. Integer fermentum semper quam sit amet semper. Maecenas sed turpis mi. Morbi et sapien erat. Sed placerat vulputate justo, nec semper nibh aliquet a. Nullam dapibus, neque non venenatis sodales, metus ante congue nunc, eu laoreet nisi quam dignissim mauris. Cras ultrices eros in magna sollicitudin eu blandit ipsum egestas. Vivamus non ullamcorper risus. Donec condimentum congue nulla adipiscing vestibulum.
+
+Sed interdum nisi quam. Fusce sit amet diam sit amet odio congue consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam iaculis, urna et sollicitudin congue, quam sapien dapibus mi, non tempus dolor sem non augue. Proin sagittis ultrices turpis sit amet iaculis. Quisque quis velit tortor.
+
+Integer scelerisque tellus ac ipsum suscipit eu hendrerit augue hendrerit. Cras sollicitudin urna vel felis consectetur malesuada. Ut sed mauris quis tortor dignissim lacinia vel vitae metus. Donec faucibus dapibus massa, eget feugiat risus laoreet sed. Pellentesque vitae erat sed eros imperdiet lobortis pharetra ut est. Aliquam convallis varius libero, et egestas velit venenatis a. Morbi posuere blandit ipsum eu aliquet. Nulla facilisi.
+
+Mauris neque dui, ultricies nec lobortis ut, hendrerit vel eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse consectetur, quam ut auctor aliquam, ipsum mi feugiat sapien, in tristique nisl lacus at tellus. Proin faucibus egestas augue nec posuere. Cras ut porta justo. Sed pretium sem at sem vehicula nec varius mi bibendum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque nisl nibh, iaculis eget faucibus et, malesuada fermentum lacus. Phasellus lacinia semper adipiscing. Donec eget lectus purus. Phasellus nibh felis, posuere at congue varius, suscipit eget orci. Vestibulum ac lorem velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque ultrices eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur fringilla purus sit amet neque tincidunt nec tempus tortor pellentesque.
+
+Nullam sodales, neque sit amet venenatis tempus, lectus nisi pretium metus, vitae congue ligula leo vitae lorem. Nam sapien dolor, aliquet sit amet vulputate et, bibendum id dui. Pellentesque feugiat tincidunt velit in pellentesque. Nam sollicitudin justo a lectus porta ut tempus quam blandit. Duis libero enim, eleifend vel venenatis a, ornare a urna. Etiam sit amet mauris sapien, at lacinia nisi. Aliquam eu turpis sit amet tellus varius tempor sed vitae mi.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate sollicitudin turpis ut porta. Curabitur lacinia eros vitae orci faucibus euismod. Integer fermentum semper quam sit amet semper. Maecenas sed turpis mi. Morbi et sapien erat. Sed placerat vulputate justo, nec semper nibh aliquet a. Nullam dapibus, neque non venenatis sodales, metus ante congue nunc, eu laoreet nisi quam dignissim mauris. Cras ultrices eros in magna sollicitudin eu blandit ipsum egestas. Vivamus non ullamcorper risus. Donec condimentum congue nulla adipiscing vestibulum.
+
+Sed interdum nisi quam. Fusce sit amet diam sit amet odio congue consequat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam iaculis, urna et sollicitudin congue, quam sapien dapibus mi, non tempus dolor sem non augue. Proin sagittis ultrices turpis sit amet iaculis. Quisque quis velit tortor.
+
+Integer scelerisque tellus ac ipsum suscipit eu hendrerit augue hendrerit. Cras sollicitudin urna vel felis consectetur malesuada. Ut sed mauris quis tortor dignissim lacinia vel vitae metus. Donec faucibus dapibus massa, eget feugiat risus laoreet sed. Pellentesque vitae erat sed eros imperdiet lobortis pharetra ut est. Aliquam convallis varius libero, et egestas velit venenatis a. Morbi posuere blandit ipsum eu aliquet. Nulla facilisi.
+
+Mauris neque dui, ultricies nec lobortis ut, hendrerit vel eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse consectetur, quam ut auctor aliquam, ipsum mi feugiat sapien, in tristique nisl lacus at tellus. Proin faucibus egestas augue nec posuere. Cras ut porta justo. Sed pretium sem at sem vehicula nec varius mi bibendum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque nisl nibh, iaculis eget faucibus et, malesuada fermentum lacus. Phasellus lacinia semper adipiscing. Donec eget lectus purus. Phasellus nibh felis, posuere at congue varius, suscipit eget orci. Vestibulum ac lorem velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque ultrices eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur fringilla purus sit amet neque tincidunt nec tempus tortor pellentesque.
+
+Nullam sodales, neque sit amet venenatis tempus, lectus nisi pretium metus, vitae congue ligula leo vitae lorem. Nam sapien dolor, aliquet sit amet vulputate et, bibendum id dui. Pellentesque feugiat tincidunt velit in pellentesque. Nam sollicitudin justo a lectus porta ut tempus quam blandit. Duis libero enim, eleifend vel venenatis a, ornare a urna. Etiam sit amet mauris sapien, at lacinia nisi. Aliquam eu turpis sit amet tellus varius tempor sed vitae mi.                
+
+
             </div>
 
             <footer>
