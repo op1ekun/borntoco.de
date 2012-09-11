@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<!-- normally this stuff would be on the html element -->
+<!--[if lt IE 7]>  <html lang="en" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html lang="en" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html lang="en" class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html lang="en" class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="en"> <![endif]-->
+<!--[if !IE]>      <html lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
 
@@ -22,7 +29,7 @@
         
         <style type="text/css">
             html {
-                background: #c4b3a6 url(./static/img/back.jpg) 0 433px repeat-y;    
+                background: #c4b3a6 url(./static/img/back2.jpg) 0 433px repeat-y;    
             }
         
             header {
@@ -31,7 +38,7 @@
                 left: 0;
                 width: 1000px;
                 height: 433px;
-                background: #c4b3a6 url(./static/img/head2.jpg) 0 -80px no-repeat;
+                background: #c4b3a6 url(./static/img/head3.jpg) 0 -80px no-repeat;
             }
             
             h1 {
@@ -125,7 +132,7 @@
                     position: absolute;
                     top: -117px;
                     left: 45px;
-                    background: transparent url(./static/img/cert2.png) 0 0 no-repeat;
+                    background: transparent url(./static/img/cert.png) 0 0 no-repeat;
                     width: 400px;
                     height: 550px;
                     
@@ -150,17 +157,30 @@
                     aside a:visited,
                     aside a:hover {
                         position: absolute;
-                        width: 400px;
-                        height: 258px;
+                        width: 300px;
+                        height: 200px;
                         display: block;
                         text-indent: -9999px;
+                        -webkit-transition: all .2s ease-out;
+                           -moz-transition: all .2s ease-out;
+                            -ms-transition: all .2s ease-out;
+                             -o-transition: all .2s ease-out;
+                                transition: all .2s ease-out;
+                    }
+                    
+                    #aside a:hover,
+                    aside a:hover {
+                         -webkit-transform: translateY(-2px);
+                            -moz-transform: translateY(-2px);
+                              -o-transform: translateY(-2px);
+                        
                     }
                     
                     #aside .mixcloud,
                     aside .mixcloud {
-                        top: -50px;
-                        left: 0px;
-                        background: transparent url(./static/img/mixcloud.png) 0 0 no-repeat;
+                        top: -60px;
+                        left: 10px;
+                        background: transparent url(./static/img/mixcloud2.png) 0 0 no-repeat;
                         
                         -webkit-transform: rotate(3deg);
                         -moz-transform: rotate(3deg);
@@ -170,9 +190,9 @@
                     
                     #aside .samuraj,
                     aside .samuraj {
-                        top: 220px;
-                        left: 50px;
-                        background: transparent url(./static/img/samuraj.png) 0 0 no-repeat;
+                        top: 140px;
+                        left: 110px;
+                        background: transparent url(./static/img/samuraj2.png) 0 0 no-repeat;
                         
                         -webkit-transform: rotate(-4deg);
                         -moz-transform: rotate(-4deg);
@@ -182,9 +202,9 @@
                     
                     #aside .endomondo,
                     aside .endomondo {
-                        top: 490px;
-                        left: 30px;
-                        background: transparent url(./static/img/endomondo.png) 0 0 no-repeat;
+                        top: 350px;
+                        left: 40px;
+                        background: transparent url(./static/img/endomondo2.png) 0 0 no-repeat;
                         
                         -webkit-transform: rotate(2deg);
                         -moz-transform: rotate(2deg);
