@@ -1,3 +1,142 @@
-body {
+html {
+    background: #ede6dc url(../static/img/background1080.jpg) 0 0 fixed repeat-x;
+    background-size: 96em auto; /* width is 960px/16px */
+    height: 100%;
+    /* have to be here because Gilda's basic size is 13px which complicates calculations */
+    font-size: 62.5%; /* equals 10px */
+}   
+
+    body {
+        position: relative;
+        margin: 0 auto;
+        box-shadow: 0 0 15px 5px #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000; 
+        /* width should be under media query */
+        width: 110rem; /* 1100px/10px */ 
+        min-height: 100%;
+        background: #ad9a74 url(../static/img/body1080.jpg) 0 0 repeat-x;
+        background-size: 96rem auto;
+        font-family: 'Gilda Display', serif;
+    }
     
-}
+        header {
+            height: 30rem;
+            width: 100%;
+            background: transparent url(../static/img/header.jpg) 11rem 11.8rem no-repeat;
+            background-size: 37.2rem auto;
+        }
+        
+            header h1,
+            header p {
+                float: left;
+            }
+            
+            header h1 {
+                width: 70rem;
+            }
+            
+                header h1 a {
+                    margin: 1.7rem 0 0 1.6rem;
+                    width: 46.2rem;
+                    height: 10.1rem;
+                    background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
+                    background-size: 46.2rem auto;
+                    text-indent: -5000px;
+                    display: block;    
+                }
+                
+                header h1 a:hover {
+                    background-position: 0 -10.1rem;
+                }
+        
+            header p {
+                padding: 1rem 2rem 0 0;
+                width: 38rem;
+                text-align: right;
+            }
+            
+                header p q {
+                    font-style: italic;
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                }
+            
+                header p strong {
+                    font-size: 1.6rem;
+                    line-height: 2.5rem;
+                    display: block;
+                }
+                
+            header nav {
+                width: 100%;
+                clear: left;
+                overflow: hidden;
+            }
+            
+                header nav ul {
+                    margin: 1.2rem 0 0 54rem;
+                    padding: 0 3rem;
+                    
+                    width: 43.4rem;
+                    
+                    overflow: hidden;
+                }
+            
+                    header nav ul li {
+                        float: left;
+                    }
+                    
+                    header nav ul li.first {
+                        background: transparent url(../static/img/navBackLeft.jpg) 0 0 no-repeat;
+                        background-size: 13.5rem auto;
+                        padding: 0 0 0 0.1rem;
+                    }
+                    
+                        header nav ul li a {
+                            background: transparent url(../static/img/navBack.jpg) right 0 no-repeat;
+                            background-size: 13.5rem auto;
+                            padding: 0 0 0 2.3rem;
+                            font-family: 'Sawasdee-Bold', sans-serif;
+                            font-size: 2rem;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            line-spacing: 0.1rem;
+                            color: #abb0aa;
+                            display: block;
+                        }
+                        
+                            header nav ul li a span {
+                                padding: 1.8rem 2.7rem 3rem 0;
+                                letter-spacing: -0.3rem;
+                                display: block;
+                            }
+                        
+                        header nav ul li a.active {
+                            background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;
+                            background-size: 9.8rem auto;
+                        }
+                        
+                            header nav ul li a.active span {
+                                background: transparent url(../static/img/linkRight.jpg) right 0 no-repeat;
+                                background-size: 9.8rem auto;
+                                color: #754628;
+                            }
+                        
+                        header nav ul li a:hover {
+                            color: #948582;
+                        }
+        
+        #content {
+            padding: 4rem 4rem 34rem 4rem;
+            font-size: 1.6rem;
+        }
+        
+        footer {
+            position: absolute;
+            bottom: 0;
+            border-top: 2px solid #000;
+            background-color: #331f12;
+            width: 100%;
+            height: 30rem;
+        }

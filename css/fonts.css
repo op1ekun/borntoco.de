@@ -1,5 +1,4 @@
 @font-face {
-    font-family: "DottyShadow";
-    src: url("http://localhost:8888/static/font/DottyShadow.ttf");
-/*    src: url("DottyShadow.ttf");*/
+    font-family: 'Sawasdee-Bold';
+    src: url('../static/font/Sawasdee-Bold.ttf');
 }

@@ -1,145 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
     <head>
-        <meta charset="utf-8" />
+        <meta charset='utf-8' />
 
         <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
         Remove this if you use the .htaccess -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
 
         <title>borntoco.de</title>
-        <meta name="description" content="" />
-        <meta name="author" content="op1ekun" />
-        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+        <meta name='description' content='' />
+        <meta name='author' content='op1ekun' />
+        <meta name='viewport' content='width=device-width; initial-scale=1.0' />
 
         <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-<!--         <link rel="shortcut icon" href="/favicon.ico" /> -->
-<!--         <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> -->
-        <link rel="stylesheet" href="deps/HTML5-reset/_/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="css/fonts.css" />
-        <link href='http://fonts.googleapis.com/css?family=Marcellus' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Donegal+One' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Gilda+Display' rel='stylesheet' type='text/css'>
+<!--         <link rel='shortcut icon' href='/favicon.ico' /> -->
+<!--         <link rel='apple-touch-icon' href='/apple-touch-icon.png' /> -->
+        <link rel='stylesheet' href='deps/HTML5-reset/_/css/style.css' />
+        <link rel='stylesheet' href='./css/main.css' />
+        <link rel='stylesheet' href='css/fonts.css' />
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Gilda+Display' />
         
-<!--         <link href='http://fonts.googleapis.com/css?family=Skranji' rel='stylesheet' type='text/css'> -->
-
-        <script type="text/javascript" src="deps/jquery-1.8.0.min.js"></script>
-        <script type="text/javascript">
+        <script type='text/javascript' src='deps/jquery-1.8.0.min.js'></script>
+        <script type='text/javascript'>
             // jQuery.getJSON('http://localhost:3000/jsonp/?callback=?', function (jsonData) {
                 // console.log('jsonp response', jsonData);
             // });
         </script>
-        <!-- <script type="text/javascript" src="http://localhost:3000/jsonp/?callback=dupa"></script> -->
-        
-        <style type="text/css">
-            html {
-                background: #ede6dc url(./static/img/background1080.jpg) 0 0 fixed repeat-x;
-                height: 100%;
-            }   
-            
-                body {
-                    font-family: "Gilda Display", serif;
-                    /* TODO borders for different */
-                    border-left: 1px solid #000;
-                    border-right: 1px solid #000; 
-                    margin: 0 auto;
-                    width: 90%;
-                    background: #ad9a74 url(./static/img/body1080.jpg) 0 0 repeat-x;
-                    box-shadow: 0 0 15px 5px #000;
-                    min-height: 100%;
-                }
-                
-                    header {
-                        background: transparent url(./static/img/body1080header.jpg) 0 0 no-repeat;
-                        height: 347px;
-                    }
-                    
-                        header p {
-                            padding: 10px 20px;
-                            font-size: 15px;
-                            float: right;
-                        }
-                        
-                            header p q {
-                                font-style: italic;
-                            }
-                        
-                            header p strong {
-                                text-align: right;
-                                font-size: 16px;
-                                display: block;
-                            }
-                    
-                    #content {
-                        padding: 35px;
-                        text-indent: 35px;                
-                        letter-spacing: 1px;
-                        font-size: 18px;
-                    }
-        
-        </style>
+        <!-- <script type='text/javascript' src='http://localhost:3000/jsonp/?callback=dupa'></script> -->
     </head>
 
     <body>
-        <div>
-            <header>
-                <p><q>"But it's not our job to be better than anyone else; we just need to be better than we were a year ago."</q><strong> - Jeff Atwood</strong></p>
-                <!-- for backwards compatibility HTML5 elements are given id/class attribute -->
-                <nav id="nav">
-                </nav>
-                
-            </header>
+        <header>
+            <h1>
+                <a href='http://borntoco.de'>borntoco.de</a>
+            </h1>
+            <p><q>'But it's not our job to be better than anyone else; we&nbsp;just&nbsp;need&nbsp;to be better than we were a year ago.'</q><strong> - Jeff Atwood</strong></p>
+            <!-- for backwards compatibility HTML5 elements are given id/class attribute -->
+            <nav id='nav'>
+                <ul>
+                    <li class='first'><a class='actives' href='/about'><span>about</span></a></li>
+                    <li><a class='active' href='/blog'><span>blog</span></a></li>
+                    <li><a href='/works'><span>works</span></a></li>
+                    <li><a href='/contact'><span>contact</span></a></li>
+                </ul>
+            </nav>
+            
+        </header>
 
-            <div id="content">
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nunc a est eleifend adipiscing vel in metus. Pellentesque mi eros, fringilla ut pulvinar ac, eleifend non turpis. Sed ac elit at quam lacinia gravida rutrum et nisl. Fusce dolor sem, porttitor nec mollis et, laoreet non turpis. Suspendisse nec neque eu felis tincidunt gravida at sit amet erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec sapien ut felis tristique mattis quis sit amet est. Fusce convallis consequat orci eget porta. Suspendisse eleifend, eros sit amet tempus blandit, neque eros fringilla erat, sodales pulvinar leo magna sed mauris. Phasellus nibh risus, tincidunt vitae fringilla at, ornare vitae arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sollicitudin erat nec quam tincidunt quis porttitor velit ultricies.
-
-Sed vehicula elementum fermentum. Vivamus sit amet lobortis nisi. Donec eleifend, nibh tempus tempor egestas, neque mi sollicitudin augue, vitae convallis ante tellus ac eros. Sed a enim non lectus faucibus scelerisque nec in massa. Vivamus et rutrum sem. Quisque faucibus arcu vel dolor elementum et tincidunt est volutpat. Etiam vulputate ultricies pretium. Vestibulum ac augue sapien.
-
-Nullam interdum, nisi sed vestibulum euismod, orci diam ultricies lacus, eu luctus lectus eros a dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque sed urna justo. Vestibulum eu ullamcorper turpis. Nulla id ligula sapien. Fusce non dui orci. Aliquam ultricies ipsum id dolor sodales vulputate. Proin eu felis tortor. Suspendisse rhoncus leo eget ipsum iaculis tincidunt. Vestibulum fringilla tortor vitae augue tincidunt in bibendum eros ornare. Vivamus vulputate porttitor urna, vitae vestibulum nisi pellentesque vitae. Sed non risus sed augue tristique aliquam. Donec sed vestibulum enim. Donec sollicitudin tortor nec enim aliquet a elementum leo posuere. In hac habitasse platea dictumst. Phasellus ultrices pulvinar justo, id venenatis quam malesuada eu.
-
-Suspendisse ullamcorper congue dolor eget faucibus. Nullam pellentesque vehicula mi. Fusce sit amet ipsum sit amet nisl interdum vestibulum eu ac est. Aliquam vitae lectus dui, et adipiscing arcu. Nam ac elit nec velit feugiat lacinia. Integer et vestibulum nibh. Duis hendrerit neque nec augue sodales luctus. Vivamus imperdiet velit lectus, ut aliquet lorem. Sed non libero ut quam lobortis viverra. Mauris nec sollicitudin nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien sapien, ornare eu porttitor sit amet, adipiscing et est. In hac habitasse platea dictumst. Fusce et elit mauris, ac facilisis purus. Vestibulum tristique luctus nisi quis iaculis.
-
-Sed ac odio sit amet nulla congue convallis in eget sem. In ultrices lacus non libero commodo et viverra libero imperdiet. Etiam nunc leo, porta vitae egestas et, convallis id nibh. Mauris tortor magna, vulputate facilisis aliquet interdum, euismod at eros. Proin ac nunc nibh. Vestibulum venenatis sapien at eros dignissim facilisis. Mauris elementum, elit ut interdum fringilla, dolor lacus tristique erat, ut ultricies libero libero eget diam.
-
-Donec a nibh nec purus congue pharetra ac sed velit. Maecenas vulputate justo in nisl dictum vestibulum. Aliquam erat volutpat. Pellentesque nulla ligula, ultricies eu tempus vitae, convallis a ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a quam sit amet risus aliquet luctus. Aenean pharetra arcu at metus viverra non tempus lectus luctus. Quisque varius auctor ligula at varius. Vivamus sapien leo, molestie vitae rhoncus at, scelerisque sodales diam. In id consequat ipsum.
-
-Morbi nibh libero, pretium et sodales in, vestibulum vitae sapien. Maecenas cursus vulputate nisi quis mollis. Mauris non felis libero, vestibulum vehicula tellus. Etiam aliquam dui sed dolor iaculis pharetra. Sed risus lectus, iaculis sit amet feugiat sed, fringilla quis turpis. Nunc semper turpis non tellus accumsan id hendrerit metus tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam tortor lacus, vehicula eu convallis in, malesuada sed libero. Praesent ac velit justo. Maecenas sit amet quam purus. Integer sollicitudin pretium suscipit. Aenean tristique, magna tristique scelerisque semper, orci nunc gravida dolor, sit amet fermentum ipsum metus quis nibh. Pellentesque sed purus ut ante porttitor tempor vitae ac orci. Pellentesque pretium mollis ligula at dignissim.
-
-Duis scelerisque nulla sit amet enim dignissim tincidunt. Phasellus dignissim, mi ac tincidunt tempor, arcu velit tincidunt nulla, nec molestie dui ipsum sit amet ante. Integer sed convallis neque. Donec fringilla turpis quis neque hendrerit ultrices id vitae erat. Nam rhoncus est in risus consequat scelerisque ac eget justo. Cras velit magna, tempus a consequat id, facilisis non diam. Nam vel purus elit, viverra luctus justo.
-
-Aenean in tempus turpis. Aliquam id viverra metus. Integer et accumsan mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam a congue magna. Nam et mi risus, vitae tempor sem. Mauris et risus at diam suscipit luctus ut quis lectus.
-
-Sed magna justo, auctor sed commodo a, tincidunt a tortor. Phasellus vel eros massa. Vestibulum imperdiet, nisi eget laoreet consequat, purus metus dignissim purus, vitae blandit dolor augue a dolor. Donec porta sollicitudin ante, in varius dolor adipiscing sed. Praesent tempus aliquet mattis. Nulla ornare est eu lectus euismod rutrum. Sed nunc sapien, bibendum nec tincidunt ut, sagittis quis mauris. Cras imperdiet urna eu sem tristique pulvinar. Aenean venenatis magna quis sapien euismod et euismod eros pretium. Mauris sollicitudin imperdiet egestas. 
+        <div id='content'>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nunc a est eleifend adipiscing vel in metus. Pellentesque mi eros, fringilla ut pulvinar ac, eleifend non turpis. Sed ac elit at quam lacinia gravida rutrum et nisl. Fusce dolor sem, porttitor nec mollis et, laoreet non turpis. Suspendisse nec neque eu felis tincidunt gravida at sit amet erat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec sapien ut felis tristique mattis quis sit amet est. Fusce convallis consequat orci eget porta. Suspendisse eleifend, eros sit amet tempus blandit, neque eros fringilla erat, sodales pulvinar leo magna sed mauris. Phasellus nibh risus, tincidunt vitae fringilla at, ornare vitae arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sollicitudin erat nec quam tincidunt quis porttitor velit ultricies.
-
 Sed vehicula elementum fermentum. Vivamus sit amet lobortis nisi. Donec eleifend, nibh tempus tempor egestas, neque mi sollicitudin augue, vitae convallis ante tellus ac eros. Sed a enim non lectus faucibus scelerisque nec in massa. Vivamus et rutrum sem. Quisque faucibus arcu vel dolor elementum et tincidunt est volutpat. Etiam vulputate ultricies pretium. Vestibulum ac augue sapien.
-
 Nullam interdum, nisi sed vestibulum euismod, orci diam ultricies lacus, eu luctus lectus eros a dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque sed urna justo. Vestibulum eu ullamcorper turpis. Nulla id ligula sapien. Fusce non dui orci. Aliquam ultricies ipsum id dolor sodales vulputate. Proin eu felis tortor. Suspendisse rhoncus leo eget ipsum iaculis tincidunt. Vestibulum fringilla tortor vitae augue tincidunt in bibendum eros ornare. Vivamus vulputate porttitor urna, vitae vestibulum nisi pellentesque vitae. Sed non risus sed augue tristique aliquam. Donec sed vestibulum enim. Donec sollicitudin tortor nec enim aliquet a elementum leo posuere. In hac habitasse platea dictumst. Phasellus ultrices pulvinar justo, id venenatis quam malesuada eu.
-
 Suspendisse ullamcorper congue dolor eget faucibus. Nullam pellentesque vehicula mi. Fusce sit amet ipsum sit amet nisl interdum vestibulum eu ac est. Aliquam vitae lectus dui, et adipiscing arcu. Nam ac elit nec velit feugiat lacinia. Integer et vestibulum nibh. Duis hendrerit neque nec augue sodales luctus. Vivamus imperdiet velit lectus, ut aliquet lorem. Sed non libero ut quam lobortis viverra. Mauris nec sollicitudin nulla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sapien sapien, ornare eu porttitor sit amet, adipiscing et est. In hac habitasse platea dictumst. Fusce et elit mauris, ac facilisis purus. Vestibulum tristique luctus nisi quis iaculis.
-
 Sed ac odio sit amet nulla congue convallis in eget sem. In ultrices lacus non libero commodo et viverra libero imperdiet. Etiam nunc leo, porta vitae egestas et, convallis id nibh. Mauris tortor magna, vulputate facilisis aliquet interdum, euismod at eros. Proin ac nunc nibh. Vestibulum venenatis sapien at eros dignissim facilisis. Mauris elementum, elit ut interdum fringilla, dolor lacus tristique erat, ut ultricies libero libero eget diam.
 
-Donec a nibh nec purus congue pharetra ac sed velit. Maecenas vulputate justo in nisl dictum vestibulum. Aliquam erat volutpat. Pellentesque nulla ligula, ultricies eu tempus vitae, convallis a ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a quam sit amet risus aliquet luctus. Aenean pharetra arcu at metus viverra non tempus lectus luctus. Quisque varius auctor ligula at varius. Vivamus sapien leo, molestie vitae rhoncus at, scelerisque sodales diam. In id consequat ipsum.
-
-Morbi nibh libero, pretium et sodales in, vestibulum vitae sapien. Maecenas cursus vulputate nisi quis mollis. Mauris non felis libero, vestibulum vehicula tellus. Etiam aliquam dui sed dolor iaculis pharetra. Sed risus lectus, iaculis sit amet feugiat sed, fringilla quis turpis. Nunc semper turpis non tellus accumsan id hendrerit metus tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam tortor lacus, vehicula eu convallis in, malesuada sed libero. Praesent ac velit justo. Maecenas sit amet quam purus. Integer sollicitudin pretium suscipit. Aenean tristique, magna tristique scelerisque semper, orci nunc gravida dolor, sit amet fermentum ipsum metus quis nibh. Pellentesque sed purus ut ante porttitor tempor vitae ac orci. Pellentesque pretium mollis ligula at dignissim.
-
-Duis scelerisque nulla sit amet enim dignissim tincidunt. Phasellus dignissim, mi ac tincidunt tempor, arcu velit tincidunt nulla, nec molestie dui ipsum sit amet ante. Integer sed convallis neque. Donec fringilla turpis quis neque hendrerit ultrices id vitae erat. Nam rhoncus est in risus consequat scelerisque ac eget justo. Cras velit magna, tempus a consequat id, facilisis non diam. Nam vel purus elit, viverra luctus justo.
-
-Aenean in tempus turpis. Aliquam id viverra metus. Integer et accumsan mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam a congue magna. Nam et mi risus, vitae tempor sem. Mauris et risus at diam suscipit luctus ut quis lectus.
-
-Sed magna justo, auctor sed commodo a, tincidunt a tortor. Phasellus vel eros massa. Vestibulum imperdiet, nisi eget laoreet consequat, purus metus dignissim purus, vitae blandit dolor augue a dolor. Donec porta sollicitudin ante, in varius dolor adipiscing sed. Praesent tempus aliquet mattis. Nulla ornare est eu lectus euismod rutrum. Sed nunc sapien, bibendum nec tincidunt ut, sagittis quis mauris. Cras imperdiet urna eu sem tristique pulvinar. Aenean venenatis magna quis sapien euismod et euismod eros pretium. Mauris sollicitudin imperdiet egestas. 
-                
-
-            </div>
-
-            <footer>
-                <p>
-                </p>
-            </footer>
         </div>
+
+        <footer>
+            <p>
+                Footer
+            </p>
+        </footer>
     </body>
 </html>
