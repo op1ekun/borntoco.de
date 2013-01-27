@@ -118,14 +118,19 @@ html {
                             float: left;
                         }
                         
-                            #nav li.last a {
-                                border-right: 1px solid #000;
-                            }
-                            
-                            #nav a {
+                            #nav li.first a {
                                 border-left: 1px solid #000;
+                            }
+
+                            /*#nav li.last a {
+                                border-right: 1px solid #000;
+                            }*/
+
+                            #nav a {
+                                border-right: 1px solid #000;
                                 padding: 0.85em 1.4em 1em 1.25em;
                                 
+                                line-height: 1.6em;
                                 font-family: 'sawasdeebold', sans-serif;
                                 font-size: 1.25em; /* ~ 20px */
                                 text-transform: uppercase;
