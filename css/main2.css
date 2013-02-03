@@ -1,4 +1,4 @@
-body, h1, h2, p {
+body, h1, h2, ul, li, p {
     margin: 0;
     padding: 0;
 }
@@ -62,7 +62,7 @@ html {
                 display: block;    
             }
             
-            h1 a span {
+            h1 span {
                 background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
                 background-size: 28.875em auto;
                 opacity: 0;
@@ -75,15 +75,12 @@ html {
                 height: 6.25em;
                 display: block;
                 
-                        transition: opacity 0.3s ease-out 0.1s;
-                -webkit-transition: opacity 0.3s ease-out 0.1s;
+                        transition: opacity 0.3s ease-in-out 0.1s;
+                -webkit-transition: opacity 0.3s ease-in-out 0.1s;
             }
             
             h1 a:hover span {
                 opacity: 1;
-                
-                        transition: opacity 0.3s ease-in 0.1s;
-                -webkit-transition: opacity 0.3s ease-in 0.1s;
             }
                 
                 header p {
@@ -139,8 +136,8 @@ html {
                                 color: #abb0aa;
                                 float: left;
                                 
-                                        transition: color 0.3s ease-out 0.1s;
-                                -webkit-transition: color 0.3s ease-out 0.1s;
+                                        transition: color 0.3s ease-in-out 0.1s;
+                                -webkit-transition: color 0.3s ease-in-out 0.1s;
                             }
                         
                         #nav li.active {
@@ -155,25 +152,18 @@ html {
                             
                             #nav a:hover {
                                 color: #797572;
-                                
-                                        transition: color 0.3s ease-in 0.1s;
-                                -webkit-transition: color 0.3s ease-in 0.1s;
                             }
                 
                 #content {
-                    /*padding: 0 2em 21.25em 1em;*/
-                    padding: 0 1.6em 17em 0.8em;
-                    /*font-size: 1em;*/
+                    padding: 0 0 17em 0;
                     font-size: 1.25em; /* ~20px */
-                    /*letter-spacing: 0.05em;*/
-                    /*line-height: 1.6em;*/
-                    line-height: 1.4em;
+                    line-height: 1.6em;
                     color: #222;
                     overflow: hidden;
+                    margin: 0 auto;
                 }
                 
                     #content h2 {
-                        /*padding: 0.5em 0 1em 0;*/
                         padding: 0.5em 0 1em 0;
                         font-family: 'sawasdeebold', sans-serif;
                         font-size: 2em;
@@ -186,50 +176,74 @@ html {
                     }
                     
                     #main {
-                        /*width: 37em;*/
-                        width: 30.6em; 
+                        width: 36.6em; /* 702/20 */
+                        
+                                column-count: 2;
+                                column-gap: 2em;
+                           -moz-column-count: 2;
+                           -moz-column-gap: 2em;
+                        -webkit-column-count: 2;
+                        -webkit-column-gap: 2em;
                     }
                     
                         #main p {
-                            padding: 0 0 1em 0;
+                            padding: 0 0 2em 0;
                         }
+                        
+                            #main span,
+                            #main iframe {
+                                padding-right: 0.3em;
+                                float: left;
+                            }
+                            
+                            #main iframe     {
+                                padding-left: 0.3em;     
+                            }
                     
                         #main a {
                             color: #000;
                             font-weight: bold;
                             font-size: 1.1em;
                             
-                                    transition: color 0.3s ease-out 0.1s;
-                            -webkit-transition: color 0.3s ease-out 0.1s;
- 
+                                    transition: color 0.3s ease-in-out 0.1s;
+                            -webkit-transition: color 0.3s ease-in-out 0.1s;
+                            
+                            display: inline-block;
                         }
                         
                         #main a:hover {
                             color: #333;
-                            
-                                    transition: color 0.3s ease-in 0.1s;
-                            -webkit-transition: color 0.3s ease-in 0.1s;
                         }
-                    
+
                     #more {
-                        /*width: 25em;*/
-                        width: 19em;
+                        margin: -4em 0 0 0;
+                        width: 14em; /* 310/20 */
                     }
                     
+                        #more a {
+                            margin: 0 0 0 2em;
+                        }
+                    
                         .even img {
-                            transform: rotate(3deg);
-                            transition: transform 0.3s ease-out 0.1s;
+                                    transform: rotate(3deg);
+                            -webkit-transform: rotate(3deg);
+                            
+                                    transition: transform 0.3s ease-in-out 0.1s;
+                            /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
                         }
                         
                         .odd img {
-                            transform: rotate(-3deg);
-                            transition: transform 0.3s ease-out 0.1s;
+                                    transform: rotate(-3deg);
+                            -webkit-transform: rotate(-3deg);
+                            
+                                    transition: transform 0.3s ease-in-out 0.1s;
+                            /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
                         }
                         
                         .even a:hover img,
                         .odd a:hover img {
-                            transform: rotate(0deg);
-                            transition: transform 0.3s ease-in 0.1s;    
+                                    transform: rotate(0deg);
+                            -webkit-transform: rotate(0deg);
                         }
                     
                 footer {
