@@ -1,4 +1,4 @@
-body, h1, h2, ul, li, p {
+body, h1, h2, ul, li, p, img {
     margin: 0;
     padding: 0;
 }
@@ -157,7 +157,7 @@ html {
                 #content {
                     padding: 0 0 17em 0;
                     font-size: 1.25em; /* ~20px */
-                    line-height: 1.6em;
+                    line-height: 1.8em;
                     color: #222;
                     overflow: hidden;
                     margin: 0 auto;
@@ -170,81 +170,6 @@ html {
                         text-transform: uppercase;
                         letter-spacing: -0.12em;
                     }
-                    
-                    #main, #more {
-                        float: left;
-                    }
-                    
-                    #main {
-                        width: 36.6em; /* 702/20 */
-                        
-                                column-count: 2;
-                                column-gap: 2em;
-                           -moz-column-count: 2;
-                           -moz-column-gap: 2em;
-                        -webkit-column-count: 2;
-                        -webkit-column-gap: 2em;
-                    }
-                    
-                        #main p {
-                            padding: 0 0 2em 0;
-                        }
-                        
-                            #main span,
-                            #main iframe {
-                                padding-right: 0.3em;
-                                float: left;
-                            }
-                            
-                            #main iframe     {
-                                padding-left: 0.3em;     
-                            }
-                    
-                        #main a {
-                            color: #000;
-                            font-weight: bold;
-                            font-size: 1.1em;
-                            
-                                    transition: color 0.3s ease-in-out 0.1s;
-                            -webkit-transition: color 0.3s ease-in-out 0.1s;
-                            
-                            display: inline-block;
-                        }
-                        
-                        #main a:hover {
-                            color: #333;
-                        }
-
-                    #more {
-                        margin: -4em 0 0 0;
-                        width: 14em; /* 310/20 */
-                    }
-                    
-                        #more a {
-                            margin: 0 0 0 2em;
-                        }
-                    
-                        .even img {
-                                    transform: rotate(3deg);
-                            -webkit-transform: rotate(3deg);
-                            
-                                    transition: transform 0.3s ease-in-out 0.1s;
-                            /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
-                        }
-                        
-                        .odd img {
-                                    transform: rotate(-3deg);
-                            -webkit-transform: rotate(-3deg);
-                            
-                                    transition: transform 0.3s ease-in-out 0.1s;
-                            /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
-                        }
-                        
-                        .even a:hover img,
-                        .odd a:hover img {
-                                    transform: rotate(0deg);
-                            -webkit-transform: rotate(0deg);
-                        }
                     
                 footer {
                     position: absolute;
