@@ -10,7 +10,11 @@ ul {
 a {
     text-decoration: none;
     outline: none;
+    font-size: 1em;
+    
+    display: block;
 }
+
 
 html { 
     height: 100%;
@@ -157,7 +161,7 @@ html {
                 #content {
                     padding: 0 0 17em 0;
                     font-size: 1.25em; /* ~20px */
-                    line-height: 1.8em;
+                    /*line-height: 1.8em;*/
                     color: #222;
                     overflow: hidden;
                     margin: 0 auto;
@@ -169,6 +173,11 @@ html {
                         font-size: 2em;
                         text-transform: uppercase;
                         letter-spacing: -0.12em;
+                    }
+                    
+                    #content p { 
+                        padding: 0 0 4em;
+                        line-height: 2em; 
                     }
                     
                 footer {

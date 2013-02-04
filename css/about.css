@@ -13,10 +13,6 @@
     -webkit-column-gap: 2em;
 }
 
-    #main p {
-        padding: 0 0 3.3em 0;
-    }
-    
         #main span,
         #main iframe {
             padding-right: 0.3em;
@@ -30,7 +26,7 @@
     #main a {
         color: #000;
         font-weight: bold;
-        font-size: 1.1em;
+        /*font-size: 1.1em;*/
         
                 transition: color 0.3s ease-in-out 0.1s;
         -webkit-transition: color 0.3s ease-in-out 0.1s;
