@@ -28,20 +28,6 @@
         padding-left: 0.3em;     
     }
 
-    #content a {
-        color: #000;
-        font-weight: bold;
-        
-                transition: color 0.3s ease-in-out 0.1s;
-        -webkit-transition: color 0.3s ease-in-out 0.1s;
-        
-        display: inline-block;
-    }
-    
-    #content a:hover {
-        color: #333;
-    }
-
 #right {
     margin: -4em 0 0 0;
     width: 15em; /* 310/20 */
