@@ -1,0 +1,17 @@
+#content em {
+    font-weight: bold;
+}
+
+#left, #right {
+    float: left;
+}
+
+#left {
+    width: 25em; /* 350/20 */
+}
+
+#right {
+    padding: 0 0 0 2em;
+    width: 25em; /* 310/20 */
+}
+

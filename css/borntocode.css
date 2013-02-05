@@ -161,7 +161,7 @@ html {
                     padding: 0 0 17em 0;
                     font-size: 1.25em; /* ~20px */
                     /*line-height: 1.8em;*/
-                    color: #222;
+                    color: #333;
                     overflow: hidden;
                     margin: 0 auto;
                 }
@@ -190,7 +190,7 @@ html {
                     }
                     
                     #content a:hover {
-                        color: #333;
+                        color: #444;
                     }
                     
                 footer {
