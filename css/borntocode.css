@@ -51,7 +51,7 @@ html {
                 }
                 
                 header h1 {
-                    width: 38em;
+                    width: 41em;
                 }
                 
             h1 a {
@@ -203,3 +203,55 @@ html {
                     width: 100%;
                     height: 18.75em;
                 }
+                
+/* biggest - more than ~1377px */
+@media all and (min-width: 86.125em) {
+    #wrapper {
+        /*border: 1px solid red;*/
+    }
+}
+
+/* tablets - less than ~1092px more than ~768px */
+@media all and (max-width: 68.25em) and (min-width: 48em) { /* ~16px */
+    #wrapper {
+        padding: 0 1em;
+        width: 46em;
+    }
+   
+    header {
+        background: none;
+        height: 12.75em;
+        width: 46em;
+    }
+    
+    header h1 {
+        width: 26.875em;    
+    }
+    
+        h1 a {
+            margin: 2.2em 0 0 0;
+            height: 5.85em;
+            background-size: 26.875em auto;
+        }
+        
+        h1 span {
+            background: transparent url(../static/img/logotype.jpg) 0 -5.875em no-repeat;
+            background-size: 26.875em auto;
+        }
+    
+    header p {
+        width: 18em;
+    }
+    
+    header q {
+        font-size: 0.775em;
+    }
+    
+    header strong {
+        font-size: 0.9em;
+    }
+        
+    #nav ul {
+        margin: 0.15em 0 0 18.625em;
+    }
+}

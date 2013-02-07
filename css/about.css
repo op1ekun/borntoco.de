@@ -58,3 +58,29 @@
                 transform: rotate(0deg);
         -webkit-transform: rotate(0deg);
     }
+    
+    
+@media all and (max-width: 68.25em) and (min-width: 48em) { /* ~16px */    
+    #left, 
+    #center {
+        width: 17.4em    
+    }
+    
+    #right {
+        margin: 0;
+        width: 36.8em;
+    }
+    
+    #right li {
+        float: left;
+    }
+    
+    #right a {
+        margin: 0 1em 1em 1em;
+    }
+    
+    #right img {
+        width: 10em;
+        height: auto;
+    }
+}

@@ -15,3 +15,9 @@
     width: 25em; /* 310/20 */
 }
 
+@media all and (max-width: 68.25em) and (min-width: 48em) { /* ~16px */    
+    #left, 
+    #right {
+        width: 17.4em    
+    }
+}
