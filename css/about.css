@@ -84,3 +84,17 @@
         height: auto;
     }
 }
+
+@media all and (max-width: 47.8125em) { /* ~16px */    
+    #left, #center, #right {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #right img {
+        margin: 0 auto;
+        width: 19em;
+        height: auto;
+    }
+}

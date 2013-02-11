@@ -1,4 +1,5 @@
 body, h1, h2, ul, li, p, img {
+    border: 0;
     margin: 0;
     padding: 0;
 }
@@ -111,8 +112,8 @@ html {
                 }
                 
                     #nav ul {
-                        margin: 0.75em 0 0 30.625em;
-                        padding: 0 1.875em;
+                        margin: 0.75em 0 0 31.625em;
+                        /*padding: 0 1.875em;*/
                         overflow: hidden;
                     }
                 
@@ -252,6 +253,46 @@ html {
     }
         
     #nav ul {
-        margin: 0.15em 0 0 18.625em;
+        margin: 0.15em 0 0 18em;
     }
+}
+
+/* mobile less than 768px */
+@media all and (max-width: 47.8125em) { /* 16px */
+    body {
+        background-position: center -7em;
+    }
+    
+    #wrapper {
+        /*border: 1px solid red;*/
+        padding: 0 1em;
+        width: 28em;
+    }
+    
+    header {
+        background: none;
+        height: 5.75em;
+        width: 28em;
+    }
+    
+    header h1 {
+        width: 26.875em;    
+    }
+    
+    header p, h1 a, h1 span {
+        display: none;
+    }
+        
+    #nav ul {
+        margin: 1.2em 0 0 0;
+        padding: 0;
+    }
+    
+        #content h2 {
+            font-size: 1.5em;
+        }
+    
+    footer {
+        width: 100%;
+    }    
 }
