@@ -92,9 +92,15 @@
         width: 100%;
     }
     
-    #right img {
-        margin: 0 auto;
-        width: 19em;
-        height: auto;
+    #right a {
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
+        #right img {
+            margin: 0 auto;
+            width: 70%;
+            height: auto;
+            display: block;
+        }
 }
