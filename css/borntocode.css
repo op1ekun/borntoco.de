@@ -60,14 +60,14 @@ html {
                 margin: 1.125em 0 0 1em;
                 width: 28.875em;
                 height: 6.3125em;
-                background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
+                background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
                 background-size: 28.875em auto;
                 text-indent: -5000px;
                 display: block;    
             }
             
             h1 span {
-                background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
+                background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
                 background-size: 28.875em auto;
                 opacity: 0;
                 
@@ -231,12 +231,14 @@ html {
     
         h1 a {
             margin: 2.2em 0 0 0;
-            height: 5.85em;
+            height: 5.875em;
             background-size: 26.875em auto;
+            background-position: 0 -5.875em;
         }
         
         h1 span {
-            background: transparent url(../static/img/logotype.jpg) 0 -5.875em no-repeat;
+            height: 5.875em;
+            background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
             background-size: 26.875em auto;
         }
     
@@ -260,7 +262,7 @@ html {
 /* mobile less than 768px */
 @media all and (max-width: 47.8125em) { /* 16px */
     body {
-        background-position: center -7em;
+        background-position: center -6em;
     }
     
     #wrapper {
@@ -270,7 +272,8 @@ html {
     }
     
     header {
-        background: none;
+        background: transparent url(../static/img/logotype.jpg) 0 -2em no-repeat;
+        background-size: 9.2em auto;
         height: 5.75em;
         width: 28em;
     }
@@ -284,7 +287,7 @@ html {
     }
         
     #nav ul {
-        margin: 1.2em 0 0 0;
+        margin: 2.15em 0 0 0;
         padding: 0;
     }
     
