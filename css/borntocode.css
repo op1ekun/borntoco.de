@@ -272,8 +272,8 @@ html {
     }
     
     header {
-        background: transparent url(../static/img/logotype.jpg) 0 -2em no-repeat;
-        background-size: 9.2em auto;
+        background: transparent url(../static/img/logotype.jpg) 0 -2.1em no-repeat;
+        background-size: 9.6em auto;
         height: 5.75em;
         width: 28em;
     }
