@@ -162,7 +162,7 @@ html {
                     padding: 0 0 17em 0;
                     font-size: 1.25em; /* ~20px */
                     /*line-height: 1.8em;*/
-                    color: #333;
+                    color: #222;
                     overflow: hidden;
                     margin: 0 auto;
                 }
@@ -191,7 +191,7 @@ html {
                     }
                     
                     #content a:hover {
-                        color: #444;
+                        color: #333;
                     }
                     
                 footer {
@@ -262,24 +262,26 @@ html {
 /* mobile less than 768px */
 @media all and (max-width: 47.8125em) { /* 16px */
     body {
+        /*background-position: center -4em;*/
         background-position: center -6em;
+        /*background-size: 45em auto;*/
     }
     
     #wrapper {
         /*border: 1px solid red;*/
         padding: 0 1em;
-        width: 28em;
+        width: 27em;
     }
     
     header {
         background: transparent url(../static/img/logotype.jpg) 0 -2.1em no-repeat;
         background-size: 9.6em auto;
-        height: 5.75em;
-        width: 28em;
+        height: 6.75em;
+        width: 27em;
     }
     
     header h1 {
-        width: 26.875em;    
+        width: 25.875em;    
     }
     
     header p, h1 a, h1 span {
@@ -298,6 +300,7 @@ html {
 }
 
 @media all and (max-width: 30em) {
+    
     footer {
         width: 150%;
     }    

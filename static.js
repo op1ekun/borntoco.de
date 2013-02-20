@@ -1,27 +1,46 @@
 var express = require('express'),
         app = express();
+        
+app.use(express.logger());
+app.use(express.static(__dirname));
 
 function handleRoute(res, route) {
-    res.set('Content-Type', 'text/html');  
+    res.set('Content-Type', 'text/html');
     res.sendfile(__dirname + '/' + route + '.html');
 }
 
-app.get('/about', function(req, res) {
-    handleRoute(res, 'about');
+
+app.get('/about*', function(req, res) {
+    if(req.path.substr(req.path.length -1, 1) !== "/") {
+        res.redirect(req.path + '/');
+    } else {
+        handleRoute(res, 'about');
+    }
 });
 
-app.get('/blog', function(req, res) {
-    handleRoute(res, 'blog');
+app.get('/blog*', function(req, res) {
+    if(req.path.substr(req.path.length -1, 1) !== "/") {
+        res.redirect(req.path + '/');
+    } else {
+        handleRoute(res, 'blog');
+    }
 });
 
-app.get('/works', function(req, res) {
-    handleRoute(res, 'works');
+app.get('/works*', function(req, res) {
+    if(req.path.substr(req.path.length -1, 1) !== "/") {
+        res.redirect(req.path + '/');
+    } else {
+        handleRoute(res, 'works');
+    }
 });
 
-app.get('/contact', function(req, res) {
-    handleRoute(res, 'contact');
+app.get('/contact*', function(req, res) {
+    if(req.path.substr(req.path.length -1, 1) !== "/") {
+        res.redirect(req.path + '/');
+    } else {
+        handleRoute(res, 'contact');
+    }
 });
 
-app.use(express.static(__dirname));
 
 app.listen(8888);
