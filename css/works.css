@@ -25,3 +25,11 @@ h3 {
         width: 17.4em    
     }
 }
+
+@media all and (max-width: 47.8125em) { /* ~16px */
+    #left, #right {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
