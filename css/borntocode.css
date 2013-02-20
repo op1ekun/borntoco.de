@@ -1,4 +1,4 @@
-body, h1, h2, ul, li, p, img {
+body, h1, h2, h3, ul, li, p, img {
     border: 0;
     margin: 0;
     padding: 0;
@@ -172,7 +172,7 @@ html {
                         font-family: 'sawasdeebold', sans-serif;
                         font-size: 2em;
                         text-transform: uppercase;
-                        letter-spacing: -0.12em;
+                        letter-spacing: -0.15em;
                     }
                     
                     #content p { 

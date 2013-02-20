@@ -1,5 +1,8 @@
-h3 {
+#content h3 {
+    padding: 0 0 1em 0;
     font-family: 'sawasdeebold', sans-serif;
+    font-size: 1.5em;
+    letter-spacing: -0.18em;
 }
 
 #content em {
@@ -27,6 +30,14 @@ h3 {
 }
 
 @media all and (max-width: 47.8125em) { /* ~16px */
+    #content {
+        padding-top: 1em;
+    }
+    
+    #content h2 {
+        display: none;
+    }
+    
     #left, #right {
         margin: 0;
         padding: 0;
