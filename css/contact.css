@@ -1,0 +1,31 @@
+#content strong {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+#content strong,
+#content a {
+    width: 20em;
+    display: block;
+}
+
+#content p {
+    padding: 0 0 1.5em 0;
+    line-height: 1.5em;
+    overflow: hidden;
+}
+
+
+#content .icon,
+#content .contact {
+    float: left;
+}
+
+#content .icon {
+    padding-top: 0.2em;
+    font-family: 'icomoon';
+    font-size: 2em; /* 40px */
+    width: 1.4em; /* 56px, cause 1em == 40px */
+    height: 2em;
+    line-height: 1.2em;
+}
