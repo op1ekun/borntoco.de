@@ -5,7 +5,7 @@
 
 #content strong,
 #content a {
-    width: 20em;
+    width: 22em;
     display: block;
 }
 
@@ -28,4 +28,35 @@
     width: 1.4em; /* 56px, cause 1em == 40px */
     height: 2em;
     line-height: 1.2em;
+}
+
+@media all and (max-width: 68.25em) and (min-width: 48em) { /* ~16px */ 
+    #content p {
+        padding: 0;
+    }
+       
+    #content a, #content strong {
+        font-size: 0.7em;
+        width: 20em;
+    }
+}
+
+@media all and (max-width: 47.8125em) { /* ~16px */
+    #left, #right {
+        width: 100%;
+        float: none;
+    }
+    
+    #right {
+        padding: 0;
+    }
+    
+    #content p {
+        padding: 0;
+    }
+       
+    #content a, #content strong {
+        font-size: 0.7em;
+        width: 20em;
+    }
 }

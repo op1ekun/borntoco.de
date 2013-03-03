@@ -182,7 +182,7 @@ html {
                     
                     #content a {
                         color: #000;
-                        font-weight: bold;
+                        font-weight: bolder;
                         
                                 transition: color 0.3s ease-in-out 0.1s;
                         -webkit-transition: color 0.3s ease-in-out 0.1s;
