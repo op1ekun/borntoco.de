@@ -21,6 +21,10 @@ html {
     font-size: 100%; /* ~16px */
 }
 
+    body, footer {
+        font-family: 'Gilda Display', serif;
+    }
+
     body {
         position: relative;
          
@@ -28,14 +32,19 @@ html {
         background-size: 60em auto; /* ~960px */
         
         min-height: 100%;
-        font-family: 'Gilda Display', serif;
     }
 
         #wrapper {
+            max-width: 65em; /* ~1040px */
+        }
+        
+        #footer_wrapper {
+            padding: 2em 1em;
+            max-width: 63em;
+        }
+              
+        #wrapper, #footer_wrapper {
             margin: 0 auto;
-            
-            /* width should be under media query */
-            max-width: 65em; /* ~1040px */      
         }
     
             header {
@@ -159,7 +168,7 @@ html {
                             }
                 
                 #content {
-                    padding: 0 0 17em 0;
+                    padding: 0 0 11em 0;
                     font-size: 1.25em; /* ~20px */
                     /*line-height: 1.8em;*/
                     color: #222;
@@ -202,9 +211,27 @@ html {
                     background-size: 60em auto;
                     
                     width: 100%;
-                    height: 18.75em;
+                    height: 9.75em;
+                    color: #999;
                 }
                 
+                        footer li {
+                            padding: 0 3em 0 0;
+                            float: left;
+                        }
+                    
+                            footer li a {
+                                font-family: 'sawasdeebold', sans-serif;
+                                font-size: 2.25em; /* ~ 36px */
+                                text-transform: uppercase;
+                                letter-spacing: -0.15em;
+                                color: #aaa;
+                            }
+                
+                    footer p {
+                        clear: both;    
+                    }
+                    
 /* biggest - more than ~1377px */
 @media all and (min-width: 86.125em) {
     #wrapper {

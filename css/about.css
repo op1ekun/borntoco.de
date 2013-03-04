@@ -87,7 +87,7 @@
 
 @media all and (max-width: 47.8125em) { /* ~16px */
     #content {
-        padding: 1em 0 0 0;
+        padding: 1em 0 11em 0;
     }
     
     #content h2 {
