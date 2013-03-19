@@ -39,8 +39,8 @@ html {
         }
         
         #footer_wrapper {
-            padding: 2em 1em;
-            max-width: 63em;
+            padding: 2em 0;
+            max-width: 65em;
         }
               
         #wrapper, #footer_wrapper {
@@ -168,7 +168,7 @@ html {
                             }
                 
                 #content {
-                    padding: 0 0 11em 0;
+                    padding: 0 0 13em 0;
                     font-size: 1.25em; /* ~20px */
                     /*line-height: 1.8em;*/
                     color: #222;
@@ -211,7 +211,7 @@ html {
                     background-size: 60em auto;
                     
                     width: 100%;
-                    height: 9.75em;
+                    height: 12.75em;
                     color: #999;
                 }
                 
@@ -227,9 +227,15 @@ html {
                                 letter-spacing: -0.15em;
                                 color: #aaa;
                             }
-                
+                            
                     footer p {
                         clear: both;    
+                    }
+                    
+                    footer p a {
+                        padding: 0 0 0.5em 0;
+                        color: #aaa;
+                        display: inline-block;
                     }
                     
 /* biggest - more than ~1377px */
@@ -241,9 +247,16 @@ html {
 
 /* tablets - less than ~1092px more than ~768px */
 @media all and (max-width: 68.25em) and (min-width: 48em) { /* ~16px */
+    #wrapper, #footer_wrapper {
+        width: 46em;
+    }
+    
     #wrapper {
         padding: 0 1em;
-        width: 46em;
+    }
+    
+    #footer_wrapper {
+        padding: 2em 1em;
     }
    
     header {
@@ -293,12 +306,26 @@ html {
         background-position: center -6em;
         /*background-size: 45em auto;*/
     }
+
+    #wrapper, #footer_wrapper {
+        width: 26em;
+    }
     
     #wrapper {
-        /*border: 1px solid red;*/
         padding: 0 1em;
-        width: 27em;
     }
+    
+    footer {
+        height: 11.2em;
+    }
+    
+    #footer_wrapper {
+        padding: 2em 1em;
+    }
+    
+        #footer_wrapper li a {
+            font-size: 1.6em;
+        }
     
     header {
         background: transparent url(../static/img/logotype.jpg) 0 -2.1em no-repeat;
@@ -326,7 +353,7 @@ html {
     
 }
 
-@media all and (max-width: 30em) {
+@media all and (max-width: 27em) {
     
     footer {
         width: 150%;
