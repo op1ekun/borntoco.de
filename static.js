@@ -9,38 +9,29 @@ function handleRoute(res, route) {
     res.sendfile(__dirname + '/' + route + '.html');
 }
 
+function handleSlash(req, res) {
+    if (req.path.substr(req.path.length -1, 1) !== "/") {
+        res.redirect(req.path + '/');
+    }
+}
 
 app.get('/about*', function(req, res) {
-    if(req.path.substr(req.path.length -1, 1) !== "/") {
-        res.redirect(req.path + '/');
-    } else {
-        handleRoute(res, 'about');
-    }
-});
-
-app.get('/blog*', function(req, res) {
-    if(req.path.substr(req.path.length -1, 1) !== "/") {
-        res.redirect(req.path + '/');
-    } else {
-        handleRoute(res, 'blog');
-    }
+    handleSlash(req, res);
+    handleRoute(res, 'about');
 });
 
 app.get('/works*', function(req, res) {
-    if(req.path.substr(req.path.length -1, 1) !== "/") {
-        res.redirect(req.path + '/');
-    } else {
-        handleRoute(res, 'works');
-    }
+    handleSlash(req, res);
+    handleRoute(res, 'works');
 });
 
 app.get('/contact*', function(req, res) {
-    if(req.path.substr(req.path.length -1, 1) !== "/") {
-        res.redirect(req.path + '/');
-    } else {
-        handleRoute(res, 'contact');
-    }
+    handleSlash(req, res);
+    handleRoute(res, 'contact');
 });
 
+app.get('/', function(req, res) {
+    res.redirect(req.path + 'about/');
+});
 
 app.listen(8888);
