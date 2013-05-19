@@ -30,6 +30,7 @@ app.get('/contact*', function(req, res) {
     handleRoute(res, 'contact');
 });
 
+// if everything else fails ;)
 app.get('/', function(req, res) {
     res.redirect(req.path + 'about/');
 });
