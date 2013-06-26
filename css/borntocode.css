@@ -1,3 +1,4 @@
+/* a little bit of reset */
 body, h1, h2, h3, ul, li, p, img {
     border: 0;
     margin: 0;
@@ -15,6 +16,7 @@ a {
     
     display: block;
 }
+
 
 html { 
     height: 100%;
@@ -40,7 +42,7 @@ html {
         
         #footer_wrapper {
             padding: 2em 0;
-            max-width: 65em;
+            max-width: 65em; /* ~1040px */
         }
               
         #wrapper, #footer_wrapper {
@@ -48,8 +50,8 @@ html {
         }
     
             header {
-                height: 18.75em;
-                width: 65em;
+                height: 18.75em; /* ~300px*/
+                /*width: 100%;*/
                 background: transparent url(../static/img/header2.jpg) 6.875em 7.375em no-repeat;
                 background-size: 23.25em auto;
             }
@@ -67,11 +69,11 @@ html {
             h1 a {
                 position: relative;
                 margin: 1.125em 0 0 1em;
-                width: 28.875em;
-                height: 6.3125em;
+                width: 28.875em; /* ~462px */
+                height: 6.3125em; /* ~101px */
                 background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
                 background-size: 28.875em auto;
-                text-indent: -5000px;
+                text-indent: -5000em;
                 display: block;    
             }
             
@@ -168,6 +170,7 @@ html {
                             }
                 
                 #content {
+                    text-align: justify;
                     padding: 0 0 13em 0;
                     font-size: 1.25em; /* ~20px */
                     /*line-height: 1.8em;*/
@@ -356,6 +359,13 @@ html {
 @media all and (max-width: 27em) {
     
     footer {
-        width: 150%;
-    }    
+        border: 1px solid red;
+        width: 110%;
+    } 
+
+    #footer_wrapper ul {
+        border: 1px solid blue;
+        overflow: hidden;
+        height: 50em;  
+    }        
 }
