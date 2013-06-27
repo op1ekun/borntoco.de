@@ -13,10 +13,8 @@ a {
     text-decoration: none;
     outline: none;
     font-size: 1em;
-    
-    display: block;
+    display: inline-block;
 }
-
 
 html { 
     height: 100%;
@@ -41,7 +39,7 @@ html {
         }
         
         #footer_wrapper {
-            padding: 2em 0;
+            padding: 1.5em 0 0 0;
             max-width: 65em; /* ~1040px */
         }
               
@@ -51,7 +49,6 @@ html {
     
             header {
                 height: 18.75em; /* ~300px*/
-                /*width: 100%;*/
                 background: transparent url(../static/img/header2.jpg) 6.875em 7.375em no-repeat;
                 background-size: 23.25em auto;
             }
@@ -59,11 +56,13 @@ html {
                 header h1,
                 header p {
                     font-size: 1em; /* ~16px */
-                    float: left;
+                    display: inline-block;
+                    vertical-align: top;
                 }
                 
                 header h1 {
                     width: 41em;
+                    height: 7.4375em; 
                 }
                 
             h1 a {
@@ -117,21 +116,17 @@ html {
                     }
                             
                 #nav {
-                    width: 100%;
-                    clear: left;
-                    overflow: hidden;
+                    text-align: right;
                 }
                 
                     #nav ul {
-                        margin: 0.75em 0 0 31.625em;
-                        /*padding: 0 1.875em;*/
-                        overflow: hidden;
+                        margin: 0.75em 10em 0 0;
                     }
                 
                         #nav li {
                             background: transparent url(../static/img/navBack.jpg) 0 0 no-repeat;
                             background-size: 15.5em auto;
-                            float: left;
+                            display: inline-block;
                         }
                         
                             #nav li.first a {
@@ -149,7 +144,6 @@ html {
                                 letter-spacing: -0.15em;
                                 
                                 color: #abb0aa;
-                                float: left;
                                 
                                         transition: color 0.3s ease-in-out 0.1s;
                                 -webkit-transition: color 0.3s ease-in-out 0.1s;
@@ -173,9 +167,7 @@ html {
                     text-align: justify;
                     padding: 0 0 13em 0;
                     font-size: 1.25em; /* ~20px */
-                    /*line-height: 1.8em;*/
                     color: #222;
-                    overflow: hidden;
                     margin: 0 auto;
                 }
                 
@@ -217,10 +209,21 @@ html {
                     height: 12.75em;
                     color: #999;
                 }
+
+                    footer ul {
+                        width: 30em;
+                        text-align: justify;
+                    }
+
+                    footer ul:after {
+                        content: '';
+                        width: 100%;
+                        display: inline-block;
+                    }
                 
                         footer li {
-                            padding: 0 3em 0 0;
-                            float: left;
+                            display: inline-block;
+                            width: auto;
                         }
                     
                             footer li a {
@@ -231,25 +234,20 @@ html {
                                 color: #aaa;
                             }
                             
-                    footer p {
-                        clear: both;    
-                    }
-                    
                     footer p a {
-                        padding: 0 0 0.5em 0;
+                        padding-bottom: 0.5em;
                         color: #aaa;
-                        display: inline-block;
                     }
                     
 /* biggest - more than ~1377px */
-@media all and (min-width: 86.125em) {
+/*@media all and (min-width: 86.125em) {
     #wrapper {
-        /*border: 1px solid red;*/
+        border: 1px solid red;
     }
-}
+}*/
 
 /* tablets - less than ~1092px more than ~768px */
-@media all and (max-width: 68.25em) and (min-width: 48em) { /* ~16px */
+/*@media all and (max-width: 68.25em) and (min-width: 48em) {
     #wrapper, #footer_wrapper {
         width: 46em;
     }
@@ -259,7 +257,7 @@ html {
     }
     
     #footer_wrapper {
-        padding: 2em 1em;
+        padding: 1.5em 0 0 0;
     }
    
     header {
@@ -300,14 +298,14 @@ html {
     #nav ul {
         margin: 0.15em 0 0 18em;
     }
-}
+}*/
 
 /* mobile less than 768px */
-@media all and (max-width: 47.8125em) { /* 16px */
+/*@media all and (max-width: 47.8125em) {
     body {
-        /*background-position: center -4em;*/
+        background-position: center -4em;
         background-position: center -6em;
-        /*background-size: 45em auto;*/
+        background-size: 45em auto;
     }
 
     #wrapper, #footer_wrapper {
@@ -354,9 +352,12 @@ html {
             font-size: 1.5em;
         }
     
-}
+}*/
 
-@media all and (max-width: 27em) {
+/*@media all and (max-width: 27em) {
+    #content {
+        border: 1px solid green;
+    }
     
     footer {
         border: 1px solid red;
@@ -366,6 +367,7 @@ html {
     #footer_wrapper ul {
         border: 1px solid blue;
         overflow: hidden;
-        height: 50em;  
+        height: 50em;
+        width: 100%;
     }        
 }

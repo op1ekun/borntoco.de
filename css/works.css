@@ -28,7 +28,7 @@
     }
 }
 
-@media all and (max-width: 47.8125em) { /* ~16px */
+/*@media all and (max-width: 47.8125em) {
     #content {
         padding-top: 1em;
     }
@@ -42,4 +42,4 @@
         padding: 0;
         width: 100%;
     }
-}
+}*/
