@@ -170,6 +170,12 @@ html {
                     color: #222;
                     margin: 0 auto;
                 }
+
+                #content:after {
+                    display: inline-block;
+                    width: 100%;
+                    content: ' ';
+                }
                 
                     #content h2 {
                         padding: 0.5em 0 1em 0;
@@ -197,6 +203,12 @@ html {
                     #content a:hover {
                         color: #333;
                     }
+
+                #left, #center, #right {
+                    display: inline-block;
+                    /*text-align: top;*/
+                    vertical-align: top;
+                }
                     
                 footer {
                     position: absolute;

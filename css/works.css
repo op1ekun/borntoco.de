@@ -9,24 +9,16 @@
     font-weight: bold;
 }
 
-#content:after {
-    display: inline-block;
-    width: 100%;
-    content: ' ';
-}
-
 #left, #right {
     width: 25em;
-    display: inline-block;
-    vertical-align: top;
 }
 
-@media all and (max-width: 68.25em) and (min-width: 48em) { /* ~16px */    
+/*@media all and (max-width: 68.25em) and (min-width: 48em) {  ~16px     
     #left, 
     #right {
-        width: 17.4em    
+        width: 17.5em    
     }
-}
+}*/
 
 /*@media all and (max-width: 47.8125em) {
     #content {
