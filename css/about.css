@@ -1,6 +1,16 @@
 #left, 
 #center {
-    width: 17.5em; /* 350/20 */   
+    /* 350/1040 = 0.336538462 */
+    width: 33.6538462%;
+
+
+    /* 350/20 */
+    /* width: 17.5em; */
+}
+
+#right {
+    /* 250/1040 = 0.240384615 */
+    width: 24.0384615%;
 }
 
     #center iframe {
@@ -12,27 +22,33 @@
         margin: -4em 0 0 0;
     }
 
-    .even img {
-                transform: rotate(3deg);
-        -webkit-transform: rotate(3deg);
+        #right img {
+            height: auto;
+            width: 100%;
+        }
+
+        .even img {
+            
+                    transform: rotate(3deg);
+            -webkit-transform: rotate(3deg);
+            
+                    transition: transform 0.3s ease-in-out 0.1s;
+            /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
+        }
         
-                transition: transform 0.3s ease-in-out 0.1s;
-        /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
-    }
-    
-    .odd img {
-                transform: rotate(-3deg);
-        -webkit-transform: rotate(-3deg);
+        .odd img {
+                    transform: rotate(-3deg);
+            -webkit-transform: rotate(-3deg);
+            
+                    transition: transform 0.3s ease-in-out 0.1s;
+            /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
+        }
         
-                transition: transform 0.3s ease-in-out 0.1s;
-        /*-webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s;*/
-    }
-    
-    .even a:hover img,
-    .odd a:hover img {
-                transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-    }
+        .even a:hover img,
+        .odd a:hover img {
+                    transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+        }
     
     
 /* ~16px */    

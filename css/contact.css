@@ -1,29 +1,68 @@
 #content strong {
     font-weight: normal;
-    font-size: 1em;
 }
 
+#content li:before,
 #content strong,
 #content a {
-    padding: 0 0 0.5em 0.5em;
-    width: 22em;
     display: block;
 }
 
-#content p {
-    line-height: normal;
-    padding: 0 0 1.5em 0;
+#content li {
+    padding: 0 0 2em 2.5em;
+    position: relative;
 }
 
-#content .icon,
-#content .contact {
-    display: inline-block;
-    vertical-align: top;
+/* web font icons */
+#content li:before {
+    font-family: 'borntocode-custom';
+    font-size: 2em;
+
+    position: absolute;
+    left: 0;
 }
 
-#content .icon {
-    font-family: 'icomoon';
-    font-size: 2em; /* 40px */
+.email:before {
+    content: '\e002';
+}
+
+#content .gmail_chat:before {
+    content: '\e016';
+    font-size: 1.8em 
+}
+
+.skype:before {
+    content: '\e01a';
+}
+
+.phone:before {
+    content: '\e019';
+}
+
+.linkedin:before {
+    content: '\e012';
+}
+
+.twitter:before {
+    content: '\e00a';
+}
+
+.facebook:before {
+    content: '\e008';
+}
+
+.google_plus:before {
+    content: '\e004';
+}
+
+.github:before {
+    content: '\e00e';
+}
+
+.stackoverflow:before {
+    content: '\e013';
+}
+
 
 /*@media all and (max-width: 68.25em) and (min-width: 48em) { 
     #content p {

@@ -35,15 +35,19 @@ html {
     }
 
         #wrapper {
-            max-width: 65em; /* ~1040px */
+            /* 32/1040 = 0.030769231 */
+            padding: 0 3.0769231%;
+
+            /* ~32px */
+            /*padding: 0 2em; */
         }
         
         #footer_wrapper {
             padding: 1.5em 0 0 0;
-            max-width: 65em; /* ~1040px */
         }
               
         #wrapper, #footer_wrapper {
+            max-width: 65em; /* ~1040px */
             margin: 0 auto;
         }
     
@@ -206,7 +210,6 @@ html {
 
                 #left, #center, #right {
                     display: inline-block;
-                    /*text-align: top;*/
                     vertical-align: top;
                 }
                     
@@ -252,11 +255,11 @@ html {
                     }
                     
 /* biggest - more than ~1377px */
-/*@media all and (min-width: 86.125em) {
+@media all and (min-width: 86.125em) {
     #wrapper {
         border: 1px solid red;
     }
-}*/
+}
 
 /* tablets - less than ~1092px more than ~768px */
 /*@media all and (max-width: 68.25em) and (min-width: 48em) {
