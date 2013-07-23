@@ -34,16 +34,13 @@ html {
         min-height: 100%;
     }
 
-        #wrapper {
+        #wrapper, #footer_wrapper {
             /* 32/1040 = 0.030769231 */
             padding: 0 3.0769231%;
-
-            /* ~32px */
-            /*padding: 0 2em; */
         }
         
         #footer_wrapper {
-            padding: 1.5em 0 0 0;
+            padding-top: 1.5em;
         }
               
         #wrapper, #footer_wrapper {
@@ -63,55 +60,54 @@ html {
                     display: inline-block;
                     vertical-align: top;
                 }
-                
-                header h1 {
-                    width: 41em;
-                    height: 7.4375em; 
+                                
+                h1 a {
+                    position: relative;
+
+                    /* 18/1040 = 0.017307692 */
+                    margin: 1.7307692% 0 0 1em;
+
+                    margin: 1.125em 0 0 1em;
+
+                    width: 28.875em; /* ~462px */
+                    height: 6.3125em; /* ~101px */
+                    background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
+                    background-size: 28.875em auto;
+                    text-indent: -5000em;
+                    display: block;    
                 }
                 
-            h1 a {
-                position: relative;
-                margin: 1.125em 0 0 1em;
-                width: 28.875em; /* ~462px */
-                height: 6.3125em; /* ~101px */
-                background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
-                background-size: 28.875em auto;
-                text-indent: -5000em;
-                display: block;    
-            }
-            
-            h1 span {
-                background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
-                background-size: 28.875em auto;
-                opacity: 0;
+                h1 span {
+                    background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
+                    background-size: 28.875em auto;
+                    opacity: 0;
+                    
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    
+                    width: 100%;
+                    height: 6.25em;
+                    display: block;
+                    
+                            transition: opacity 0.3s ease-in-out 0.1s;
+                    -webkit-transition: opacity 0.3s ease-in-out 0.1s;
+                }
                 
-                position: absolute;
-                left: 0;
-                top: 0;
+                h1 a:hover span {
+                    opacity: 1;
+                }
                 
-                width: 100%;
-                height: 6.25em;
-                display: block;
-                
-                        transition: opacity 0.3s ease-in-out 0.1s;
-                -webkit-transition: opacity 0.3s ease-in-out 0.1s;
-            }
-            
-            h1 a:hover span {
-                opacity: 1;
-            }
-                
-                header p {
+                header q {
                     padding: 0.625em 0 0 0;
-                    width: 23em;
+                    width: 24em;
+
                     text-align: right;
+                    font-style: italic;
+                    font-size: 0.875em;
+
+                    float: right;
                 }
-                
-                    header q {
-                        font-style: italic;
-                        font-size: 0.875em;
-                        line-height: 1.25em;
-                    }
                 
                     header strong {
                         font-size: 1em;
@@ -119,12 +115,9 @@ html {
                         display: block;
                     }
                             
-                #nav {
-                    text-align: right;
-                }
                 
                     #nav ul {
-                        margin: 0.75em 10em 0 0;
+                        margin: 0.75em 0 0 31em;
                     }
                 
                         #nav li {
