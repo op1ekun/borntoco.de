@@ -32,6 +32,11 @@ html {
         background-size: 60em auto; /* ~960px */
         
         min-height: 100%;
+
+                transition: background-size 0.6s ease-in-out 0.1s,
+                            background-position 0.6s ease-in-out 0.1s;
+        -webkit-transition: background-size 0.6s ease-in-out 0.1s,
+                            background-position 0.6s ease-in-out 0.1s;
     }
 
         #wrapper, #footer_wrapper {
@@ -49,7 +54,9 @@ html {
         }
     
             header {
-                height: 18.75em; /* ~300px*/
+                        transition: background-position 0.4s ease-in-out 0s;
+                -webkit-transition: background-position 0.4s ease-in-out 0s;
+
                 background: transparent url(../static/img/header2.jpg) 6.875em 7.375em no-repeat;
                 background-size: 23.25em auto;
             }
@@ -64,17 +71,25 @@ html {
                 h1 a {
                     position: relative;
 
-                    /* 18/1040 = 0.017307692 */
-                    margin: 1.7307692% 0 0 1em;
+                            transition: margin 0.6s ease-in-out 0.1s,
+                                        background-size 0.6s ease-in-out 0.1s,
+                                        background-position 0.6s ease-in-out 0.1s,
+                                        height 0.6s ease-in-out 0.1s,
+                                        width 0.6s ease-in-out 0.1s;
+                    -webkit-transition: margin 0.6s ease-in-out 0.1s,
+                                        background-size 0.6s ease-in-out 0.1s,
+                                        background-position 0.6s ease-in-out 0.1s,
+                                        height 0.6s ease-in-out 0.1s,
+                                        width 0.6s ease-in-out 0.1s;
 
-                    margin: 1.125em 0 0 1em;
+                    margin: 1.125em 0 0.75em 1em;
 
                     width: 28.875em; /* ~462px */
                     height: 6.3125em; /* ~101px */
                     background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
                     background-size: 28.875em auto;
                     text-indent: -5000em;
-                    display: block;    
+                    display: block;
                 }
                 
                 h1 span {
@@ -90,35 +105,21 @@ html {
                     height: 6.25em;
                     display: block;
                     
-                            transition: opacity 0.3s ease-in-out 0.1s;
-                    -webkit-transition: opacity 0.3s ease-in-out 0.1s;
+                            transition: opacity 0.6s ease-in-out 0.1s;
+                    -webkit-transition: opacity 0.6s ease-in-out 0.1s;
                 }
                 
                 h1 a:hover span {
                     opacity: 1;
                 }
                 
-                header q {
-                    padding: 0.625em 0 0 0;
-                    width: 24em;
+                #nav {
+                            transition: padding 0.6s ease-in-out 0.1s;
+                    -webkit-transition: padding 0.6s ease-in-out 0.1s;
 
+                    padding-bottom: 5em;
                     text-align: right;
-                    font-style: italic;
-                    font-size: 0.875em;
-
-                    float: right;
                 }
-                
-                    header strong {
-                        font-size: 1em;
-                        line-height: 1.5625em;
-                        display: block;
-                    }
-                            
-                
-                    #nav ul {
-                        margin: 0.75em 0 0 31em;
-                    }
                 
                         #nav li {
                             background: transparent url(../static/img/navBack.jpg) 0 0 no-repeat;
@@ -128,13 +129,13 @@ html {
                         
                             #nav li.first a {
                                 border-left: 1px solid #000;
+
                             }
 
                             #nav a {
                                 border-right: 1px solid #000;
                                 padding: 0.85em 1.4em 1em 1.25em;
                                 
-                                line-height: 1.6em;
                                 font-family: 'sawasdeebold', sans-serif;
                                 font-size: 1.25em; /* ~ 20px */
                                 text-transform: uppercase;
@@ -142,14 +143,23 @@ html {
                                 
                                 color: #abb0aa;
                                 
-                                        transition: color 0.3s ease-in-out 0.1s;
-                                -webkit-transition: color 0.3s ease-in-out 0.1s;
+                                        transition: color 0.6s ease-in-out 0.1s,
+                                                    padding 0.3s ease-in-out 0s,
+                                                    font-size 0.6s ease-in-out 0.1s;
+                                -webkit-transition: color 0.6s ease-in-out 0.1s, 
+                                                    padding 0.3s ease-in-out 0s,
+                                                    font-size 0.6s ease-in-out 0.1s;
                             }
                         
                         #nav li.active {
                             background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;
                             background-size: 12.5em auto;
                             height: 5em;
+
+                                    transition: background-size 0.6s ease-in-out 0.1s,
+                                                height 0.6s ease-in-out 0.1s;
+                            -webkit-transition: background-size 0.6s ease-in-out 0.1s,
+                                                height 0.6s ease-in-out 0.1s;
                         }
                             
                             #nav li.active a {
@@ -191,8 +201,8 @@ html {
                         color: #000;
                         font-weight: bolder;
                         
-                                transition: color 0.3s ease-in-out 0.1s;
-                        -webkit-transition: color 0.3s ease-in-out 0.1s;
+                                transition: color 0.6s ease-in-out 0.1s;
+                        -webkit-transition: color 0.6s ease-in-out 0.1s;
                         
                         display: inline-block;
                     }
@@ -219,7 +229,8 @@ html {
                 }
 
                     footer ul {
-                        width: 30em;
+                        width: 40%;
+                        min-width: 28em;
                         text-align: justify;
                     }
 
@@ -248,9 +259,100 @@ html {
                     }
                     
 /* biggest - more than ~1377px */
-@media all and (min-width: 86.125em) {
+/*@media all and (min-width: 86.125em) {
     #wrapper {
         border: 1px solid red;
+    }
+}*/
+
+/* 1019px/16px */
+@media screen and (max-width: 65.6875em) {
+
+    header {
+        background-position: -50em 8em;
+    }
+
+        header q {
+            width: 26%;
+        }
+
+        h1 a {
+            margin: 1.84em 0 0.05em 1em;
+        }
+
+        #nav {
+            padding-bottom: 0;
+        }
+}
+
+@media screen and (max-width: 47.9375em) {
+
+    body {
+        background-size: 40em auto;
+    }
+
+    h1 a,
+    h1 span {
+        background-size: 21.875em auto;
+        height: 4.8em;
+        width: 21.875em;
+    }
+
+    h1 a {
+        margin: 0.6em 0 0.1em 1em;
+        background-position: 0 -4.8em;
+    }
+
+    #nav li.active {
+        background-size: 8.5em auto;
+        height: 3.2em;
+    }
+
+    #nav a {
+        font-size: 0.85em;
+    }
+
+    footer ul {
+        min-width: 25em;
+    }
+
+        footer li a {
+            font-size: 2em;
+        }
+}
+
+/* 480px */
+@media screen and (max-width: 30em) {
+
+    body {
+        background-position: 0 -2em;
+    }
+
+    h1 a, h1 span {
+        background-size: 15.875em auto;
+        height: 3.4em;
+        width: 15.875em;
+    }
+
+    h1 a {
+        background-position: 0 -3.4em;
+        margin: 0 0 0.1em 1em;
+    }
+
+    footer ul {
+        min-width: 18em;
+    }
+
+        footer li a {
+            font-size: 1.5em;
+        }
+}
+
+/* 320px */
+@media screen and (max-width: 20em) {
+
+    #nav a {
+        padding: 0.85em 1em 1em 0.9em;
     }
 }
 
