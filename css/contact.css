@@ -11,13 +11,14 @@
 #content li {
     padding: 0 0 2em 2.5em;
     position: relative;
+    width: 85%;
+    height: 2em;
 }
 
 /* web font icons */
 #content li:before {
     font-family: 'borntocode-custom';
     font-size: 2em;
-
     position: absolute;
     left: 0;
 }
@@ -62,36 +63,3 @@
 .stackoverflow:before {
     content: '\e013';
 }
-
-
-/*@media all and (max-width: 68.25em) and (min-width: 48em) { 
-    #content p {
-        padding: 0;
-    }
-       
-    #content a, #content strong {
-        font-size: 0.7em;
-        width: 20em;
-    }
-}
-
-@media all and (max-width: 47.8125em) {  ~16px 
-    #left, #right {
-        width: 100%;
-        float: none;
-    }
-    
-    #right {
-        padding: 0;
-    }
-    
-    #content p {
-        padding: 0;
-    }
-       
-    #content a, #content strong {
-        font-size: 0.7em;
-        width: 20em;
-    }
-}
-*/

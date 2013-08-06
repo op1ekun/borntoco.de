@@ -47,59 +47,11 @@
                     transform: rotate(0deg);
             -webkit-transform: rotate(0deg);
         }
-    
-    
-/* ~16px */    
-/*@media all and (max-width: 68.25em) and (min-width: 48em) { 
-    #left, 
-    #center {
-        width: 17.4em    
-    }
-    
-    #right {
-        margin: 0;
-        width: 36.8em;
-    }
-    
-    #right li {
-        float: left;
-    }
-    
-    #right a {
-        margin: 0 1em 1em 1em;
-    }
-    
-    #right img {
-        width: 10em;
-        height: auto;
+
+/* 640px */
+@media screen and (max-width: 40em) {
+    #left, #right, #center {
+        width: 100%;
+        margin: 0 0 0 0;
     }
 }
-*/
-    /* ~16px */
-/*@media all and (max-width: 47.8125em) { 
-    #content {
-        padding: 1em 0 11em 0;
-    }
-    
-    #content h2 {
-        display: none;
-    }
-    
-    #left, #center, #right {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-    
-    #right a {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-        #right img {
-            margin: 0 auto;
-            width: 70%;
-            height: auto;
-            display: block;
-        }
-}*/

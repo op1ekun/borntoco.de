@@ -1,37 +1,15 @@
-#content h3 {
-    padding: 0 0 1em 0;
-    font-family: 'sawasdeebold', sans-serif;
-    font-size: 1.5em;
-    letter-spacing: -0.18em;
-}
-
 #content em {
     font-weight: bold;
 }
 
 #left, #right {
-    width: 25em;
+    /* 500/1040 */
+    width: 48.0769231%;
 }
 
-/*@media all and (max-width: 68.25em) and (min-width: 48em) {  ~16px     
-    #left, 
-    #right {
-        width: 17.5em    
-    }
-}*/
-
-/*@media all and (max-width: 47.8125em) {
-    #content {
-        padding-top: 1em;
-    }
-    
-    #content h2 {
-        display: none;
-    }
-    
+/* 640px */
+@media screen and (max-width: 40em) {
     #left, #right {
-        margin: 0;
-        padding: 0;
         width: 100%;
     }
-}*/
+}
