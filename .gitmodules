@@ -1,6 +1,0 @@
-[submodule "deps/HTML5-reset"]
-	path = deps/HTML5-reset
-	url = git://github.com/murtaugh/HTML5-Reset.git
-[submodule "deps/hogan"]
-	path = deps/hogan
-	url = https://github.com/twitter/hogan.js.git
