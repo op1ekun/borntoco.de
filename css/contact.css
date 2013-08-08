@@ -1,3 +1,8 @@
+#left, #right {
+    /* 500/1040 */
+    width: 48.0769231%;
+}
+
 #content strong {
     font-weight: normal;
 }
@@ -30,7 +35,6 @@
 
 #content .gmail_chat:before {
     content: '\e016';
-    font-size: 1.8em 
 }
 
 .skype:before {
@@ -63,4 +67,11 @@
 
 .stackoverflow:before {
     content: '\e013';
+}
+
+/* 640px */
+@media screen and (max-width: 40em) {
+    #left, #right {
+        width: 100%;
+    }
 }

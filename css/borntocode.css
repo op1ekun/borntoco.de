@@ -38,11 +38,6 @@ html {
         background-size: 60em auto; /* ~960px */
         
         min-height: 100%;
-
-                transition: background-size 0.6s ease 0.1s,
-                            background-position 0.6s ease 0.1s;
-        -webkit-transition: background-size 0.6s ease 0.1s,
-                            background-position 0.6s ease 0.1s;
     }
 
         #wrapper, #footer_wrapper {
@@ -64,9 +59,6 @@ html {
 
                 background: transparent url(../static/img/header2.jpg) 6.875em 7.375em no-repeat;
                 background-size: 23.25em auto;
-
-                        transition: background-position 0.5s ease 0s;
-                -webkit-transition: background-position 0.5s ease 0s;
             }
             
                 header h1 {
@@ -83,17 +75,6 @@ html {
                     background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
                     background-size: 28.875em auto;
                     text-indent: -5000em;
-
-                            transition: margin 0.6s ease 0.1s,
-                                        background-size 0.6s ease 0.1s,
-                                        background-position 0.6s ease 0.1s,
-                                        height 0.6s ease 0.1s,
-                                        width 0.6s ease 0.1s;
-                    -webkit-transition: margin 0.6s ease 0.1s,
-                                        background-size 0.6s ease 0.1s,
-                                        background-position 0.6s ease 0.1s,
-                                        height 0.6s ease 0.1s,
-                                        width 0.6s ease 0.1s;
                 }
                 
                 h1 span {
@@ -107,19 +88,6 @@ html {
                     background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
                     background-size: 28.875em auto;
                     opacity: 0;
-                    
-                            transition: margin 0.6s ease 0.1s,
-                                        background-size 0.6s ease 0.1s,
-                                        background-position 0.6s ease 0.1s,
-                                        opacity 0.6s ease 0.1s,
-                                        height 0.6s ease 0.1s,
-                                        width 0.6s ease 0.1s;
-                    -webkit-transition: margin 0.6s ease 0.1s,
-                                        background-size 0.6s ease 0.1s,
-                                        background-position 0.6s ease 0.1s,
-                                        opacity 0.6s ease 0.1s,
-                                        height 0.6s ease 0.1s,
-                                        width 0.6s ease 0.1s;
                 }
                 
                 h1 a:hover span {
@@ -135,22 +103,12 @@ html {
 
                     font-style: italic;
                     text-align: right;
-
-                            transition: font-size 0.6s ease 0s,
-                                        opacity 0.3s ease 0s,
-                                        width 0.6s ease 0s;
-                    -webkit-transition: font-size 0.6s ease 0s,
-                                        opacity 0.3s ease 0s,
-                                        width 0.6s ease 0s;
                 }
 
                 header q a:link,
                 header q a:visited,
                 header q a:active {
-                    display: inline;
-
-                            transition: color 0.6s ease 0.1s;
-                    -webkit-transition: color 0.6s ease 0.1s;
+                    display: inline;;
                 }
 
                 header q a:hover {
@@ -160,9 +118,6 @@ html {
                 #nav {
                     padding-bottom: 5em;
                     text-align: right;
-
-                            transition: padding 0.6s ease 0.1s;
-                    -webkit-transition: padding 0.6s ease 0.1s;
                 }
                 
                         #nav li {
@@ -183,13 +138,9 @@ html {
                                 text-transform: uppercase;
                                 letter-spacing: -0.15em;
                                 color: #abb0aa;
-                                
-                                        transition: color 0.6s ease 0.1s,
-                                                    padding 0.6s ease 0s,
-                                                    font-size 0.6s ease 0.1s;
-                                -webkit-transition: color 0.6s ease 0.1s, 
-                                                    padding 0.6s ease 0s,
-                                                    font-size 0.6s ease 0.1s;
+
+                                /* SHAME, necessary for win browsers */
+                                line-height: 1.6em;
                             }
                         
                         #nav li.active {
@@ -197,11 +148,6 @@ html {
 
                             background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;
                             background-size: 12.5em auto;
-
-                                    transition: background-size 0.6s ease 0.1s,
-                                                height 0.6s ease 0.1s;
-                            -webkit-transition: background-size 0.6s ease 0.1s,
-                                                height 0.6s ease 0.1s;
                         }
                             
                             #nav li.active a {
@@ -232,9 +178,6 @@ html {
                         font-size: 2em;
                         text-transform: uppercase;
                         letter-spacing: -0.15em;
-
-                                transition: font-size 0.6s ease 0.1s;
-                        -webkit-transition: font-size 0.6s ease 0.1s;   
                     }
                     
                     #content p { 
@@ -242,12 +185,11 @@ html {
                         line-height: 2em; 
                     }
                     
-                    #content a {
+                    #content a:link,
+                    #content a:visited,
+                    #content a:active {
                         color: #000;
                         font-weight: bolder;
-                        
-                                transition: color 0.6s ease 0.1s;
-                        -webkit-transition: color 0.6s ease 0.1s;
                     }
                     
                     #content a:hover {
@@ -256,10 +198,7 @@ html {
 
                 #left, #center, #right {
                     padding: 1em 0 0 0;
-                    vertical-align: top;
-
-                            transition: width 0.6s ease 0.1s;
-                    -webkit-transition: width 0.6s ease 0.1s;        
+                    vertical-align: top;        
                 }
                     
                 footer {
@@ -278,9 +217,6 @@ html {
                         width: 40%;
                         min-width: 28em;
                         text-align: justify;
-
-                                transition: min-width 0.6s ease 0.1s;
-                        -webkit-transition: min-width 0.6s ease 0.1s;
                     }
 
                     footer ul:after {
@@ -302,9 +238,6 @@ html {
                                 text-transform: uppercase;
                                 letter-spacing: -0.15em;
                                 color: #aaa;
-
-                                        transition: font-size 0.6s ease 0.1s;
-                                -webkit-transition: font-size 0.6s ease 0.1s;
                             }
                             
                     footer p a:link,
@@ -314,15 +247,8 @@ html {
                         padding-bottom: 0.5em;
                         color: #aaa;
                     }
-                    
-/* biggest - more than ~1377px */
-/*@media all and (min-width: 86.125em) {
-    #wrapper {
-        border: 1px solid red;
-    }
-}*/
 
-/* 1052px/16px */
+/* 1052px / 16px */
 @media screen and (max-width: 65.75em) {
 
     header {
@@ -355,9 +281,9 @@ html {
 
     h1 a,
     h1 span {
-        background-size: 21.875em auto;
+        background-size: 21.8em auto;
         height: 4.8em;
-        width: 21.875em;
+        width: 21.8em;
     }
 
     h1 a {
@@ -408,7 +334,7 @@ html {
 /* 500 */
 @media screen and (max-width: 31.25em) {
     header q {
-        opacity: 0;
+        font-size: 0;
     }
 }
 
@@ -420,9 +346,9 @@ html {
     }
 
     h1 a, h1 span {
-        background-size: 15.875em auto;
+        background-size: 15.7em auto;
         height: 3.4em;
-        width: 15.875em;
+        width: 15.8em;
     }
 
     h1 a {
