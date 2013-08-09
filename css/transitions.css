@@ -1,8 +1,21 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+            transition: color 0.6s ease 0.1s;
+    -webkit-transition: color 0.6s ease 0.1s;
+}
+
 body, 
-h1 a, 
+h1 a:link,
+h1 a:visited,
+h1 a:active, 
 h1 span, 
 header q, 
-#nav a, 
+#nav a:link, 
+#nav a:visited, 
+#nav a:hover, 
+#nav a:active, 
 #nav li.active {
             transition: all 0.6s ease 0.1s;
     -webkit-transition: all 0.6s ease 0.1s;
@@ -13,12 +26,6 @@ header {
     -webkit-transition: background-position 0.5s ease 0s;
 }
 
-a:link,
-a:visited,
-a:active {
-            transition: color 0.6s ease 0.1s;
-    -webkit-transition: color 0.6s ease 0.1s;
-}
 
 #nav {
             transition: padding 0.6s ease 0.1s;
