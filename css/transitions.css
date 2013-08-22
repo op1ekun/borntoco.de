@@ -2,8 +2,10 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-            transition: color 0.6s ease 0.1s;
     -webkit-transition: color 0.6s ease 0.1s;
+       -moz-transition: color 0.6s ease 0.1s;
+         -o-transition: color 0.6s ease 0.1s;
+            transition: color 0.6s ease 0.1s;
 }
 
 body, 
@@ -17,19 +19,25 @@ header q,
 #nav a:hover, 
 #nav a:active, 
 #nav li.active {
-            transition: all 0.6s ease 0.1s;
     -webkit-transition: all 0.6s ease 0.1s;
+       -moz-transition: all 0.6s ease 0.1s;
+         -o-transition: all 0.6s ease 0.1s;
+            transition: all 0.6s ease 0.1s;
 }
 
 header {
-            transition: background-position 0.5s ease 0s;
     -webkit-transition: background-position 0.5s ease 0s;
+       -moz-transition: background-position 0.5s ease 0s;
+         -o-transition: background-position 0.5s ease 0s;
+            transition: background-position 0.5s ease 0s;
 }
 
 
 #nav {
-            transition: padding 0.6s ease 0.1s;
     -webkit-transition: padding 0.6s ease 0.1s;
+       -moz-transition: padding 0.6s ease 0.1s;
+         -o-transition: padding 0.6s ease 0.1s;
+            transition: padding 0.6s ease 0.1s;
 }
 
 #content h2,
@@ -37,16 +45,22 @@ footer li a:link,
 footer li a:visited,
 footer li a:hover,
 footer li a:active {
+    -webkit-transition: font-size 0.6s ease 0.1s;
+       -moz-transition: font-size 0.6s ease 0.1s;
+         -o-transition: font-size 0.6s ease 0.1s;
             transition: font-size 0.6s ease 0.1s;
-    -webkit-transition: font-size 0.6s ease 0.1s;   
 }
 
 #left, #center, #right {
-            transition: width 0.6s ease 0.1s;
-    -webkit-transition: width 0.6s ease 0.1s;        
+    -webkit-transition: width 0.6s ease 0.1s;
+       -moz-transition: width 0.6s ease 0.1s;
+         -o-transition: width 0.6s ease 0.1s;
+            transition: width 0.6s ease 0.1s;       
 }
 
 footer ul {
-            transition: min-width 0.6s ease 0.1s;
     -webkit-transition: min-width 0.6s ease 0.1s;
+       -moz-transition: min-width 0.6s ease 0.1s;
+         -o-transition: min-width 0.6s ease 0.1s;
+            transition: min-width 0.6s ease 0.1s;
 }
