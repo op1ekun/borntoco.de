@@ -48,6 +48,18 @@
             -webkit-transform: rotate(0deg);
         }
 
+/* 768px */
+@media screen and (max-width: 48em) {
+    #left, #center {
+        width: 47%;
+    }
+
+    #right {
+        width: 100%;
+        margin: 0 0 0 0;
+    }
+}
+
 /* 640px */
 @media screen and (max-width: 40em) {
     #left, #right, #center {
