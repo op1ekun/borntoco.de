@@ -1,0 +1,44 @@
+{
+  "name": "borntoco.de",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ./node_modules/.bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/op1ekun/borntoco.de.git"
+  },
+  "keywords": [
+    "personal",
+    "cv",
+    "portfolio",
+    "website"
+  ],
+  "author": "op1ekun@borntoco.de",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/op1ekun/borntoco.de/issues"
+  },
+  "homepage": "https://github.com/op1ekun/borntoco.de#readme",
+  "devDependencies": {
+    "@types/enzyme": "^2.8.11",
+    "@types/mocha": "^2.2.43",
+    "@types/react": "^15.6.4",
+    "@types/react-dom": "^15.5.6",
+    "assert": "^1.4.1",
+    "enzyme": "^2.9.1",
+    "express": "^4.16.1",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
+    "react-test-renderer": "^15.6.2",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  }
+}

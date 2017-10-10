@@ -1,0 +1,2 @@
+--compilers tsx:ts-node/register
+src/**/*.test.tsx
