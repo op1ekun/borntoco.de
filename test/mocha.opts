@@ -1,2 +1,4 @@
---compilers tsx:ts-node/register
+--full-trace
+--bail
+--ui tdd
 src/**/*.test.tsx

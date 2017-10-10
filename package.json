@@ -4,7 +4,8 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
-    "test": "nyc ./node_modules/.bin/_mocha"
+    "test": "nyc ./node_modules/.bin/_mocha",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,12 @@
   },
   "homepage": "https://github.com/op1ekun/borntoco.de#readme",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
     "@types/enzyme": "^2.8.11",
     "@types/mocha": "^2.2.43",
     "@types/react": "^15.6.4",
     "@types/react-dom": "^15.5.6",
-    "assert": "^1.4.1",
+    "chai": "^4.1.2",
     "enzyme": "^2.9.1",
     "express": "^4.16.1",
     "mocha": "^4.0.1",
@@ -40,5 +42,30 @@
   "dependencies": {
     "react": "^15.6.2",
     "react-dom": "^15.6.2"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx"
+    ],
+    "exclude": [
+      "src/**/*.test.ts",
+      "src/**/*.test.tsx",
+      "node_modules/",
+      "dist/"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
   }
 }

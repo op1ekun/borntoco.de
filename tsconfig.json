@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "lib": [
+            "es2015",
+            "es2015.promise",
+            "dom"
+        ],
+        "jsx": "react",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "outDir": "dist"
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test",
+        "**/*.test.tsx"
+    ]
+}
