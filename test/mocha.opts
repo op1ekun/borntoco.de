@@ -1,3 +1,4 @@
+--require test/dom.js
 --full-trace
 --bail
 --ui tdd

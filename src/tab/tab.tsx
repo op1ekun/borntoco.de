@@ -8,12 +8,12 @@ export interface TabProps {
 export default class Tab extends React.Component<TabProps, {}> {
 
 	constructor(props: TabProps) {
-        super();
+        super(props);
     }
 
     public render() {
         return (
-            <li>
+            <li className="tab">
                 { this.props.url
                 ? <a href={this.props.url}>{this.props.label}</a>
                 : this.props.label }

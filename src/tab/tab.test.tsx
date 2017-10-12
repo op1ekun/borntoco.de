@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { assert } from 'chai';
 
-import { shallow, mount, ShallowWrapper } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 
 import Tab from './tab';
 
@@ -15,7 +15,7 @@ describe('Tab', () => {
     });
 
     describe('render', () => {
-        const label = 'CUT';
+        const label = 'componentUnderTest';
         const url = 'dummy.url';
 
         it('renders a label', () => {
@@ -24,6 +24,7 @@ describe('Tab', () => {
             });
 
             assert.equal(tabComponent.text(), label);
+            assert.include(tabComponent.html(), 'class="tab"');
         });
 
         it('renders a link with the label\'s text', () => {
