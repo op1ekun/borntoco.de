@@ -1,0 +1,37 @@
+{
+    "rules": {
+        "indent": [
+            true,
+            "spaces",
+            4
+        ],
+        "eofline": true,
+        "no-var-keyword": true,
+        "prefer-const": true,
+        "trailing-comma": false,
+        "no-irregular-whitespace": true,
+        "object-literal-shorthand": true,
+        "arrow-return-shorthand": true,
+        "arrow-parens": true,
+        "class-name": true,
+        "object-literal-key-quotes": false,
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "space-before-function-paren": [
+            true, 
+            {
+                "anonymous": "always",
+                "named": "never",
+                "method": "never",
+                "constructor": "never"
+            }
+        ],
+        "triple-equals": [
+            true,
+            "allow-null-check"
+        ]
+    }
+}
