@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { assert } from 'chai';
-
 import { shallow, ShallowWrapper } from 'enzyme';
 
 import Tab from './tab';

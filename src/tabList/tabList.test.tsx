@@ -1,22 +1,12 @@
 import * as React from 'react';
 import { assert } from 'chai';
-
 import { mount, ReactWrapper } from 'enzyme';
 
 import TabList from './tabList';
-import { TabProps } from '../tab/tab';
+import { tabs } from '../../test/dummies/tabProps.dummy';
 
 describe('TabList', () => {
     let listComponent: ReactWrapper;
-    const tabs: TabProps[] = [
-        {
-            label: 'tab1'
-        },
-        {
-            label: 'tab2',
-            url: 'dummy2.url'
-        }
-    ];
 
     beforeEach(() => {
         listComponent = mount(<TabList tabs={[]} />);
@@ -40,7 +30,7 @@ describe('TabList', () => {
                 tabs
             });
 
-            assert.equal(listComponent.find('li').length, tabs.length);
+            assert.equal(listComponent.find('li.tab').length, tabs.length);
         });
     });
 });

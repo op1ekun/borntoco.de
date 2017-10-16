@@ -12,7 +12,7 @@ export default class TabList extends React.Component<TabsListProps, {}> {
     }
 
     public render() {
-        const tabs = this.props.tabs;
+        const  { tabs } = this.props;
 
         return (
             <ul className="tabs">
