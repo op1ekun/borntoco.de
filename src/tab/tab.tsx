@@ -7,11 +7,7 @@ export interface TabProps {
 };
 
 export default class Tab extends React.Component<TabProps, {}> {
-
-    constructor(props: TabProps) {
-        super(props);
-    }
-
+    
     public render() {
         const {
             url,

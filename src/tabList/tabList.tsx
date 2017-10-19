@@ -6,10 +6,6 @@ export interface TabsListProps {
 };
 
 export default class TabList extends React.Component<TabsListProps, {}> {
-    
-    constructor(props: TabsListProps) {
-        super(props);
-    }
 
     public render() {
         const  { tabs } = this.props;

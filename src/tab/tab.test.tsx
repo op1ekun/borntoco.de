@@ -2,10 +2,10 @@ import * as React from 'react';
 import { assert } from 'chai';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import Tab from './tab';
+import Tab, { TabProps } from './tab';
 
 describe('Tab', () => {
-    let tabComponent: ShallowWrapper;
+    let tabComponent: ShallowWrapper<TabProps>;
 
     beforeEach(() => {
         tabComponent = shallow(<Tab 

@@ -2,11 +2,11 @@ import * as React from 'react';
 import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
-import TabList from './tabList';
+import TabList, { TabsListProps } from './tabList';
 import { tabs } from '../../test/dummies/tabProps.dummy';
 
 describe('TabList', () => {
-    let listComponent: ReactWrapper;
+    let listComponent: ReactWrapper<TabsListProps>;
 
     beforeEach(() => {
         listComponent = mount(<TabList tabs={[]} />);
