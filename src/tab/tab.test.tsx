@@ -16,14 +16,16 @@ describe('Tab', () => {
     describe('render', () => {
         const label = 'componentUnderTest';
         const url = 'dummy.url';
+        const classes = [ 'one', 'two' ];
 
         it('renders a label', () => {
             tabComponent.setProps({
-                label
+                label,
+                classes
             });
 
             assert.equal(tabComponent.text(), label);
-            assert.include(tabComponent.html(), 'class="tab"');
+            assert.include(tabComponent.html(), 'class="tab one two"');
         });
 
         it('renders a link with the label\'s text', () => {
