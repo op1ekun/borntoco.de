@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nyc ./node_modules/.bin/_mocha",
-    "build": "tsc",
+    "build": "webpack",
     "lint": "tslint --project ./tsconfig.json"
   },
   "repository": {
@@ -37,9 +37,11 @@
     "mocha": "^4.0.1",
     "nyc": "^11.2.1",
     "react-test-renderer": "^15.6.2",
+    "ts-loader": "^3.0.5",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
-    "typescript": "^2.5.3"
+    "typescript": "^2.5.3",
+    "webpack": "^3.8.1"
   },
   "dependencies": {
     "react": "^15.6.2",
