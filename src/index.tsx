@@ -5,16 +5,16 @@ import Header from './header/header';
 
 render(<Header tabs={[
     {
-        label: 'one',
+        label: 'about me',
         url: '/about',
-        classes: [ 'first' ]
+        classes: [ 'first', 'active' ]
     },
     {
-        label: 'two',
+        label: 'works',
         url: '/works'
     },
     {
-        label: 'three',
+        label: 'contact',
         url: '/contact'
     }
-]} />, document.getElementById('wrapper'));
+]} />, document.getElementById('header'));
