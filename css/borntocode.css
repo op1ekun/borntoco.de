@@ -144,6 +144,7 @@ html {
                             }
 
                             #nav a {
+                                position: relative;
                                 border-right: 1px solid #000;
                                 padding: 0.85em 1.4em 1em 1.25em;
                                 
@@ -158,19 +159,24 @@ html {
                             }
                         
                         #nav li a.active {
-                            height: 5em;
-
+                            color: #754628;
                             background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;
-                            background-size: 12.5em auto;
+                        }
+
+                        #nav li a.active span {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 110%;
+                            background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;
+                            z-index: -1;
                         }
                             
-                            #nav li.active a {
-                                color: #754628;
-                            }
                             
-                            #nav a:hover {
-                                color: #abb0aa;
-                            }
+                        #nav a:hover {
+                            color: #abb0aa;
+                        }
                 
                 #content {
                     text-align: justify;

@@ -21,7 +21,7 @@ export default class Tab extends React.Component<TabProps, {}> {
         return (
             <li className={`tab${classesString}`}>
                 { this.props.url
-                ? <NavLink to={this.props.url} activeClassName="active">{this.props.label}</NavLink>
+                ? <NavLink to={this.props.url} activeClassName="active">{this.props.label}<span></span></NavLink>
                 : this.props.label }
             </li>
         );
