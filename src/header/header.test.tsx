@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { HashRouter } from 'react-router-dom';
 import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
@@ -9,32 +10,31 @@ import Header from './header';
 describe('Header', () => {
 
     describe('render', () => {
-        let headerComponent: ReactWrapper;
+        let hashRouterComponent: ReactWrapper;
     
-        beforeEach(() => {
-            headerComponent = mount(<Header tabs={ [] } />);
-        });
+        beforeEach(() =>
+            hashRouterComponent = mount(
+                <HashRouter>
+                    <Header tabs={tabs} />
+                </HashRouter>)
+        );
 
         it('renders the logotype', () => {
-            const logoElem = headerComponent.find('h1 > a');
+            const logoElem = hashRouterComponent.find('h1 > a');
 
             assert.equal(logoElem.length, 1);
             assert.equal(logoElem.text(), 'borntoco.de');
         });
 
         it('renders the quote', () => {
-            const quoteElem = headerComponent.find('q > a');
+            const quoteElem = hashRouterComponent.find('q > a');
 
             assert.equal(quoteElem.length, 1);
             assert.isString(quoteElem.text());
         });
 
         it('renders the nav menu', () => {
-            headerComponent.setProps({
-                tabs
-            });
-
-            assert.equal(headerComponent.find('nav ul.tabs li.tab').length, 2);
+            assert.equal(hashRouterComponent.find('nav ul.tabs li.tab').length, 2);
         });
     });
 });

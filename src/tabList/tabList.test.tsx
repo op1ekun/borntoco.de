@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { HashRouter } from 'react-router-dom';
 import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
@@ -6,31 +7,33 @@ import TabList, { TabsListProps } from './tabList';
 import { tabs } from '../../test/dummies/tabProps.dummy';
 
 describe('TabList', () => {
-    let listComponent: ReactWrapper<TabsListProps>;
+    let hashRouterComponent: ReactWrapper;
 
-    beforeEach(() => {
-        listComponent = mount(<TabList tabs={[]} />);
+    it('renders an empty list element if not tabs were provided', () => {
+        hashRouterComponent = mount(
+            <HashRouter>
+                <TabList tabs={ [] } />
+            </HashRouter>
+        );
+
+        assert.equal(hashRouterComponent.find('ul').html(), '<ul class="tabs"></ul>');
     });
-
+    
     describe('render', () => {
-        it('renders an empty list element', () => {
-            assert.equal(listComponent.find('ul').html(), '<ul class="tabs"></ul>');
+        beforeEach(() => {
+            hashRouterComponent = mount(
+                <HashRouter>
+                    <TabList tabs={tabs} />
+                </HashRouter>
+            );
         });
 
         it('renders list element', () => {
-            listComponent.setProps({
-                tabs
-            });
-
-            assert.equal(listComponent.find('ul').length, 1);
+            assert.equal(hashRouterComponent.find('ul').length, 1);
         });
 
         it('renders correct number of tabs', () => {
-            listComponent.setProps({
-                tabs
-            });
-
-            assert.equal(listComponent.find('li.tab').length, tabs.length);
+            assert.equal(hashRouterComponent.find('li.tab').length, tabs.length);
         });
     });
 });

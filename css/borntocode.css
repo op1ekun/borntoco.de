@@ -157,7 +157,7 @@ html {
                                 line-height: 1.6em;
                             }
                         
-                        #nav li.active {
+                        #nav li a.active {
                             height: 5em;
 
                             background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;

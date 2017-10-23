@@ -9,7 +9,7 @@ export default class Header extends React.Component<TabsListProps, {}> {
         return (
             <header>
                 <h1>
-                    <a href="/about">borntoco.de<span></span></a>
+                    <a href="/">borntoco.de<span></span></a>
                 </h1>
                 <q>
                     <a href="http://www.codinghorror.com/blog/2004/08/why-im-the-best-programmer-in-the-world.html">But it's not our job to be better than anyone else; we&nbsp;just need to be better than we were a year ago.

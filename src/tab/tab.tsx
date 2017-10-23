@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export interface TabProps {
     label: string,
@@ -20,7 +21,7 @@ export default class Tab extends React.Component<TabProps, {}> {
         return (
             <li className={`tab${classesString}`}>
                 { this.props.url
-                ? <a href={this.props.url}>{this.props.label}</a>
+                ? <NavLink to={this.props.url} activeClassName="active">{this.props.label}</NavLink>
                 : this.props.label }
             </li>
         );

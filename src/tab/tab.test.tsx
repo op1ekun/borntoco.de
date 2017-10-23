@@ -1,41 +1,35 @@
 import * as React from 'react';
+import { HashRouter } from 'react-router-dom';
 import { assert } from 'chai';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 
 import Tab, { TabProps } from './tab';
 
 describe('Tab', () => {
-    let tabComponent: ShallowWrapper<TabProps>;
+    const label = 'componentUnderTest';
+    const url = 'dummy.url';
+    const classes = [ 'one', 'two' ];
 
-    beforeEach(() => {
-        tabComponent = shallow(<Tab 
-            label={'dummyLabel'}
-        />);
-    });
+    let hashRouterComponent: ReactWrapper;
 
-    describe('render', () => {
-        const label = 'componentUnderTest';
-        const url = 'dummy.url';
-        const classes = [ 'one', 'two' ];
+    it('renders a tab with just a label', () => {
+        hashRouterComponent = mount(
+            <HashRouter>
+                <Tab label={label} classes={classes} />
+            </HashRouter>);
 
-        it('renders a label', () => {
-            tabComponent.setProps({
-                label,
-                classes
-            });
+        assert.equal(hashRouterComponent.text(), label);
+        assert.notInclude(hashRouterComponent.html(), 'href')
+        assert.include(hashRouterComponent.html(), 'class="tab one two"');
+    })
 
-            assert.equal(tabComponent.text(), label);
-            assert.include(tabComponent.html(), 'class="tab one two"');
-        });
+    it('renders a link with the label\'s text', () => {
+        hashRouterComponent = mount(
+            <HashRouter>
+                <Tab label={label} url={url} classes={classes} />
+            </HashRouter>);
 
-        it('renders a link with the label\'s text', () => {
-            tabComponent.setProps({
-                label,
-                url
-            });
-
-            assert.equal(tabComponent.find('a').props().href, url);
-            assert.equal(tabComponent.find('a').text(), label);
-        });
+        assert.equal(hashRouterComponent.find('a').props().href, `#/${url}`);
+        assert.equal(hashRouterComponent.find('a').text(), label);
     });
 });
