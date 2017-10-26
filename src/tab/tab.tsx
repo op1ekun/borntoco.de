@@ -16,10 +16,10 @@ export default class Tab extends React.Component<TabProps, {}> {
             classes
         } = this.props;
 
-        const classesString = classes && classes.length ? ` ${classes.join(' ')}` : ''; 
+        const classesString = classes && classes.length ? `${classes.join(' ')}` : ''; 
         
         return (
-            <li className={`tab${classesString}`}>
+            <li className={`tab ${classesString}`}>
                 { this.props.url
                 // FIXME replace <span> with :after pseudoclass element
                 ? <NavLink to={this.props.url} activeClassName="active">{this.props.label}</NavLink>
