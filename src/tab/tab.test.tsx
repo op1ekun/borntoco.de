@@ -17,7 +17,7 @@ describe('Tab', () => {
         it('renders a tab with just a label', () => {
             hashRouterComponent = mount(
                 <HashRouter>
-                    <Tab label={label} classes={classes} />
+                    <Tab label={ label } classes={ classes } />
                 </HashRouter>);
     
             assert.equal(hashRouterComponent.text(), label);
@@ -28,10 +28,10 @@ describe('Tab', () => {
         it('renders a link with the label\'s text', () => {
             hashRouterComponent = mount(
                 <HashRouter>
-                    <Tab label={label} url={url} classes={classes} />
+                    <Tab label={ label } url={ url } classes={ classes } />
                 </HashRouter>);
     
-            assert.equal(hashRouterComponent.find('a').props().href, `#/${url}`);
+            assert.equal(hashRouterComponent.find('a').props().href, `#/${ url }`);
             assert.equal(hashRouterComponent.find('a').text(), label);
         });
     });

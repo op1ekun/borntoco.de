@@ -23,7 +23,7 @@ describe('TabList', () => {
         beforeEach(() => {
             hashRouterComponent = mount(
                 <HashRouter>
-                    <TabList tabs={tabs} />
+                    <TabList tabs={ tabs } />
                 </HashRouter>
             );
         });

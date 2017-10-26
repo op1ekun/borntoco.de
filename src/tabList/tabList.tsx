@@ -14,7 +14,7 @@ export default class TabList extends React.Component<TabsListProps, {}> {
             <ul className="tabs">
                 { tabs && tabs.length
                 ? tabs.map((tab, index) =>
-                    <Tab { ...tab } key={index} />)
+                    <Tab { ...tab } key={ index } />)
                 : null }
             </ul>
         );
