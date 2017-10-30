@@ -3,6 +3,7 @@
         "tslint-react"
     ],
     "rules": {
+        "semicolon": true,
         "indent": [
             true,
             "spaces",

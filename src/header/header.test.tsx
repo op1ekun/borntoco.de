@@ -15,7 +15,7 @@ describe('Header', () => {
         beforeEach(() =>
             hashRouterComponent = mount(
                 <HashRouter>
-                    <Header tabs={tabs} />
+                    <Header tabs={ tabs } />
                 </HashRouter>)
         );
 
@@ -31,6 +31,7 @@ describe('Header', () => {
 
             assert.equal(quoteElem.length, 1);
             assert.isString(quoteElem.text());
+            assert(quoteElem.text().length > 0);
         });
 
         it('renders the nav menu', () => {

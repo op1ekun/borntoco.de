@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './header/header';
+import About from './about/about';
 
 export class Noop extends React.Component<{ label: string }, {}> {
     public render() {
@@ -12,8 +13,8 @@ export class Noop extends React.Component<{ label: string }, {}> {
 
 render(
     <HashRouter>
-        <div>
-            <Header 
+        <div id="wrapper">
+            <Header
                 tabs={ [
                     {
                         label: 'about me',
@@ -32,10 +33,10 @@ render(
             />
             <Switch>
                 <Redirect exact={ true } path="/" to="/about" />
-                <Route path="/about" render={ () => <Noop label="about" /> } />
+                <Route path="/about" render={ () => <About title="about me" /> } />
                 <Route path="/works" render={ () => <Noop label="works" /> } />
                 <Route path="/contact" render={ () => <Noop label="contact" /> } />
             </Switch>
         </div>
     </HashRouter>,
-document.getElementById('header'));
+document.getElementById('root'));

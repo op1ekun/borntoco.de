@@ -21,9 +21,9 @@ describe('Tab', () => {
                 </HashRouter>);
     
             assert.equal(hashRouterComponent.text(), label);
-            assert.notInclude(hashRouterComponent.html(), 'href')
+            assert.notInclude(hashRouterComponent.html(), 'href');
             assert.include(hashRouterComponent.html(), 'class="tab one two"');
-        })
+        });
     
         it('renders a link with the label\'s text', () => {
             hashRouterComponent = mount(

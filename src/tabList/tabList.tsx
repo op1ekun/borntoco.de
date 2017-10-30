@@ -2,8 +2,8 @@ import * as React from 'react';
 import Tab, { TabProps } from '../tab/tab';
 
 export interface TabsListProps {
-    tabs: TabProps[]
-};
+    tabs: TabProps[];
+}
 
 export default class TabList extends React.Component<TabsListProps, {}> {
 

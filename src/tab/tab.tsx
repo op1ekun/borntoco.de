@@ -2,10 +2,10 @@ import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
 export interface TabProps {
-    label: string,
-    url?: string,
-    classes?: Array<string>
-};
+    label: string;
+    url?: string;
+    classes?: Array<string>;
+}
 
 export default class Tab extends React.Component<TabProps, {}> {
     
@@ -28,4 +28,4 @@ export default class Tab extends React.Component<TabProps, {}> {
             </li>
         );
     }
-};
+}

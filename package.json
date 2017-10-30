@@ -4,8 +4,8 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
-    "test": "nyc ./node_modules/.bin/_mocha",
-    "build": "webpack",
+    "test": "NODE_ENV=test nyc ./node_modules/.bin/_mocha",
+    "build": "NODE_ENV=production webpack",
     "lint": "tslint --project ./tsconfig.json",
     "lint:fix": "tslint --project ./tsconfig.json --fix"
   },
