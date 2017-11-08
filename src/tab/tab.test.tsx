@@ -5,7 +5,7 @@ import { mount, ReactWrapper } from 'enzyme';
 
 import Tab, { TabProps } from './tab';
 
-describe('Tab', () => {
+describe('Tab component', () => {
 
     describe('render', () => {
         const label = 'componentUnderTest';

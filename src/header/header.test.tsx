@@ -7,7 +7,7 @@ import { tabs } from '../../test/dummies/tabProps.dummy';
 
 import Header from './header';
 
-describe('Header', () => {
+describe('Header component', () => {
 
     describe('render', () => {
         let hashRouterComponent: ReactWrapper;

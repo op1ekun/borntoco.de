@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 
 import About, { AboutProps } from './about';
 
-describe('About content', () => {
+describe('About component', () => {
 
     describe('render', () => {
         let aboutComponent: ShallowWrapper;

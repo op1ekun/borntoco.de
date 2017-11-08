@@ -6,7 +6,7 @@ import { mount, ReactWrapper } from 'enzyme';
 import TabList, { TabsListProps } from './tabList';
 import { tabs } from '../../test/dummies/tabProps.dummy';
 
-describe('TabList', () => {
+describe('TabList component', () => {
     let hashRouterComponent: ReactWrapper;
 
     it('renders an empty list element if not tabs were provided', () => {
