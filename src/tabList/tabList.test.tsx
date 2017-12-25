@@ -7,7 +7,7 @@ import TabList, { TabsListProps } from './tabList';
 import { tabs } from '../../test/dummies/tabProps.dummy';
 
 describe('TabList component', () => {
-    let hashRouterComponent: ReactWrapper;
+    let hashRouterComponent: ReactWrapper<HashRouter>;
 
     it('renders an empty list element if not tabs were provided', () => {
         hashRouterComponent = mount(
@@ -34,6 +34,30 @@ describe('TabList component', () => {
 
         it('renders correct number of tabs', () => {
             assert.equal(hashRouterComponent.find('li.tab').length, tabs.length);
+        });
+
+        it('renders the first tab link', () => {
+            const {
+                label,
+                url,
+                classes
+            } = tabs[0];
+            
+            const firstTab = hashRouterComponent.find('li.tab.one a');
+            assert.equal(firstTab.text(), label);
+            assert.equal(firstTab.props().href, `#/${ url }`);
+        });
+
+        it('renders the second tab link', () => {
+            const {
+                label,
+                url,
+                classes
+            } = tabs[1];
+            
+            const firstTab = hashRouterComponent.find('li.tab.two a');
+            assert.equal(firstTab.text(), label);
+            assert.equal(firstTab.props().href, `#/${ url }`);
         });
     });
 });

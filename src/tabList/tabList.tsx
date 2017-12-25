@@ -1,5 +1,11 @@
 import * as React from 'react';
-import Tab, { TabProps } from '../tab/tab';
+import { NavLink } from 'react-router-dom';
+
+export interface TabProps {
+    label: string;
+    url: string;
+    classes?: Array<string>;
+}
 
 export interface TabsListProps {
     tabs: Array<TabProps>;
@@ -13,8 +19,15 @@ export default class TabList extends React.Component<TabsListProps, {}> {
         return (
             <ul className="tabs">
                 { tabs && tabs.length
-                ? tabs.map((tab, index) =>
-                    <Tab { ...tab } key={ index } />)
+                ? tabs.map((tab, index) => {
+                    const classes = tab.classes ?
+                        tab.classes.join(' ') :
+                        '';
+
+                    return  <li key={ index } className={ `tab ${ classes }` }>
+                                <NavLink to={ tab.url } activeClassName="active">{ tab.label }</NavLink>
+                            </li>;
+                })
                 : null }
             </ul>
         );
