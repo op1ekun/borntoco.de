@@ -4,6 +4,8 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
+    "watch-test": "NODE_ENV=test watch 'npm test' --wait=3 ./src",
+    "watch": "NODE_ENV=test watch 'npm run build' --wait=3 ./src",
     "test": "NODE_ENV=test nyc ./node_modules/.bin/_mocha",
     "build": "NODE_ENV=production webpack",
     "lint": "tslint --project ./tsconfig.json",
@@ -44,6 +46,7 @@
     "tslint": "^5.7.0",
     "tslint-react": "^3.2.0",
     "typescript": "^2.5.3",
+    "watch": "^1.0.2",
     "webpack": "^3.8.1"
   },
   "dependencies": {
