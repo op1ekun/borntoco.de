@@ -44,23 +44,15 @@ html {
         
         min-height: 100%;
     }
-
-        #wrapper, #footer_wrapper {
-            /* 32/1040 = 0.030769231 */
-            padding: 0 3.0769231%;
-        }
         
         #footer_wrapper {
             padding-top: 1.5em;
         }
-              
-        #wrapper, #footer_wrapper {
-            max-width: 65em; /* ~1040px */
-            margin: 0 auto;
-        }
 
             header {
                 position: relative;
+                width: 65em;
+                margin: 0 auto;
 
                 background: transparent url(../static/img/header2.jpg) 6.875em 7.375em no-repeat;
                 background-size: 23.25em auto;
@@ -185,6 +177,7 @@ html {
                     font-size: 1.25em; /* ~20px */
                     color: #222;
                     margin: 0 auto;
+                    width: 52em;
                 }
 
                 #content:after {
@@ -221,10 +214,16 @@ html {
                     padding: 1em 0 0 0;
                     vertical-align: top;        
                 }
+
+                #footer_wrapper {
+                    width: 65em;
+                    margin: 0 auto;
+                }
                     
                 footer {
                     position: absolute;
                     bottom: 0;
+                    left: 0;
 
                     background: transparent url(../static/img/footer.jpg) 0 0 repeat-x;
                     background-size: 60em auto;
