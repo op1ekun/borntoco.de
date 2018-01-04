@@ -21,8 +21,7 @@ export default class TabList extends React.Component<TabsListProps, {}> {
                 { tabs && tabs.length
                 ? tabs.map((tab, index) => {
                     const classes = tab.classes ?
-                        tab.classes.join(' ') :
-                        '';
+                        tab.classes.join(' ') : '';
 
                     return  <li key={ index } className={ `tab ${ classes }` }>
                                 <NavLink to={ tab.url } activeClassName="active">{ tab.label }</NavLink>

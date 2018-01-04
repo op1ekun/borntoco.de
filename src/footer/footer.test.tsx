@@ -20,7 +20,7 @@ describe('Footer component', () => {
         );
 
         it('renders the menu', () => {
-            assert.equal(hashRouterComponent.find('#footer_wrapper li.tab').length, 2);
+            assert.equal(hashRouterComponent.find('#footer_wrapper li.tab').length, tabs.length);
         });
 
         it('renders paragraphs', () => {

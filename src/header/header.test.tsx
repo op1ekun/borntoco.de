@@ -4,7 +4,6 @@ import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
 import { tabs } from '../../test/dummies/tabProps.dummy';
-
 import Header from './header';
 
 describe('Header component', () => {
@@ -35,7 +34,7 @@ describe('Header component', () => {
         });
 
         it('renders the nav menu', () => {
-            assert.equal(hashRouterComponent.find('nav ul.tabs li.tab').length, 2);
+            assert.equal(hashRouterComponent.find('nav ul.tabs li.tab').length, tabs.length);
         });
     });
 });

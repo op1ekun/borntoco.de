@@ -9,7 +9,52 @@ describe('About component', () => {
     describe('render', () => {
         let aboutComponent: ShallowWrapper;
         const aboutContent: AboutProps = {
-            title: 'Dummy Title'
+            title: 'Dummy Title',
+            left: {
+                para: [
+                    {
+                        text: 'col1'
+                    }
+                ]
+            },
+            center: {
+                para: [
+                    {
+                        text: '{{link:dummy1}} col2_1 {{link:dummy2}}.',
+                        links: [
+                            {
+                                href: 'dummy.url1',
+                                label: 'dummy1'
+                            },
+                            {
+                                href: 'dummy.url2',
+                                label: 'dummy2'
+                            }
+                        ]
+                    },
+                    {
+                        text: 'col2_2',
+                        links: [
+                            {
+                                href: 'dummy.url3',
+                                label: 'dummy3'
+                            }
+                        ]
+                    }
+                ]
+            },
+            right: {
+                links: [
+                    {
+                        href: 'dummy.url',
+                        imagePath: 'dummy.path'
+                    },
+                    {
+                        href: 'dummy.url2',
+                        imagePath: 'dummy.path2'
+                    }
+                ]
+            }
         };
 
         beforeEach(() => {
@@ -49,6 +94,11 @@ describe('About component', () => {
                 assert.isString(item.text());
                 assert(item.text().length > 0);
             });
+        });
+
+        it('renders links in the center column', () => {
+            const links = aboutComponent.find('#center a');
+            assert.equal(links.length, 4);
         });
         
         it('renders right column as list of links', () => {

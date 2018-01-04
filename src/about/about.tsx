@@ -1,13 +1,76 @@
 import * as React from 'react';
+import { parsePath } from 'history/PathUtils';
+import { updatePartiallyEmittedExpression } from 'typescript';
+
+export interface Para {
+    text: string;
+    links?: [
+        {
+            label: string;
+            href: string;
+        }
+    ];  
+}
 
 export interface AboutProps {
     title: string;
+    left: {
+        para: Array<Para>;
+    };
+    center: {
+        para: Array<Para>;
+    };
+    right: {
+        links: [
+            {
+                href: string;
+                imagePath: string;
+            }
+        ];
+    };
 }
 
 export default class About extends React.Component<AboutProps, {}> {
-    render() {
+    private renderPara(para: Array<Para>) {
+        return (
+            para.map((para, index) => {
+                const {
+                    text,
+                    links
+                } = para;
+
+                let processed: Array<any> = [];
+
+                if (links) {
+                    const paraList = text.split(/{{link:\w+}}/);
+
+                    if (paraList.length > 1) {
+                        for (let i = paraList.length - 1; i >= 0; i--) {
+                            if (links[i]) {
+                                const currentLink = links[i];
+                                const linkElem = <a key={ i } href={ currentLink.href }>{ currentLink.label }</a>;
+                                processed.unshift(linkElem);
+                            }
+    
+                            processed.unshift(paraList[i]);
+                        }
+                    } else {
+                        processed = paraList;    
+                    }
+                } else {
+                    processed = [ text ];
+                }
+
+                return <p key={ index }>{ processed }</p>;
+            })
+        );
+    }
+
+    public render() {
         const {
-            title
+            title,
+            left,
+            center
         } = this.props;
 
         // FIXME
@@ -17,30 +80,10 @@ export default class About extends React.Component<AboutProps, {}> {
             <section id="content">
                 <h2>{ title }</h2>
                 <article id="left">
-                    <p>
-                        Hello! My name is Lukasz Piatkowski, but You can call me Lucas. 
-                        I&nbsp;live&nbsp;and&nbsp;work in United Kingdom, in&nbsp;the&nbsp;beautiful city of&nbsp;London. 
-                        I&nbsp;am&nbsp;a&nbsp;passionate front-end developer and a&nbsp;web standards enthusiast
-                         with focus on Javascript.
-                        Every day I&nbsp;try to learn something new to extend my programming skills 
-                        and to stay in touch with the latest&nbsp;technologies. 
-                    </p>
+                    { this.renderPara(left.para) }
                 </article>
                 <article id="center">
-                    <p>
-                        As a big fan of social media I&nbsp;have 
-                        created a <a href="https://github.com/op1ekun">github</a> account.
-                        There you can find projects I&nbsp;have started, mostly, 
-                        for the purpose of using them in my job. 
-                        From time to time 
-                        I&nbsp;contribute to <a href="http://stackoverflow.com/users/1595495/op1ekun">stackoverflow</a>.
-                    </p>
-                    <p>
-                        I try to be a team player in both my professional and private life 
-                        because I&nbsp;believe in the spirit of
-                        cooperation and that great things can be achieved together.
-                    </p>
-                    
+                    { this.renderPara(center.para) }
                     <p>
                         <span>Don't forget to</span>
                         <a href="https://twitter.com/op1ekun" className="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @op1ekun</a>

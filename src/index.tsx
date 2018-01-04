@@ -6,42 +6,28 @@ import Header from './header/header';
 import About from './about/about';
 import Footer from './footer/footer';
 
+import { aboutMeContent, tabsContent } from './content';
+
 export class Noop extends React.Component<{ label: string }, {}> {
     public render() {
         return <div>{ this.props.label }</div>;
     }
 }
 
-const tabs = [
-    {
-        label: 'about me',
-        url: '/about',
-        classes: [ 'first' ]
-    },
-    {
-        label: 'works',
-        url: '/works'
-    },
-    {
-        label: 'contact',
-        url: '/contact'
-    }
-];
-
 render(
     <HashRouter>
         <div id="wrapper">
             <Header
-                tabs={ tabs } 
+                tabs={ tabsContent } 
             />
             <Switch>
                 <Redirect exact={ true } path="/" to="/about" />
-                <Route path="/about" render={ () => <About title="about me" /> } />
+                <Route path="/about" render={ () => <About { ...aboutMeContent } /> } />
                 <Route path="/works" render={ () => <Noop label="works" /> } />
                 <Route path="/contact" render={ () => <Noop label="contact" /> } />
             </Switch>
             <Footer
-                tabs={ tabs }
+                tabs={ tabsContent }
             />
         </div>
 

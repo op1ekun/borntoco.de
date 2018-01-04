@@ -8,13 +8,14 @@ module.exports = {
     resolve: {
         extensions: [
             '.js', 
-            '.tsx',
+            '.ts',
+            '.tsx'
         ]
     },
     module: {
         loaders: [
             { 
-                test: /\.tsx$/, 
+                test: /\.(tsx|ts)$/, 
                 loader: 'ts-loader'
             }
         ]

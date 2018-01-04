@@ -39,8 +39,7 @@ describe('TabList component', () => {
         it('renders the first tab link', () => {
             const {
                 label,
-                url,
-                classes
+                url
             } = tabs[0];
             
             const firstTab = hashRouterComponent.find('li.tab.one a');
@@ -51,8 +50,7 @@ describe('TabList component', () => {
         it('renders the second tab link', () => {
             const {
                 label,
-                url,
-                classes
+                url
             } = tabs[1];
             
             const firstTab = hashRouterComponent.find('li.tab.two a');
