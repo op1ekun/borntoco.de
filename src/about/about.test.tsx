@@ -3,64 +3,17 @@ import { assert } from 'chai';
 import { shallow, ShallowWrapper } from 'enzyme';
 
 import About, { AboutProps } from './about';
+import { aboutMeContent } from '../content';
 
 describe('About component', () => {
 
     describe('render', () => {
         let aboutComponent: ShallowWrapper;
-        const aboutContent: AboutProps = {
-            title: 'Dummy Title',
-            left: {
-                para: [
-                    {
-                        text: 'col1'
-                    }
-                ]
-            },
-            center: {
-                para: [
-                    {
-                        text: '{{link:dummy1}} col2_1 {{link:dummy2}}.',
-                        links: [
-                            {
-                                href: 'dummy.url1',
-                                label: 'dummy1'
-                            },
-                            {
-                                href: 'dummy.url2',
-                                label: 'dummy2'
-                            }
-                        ]
-                    },
-                    {
-                        text: 'col2_2',
-                        links: [
-                            {
-                                href: 'dummy.url3',
-                                label: 'dummy3'
-                            }
-                        ]
-                    }
-                ]
-            },
-            right: {
-                links: [
-                    {
-                        href: 'dummy.url',
-                        imagePath: 'dummy.path'
-                    },
-                    {
-                        href: 'dummy.url2',
-                        imagePath: 'dummy.path2'
-                    }
-                ]
-            }
-        };
 
         beforeEach(() => {
             aboutComponent = shallow(
                 <About
-                    { ...aboutContent }
+                    { ...aboutMeContent }
                 />
             );
         });
@@ -72,7 +25,7 @@ describe('About component', () => {
 
         it('renders title', () => {
             const title = aboutComponent.find('h2');
-            assert.equal(title.text(), aboutContent.title);
+            assert.equal(title.text(), aboutMeContent.title);
         });
 
         it('renders article columns', () => {
@@ -82,13 +35,12 @@ describe('About component', () => {
         
         it('renders left column as text', () => {
             const leftContent = aboutComponent.find('#left > p');
-            assert.isString(leftContent.text());
-            assert(leftContent.text().length > 0);
+            assert(leftContent.length > 0);
         });
         
         it('renders center column as paragraphs', () => {
             const paragraphs = aboutComponent.find('#center p');
-            assert.equal(paragraphs.length, 3);
+            assert.equal(paragraphs.length, aboutMeContent.center.para.length);
 
             paragraphs.forEach((item) => {
                 assert.isString(item.text());

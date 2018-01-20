@@ -54,9 +54,23 @@ export const aboutMeContent: AboutProps = {
                 ]
             },
             {
-                text: `I try to be a team player in both my professional and private life 
+                text: `I always like to be a team player in both my professional, and private life 
                 because I\u00A0believe in the spirit of
-                cooperation and that great things can be achieved together.`
+                cooperation, and that great things can be achieved together.`
+            },
+            {
+                text: `Don't forget to {{link:follow}} me on {{link:twitter}}`,
+                links: [
+                    {
+                        className: 'twitter-follow-button',
+                        label: 'Follow @op1ekun',
+                        href: 'https://twitter.com/op1ekun' 
+                    },
+                    {
+                        label: 'Twitter!',
+                        href: 'https://twitter.com/op1ekun'
+                    }
+                ]
             }
         ]
     },

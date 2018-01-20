@@ -6,8 +6,11 @@ export interface Para {
     text: string;
     links?: [
         {
+            className?: string;
             label: string;
             href: string;
+            // TODO improve the interface
+            dataparams?: object;
         }
     ];  
 }
@@ -31,6 +34,15 @@ export interface AboutProps {
 }
 
 export default class About extends React.Component<AboutProps, {}> {
+
+    componentDidMount() {
+        (window as any).twttr.widgets.load();
+    }
+
+    /**
+     * Renders paragraphs with links as React components ()
+     * @param para
+     */
     private renderPara(para: Array<Para>) {
         return (
             para.map((para, index) => {
@@ -40,22 +52,27 @@ export default class About extends React.Component<AboutProps, {}> {
                 } = para;
 
                 let processed: Array<any> = [];
+                const paraList = text.split(/{{link:\w+}}/);
 
-                if (links) {
-                    const paraList = text.split(/{{link:\w+}}/);
-
-                    if (paraList.length > 1) {
-                        for (let i = paraList.length - 1; i >= 0; i--) {
-                            if (links[i]) {
-                                const currentLink = links[i];
-                                const linkElem = <a key={ i } href={ currentLink.href }>{ currentLink.label }</a>;
-                                processed.unshift(linkElem);
-                            }
-    
-                            processed.unshift(paraList[i]);
+                if (links && paraList.length > 1) {
+                    // process backwards to avoid issues with the array changing size on fly
+                    for (let i = paraList.length - 1; i >= 0; i--) {
+                        if (links[i]) {
+                            const currentLink = links[i];
+                            const linkElem = (
+                                <a
+                                    key={ i }
+                                    href={ currentLink.href }
+                                    className={ currentLink.className ? currentLink.className : null }
+                                    // FIXME, see Para interface 
+                                    data-show-count={ false }
+                                    data-show-screen-name={ false }
+                                >{ currentLink.label }</a>
+                            );
+                            processed.unshift(linkElem);
                         }
-                    } else {
-                        processed = paraList;    
+
+                        processed.unshift(paraList[i]);
                     }
                 } else {
                     processed = [ text ];
@@ -73,9 +90,6 @@ export default class About extends React.Component<AboutProps, {}> {
             center
         } = this.props;
 
-        // FIXME
-        // const twitterSnipper = (d: Document, s: string, id: string) => { let js; const fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='//platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-
         return(
             <section id="content">
                 <h2>{ title }</h2>
@@ -84,12 +98,6 @@ export default class About extends React.Component<AboutProps, {}> {
                 </article>
                 <article id="center">
                     { this.renderPara(center.para) }
-                    <p>
-                        <span>Don't forget to</span>
-                        <a href="https://twitter.com/op1ekun" className="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @op1ekun</a>
-                        <span>me on</span> 
-                        <a href="https://twitter.com/op1ekun">Twitter!</a>
-                    </p>
                 </article>
                 <article id="right">
                     <ul>

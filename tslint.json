@@ -43,6 +43,7 @@
         ],
         "jsx-equals-spacing": "always",
         "jsx-no-multiline-js": false,
-        "jsx-no-lambda": false
+        "jsx-no-lambda": false,
+        "jsx-alignment": false
     }
 }
