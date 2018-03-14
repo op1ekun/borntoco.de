@@ -50,7 +50,7 @@ describe('About component', () => {
 
         it('renders links in the center column', () => {
             const links = aboutComponent.find('#center a');
-            assert.equal(links.length, 4);
+            assert.equal(links.length, 3);
         });
         
         it('renders right column as list of links', () => {

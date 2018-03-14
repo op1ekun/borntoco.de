@@ -1,3 +1,4 @@
+import { WorksProps } from './works/works';
 import { AboutProps } from './about/about';
 import { TabsListProps, TabProps } from './tabList/tabList';
 
@@ -16,6 +17,23 @@ export const tabsContent: Array<TabProps> = [
         url: '/contact'
     }
 ];
+
+export const worksContent: WorksProps = {
+    title: 'works',
+    left: {
+        para: [
+            {
+                text: 'test1'
+            },
+            {
+                text: 'test2'
+            }
+        ]
+    },
+    right: {
+        para: []
+    }
+};
 
 export const aboutMeContent: AboutProps = {
     title: 'about me',
@@ -45,7 +63,7 @@ export const aboutMeContent: AboutProps = {
                 links: [
                     {
                         label: 'github',
-                        href: 'https://github.com/op1ekun'
+                        href: 'https://github.com/op1ekun',
                     },
                     {
                         label: 'stackoverflow',
@@ -59,16 +77,14 @@ export const aboutMeContent: AboutProps = {
                 cooperation, and that great things can be achieved together.`
             },
             {
-                text: `Don't forget to {{link:follow}} me on {{link:twitter}}`,
+                text: `Don't forget to {{link:follow}} me!`,
                 links: [
                     {
                         className: 'twitter-follow-button',
                         label: 'Follow @op1ekun',
-                        href: 'https://twitter.com/op1ekun' 
-                    },
-                    {
-                        label: 'Twitter!',
-                        href: 'https://twitter.com/op1ekun'
+                        href: 'https://twitter.com/op1ekun',
+                        'data-show-count': false,
+                        'data-show-screen-name': false
                     }
                 ]
             }

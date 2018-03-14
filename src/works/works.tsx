@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { parsePath } from 'history/PathUtils';
-import { updatePartiallyEmittedExpression } from 'typescript';
 
 // TODO extract to it's own component
 export interface ParaLink {
@@ -15,29 +13,17 @@ export interface Para {
     links?: Array<ParaLink>;
 }
 
-export interface AboutProps {
+export interface WorksProps {
     title: string;
     left: {
-        para: Array<Para>;
-    };
-    center: {
-        para: Array<Para>;
+        para: Array<any>;
     };
     right: {
-        links: [
-            {
-                href: string;
-                imagePath: string;
-            }
-        ];
+        para: Array<any>;
     };
 }
 
-export default class About extends React.Component<AboutProps, {}> {
-
-    componentDidMount() {
-        (window as any).twttr.widgets.load();
-    }
+export default class Works extends React.Component<WorksProps, {}> {
 
     // TODO move it to a separate Paragraph component
     /**
@@ -56,7 +42,6 @@ export default class About extends React.Component<AboutProps, {}> {
                 const paraList = text.split(/{{link:\w+}}/);
 
                 if (links && paraList.length > 1) {
-                    // TODO improve this by matching links by label, array approach is a bit flaky
                     // process backwards to avoid issues with the array changing size on fly
                     for (let i = paraList.length - 1; i >= 0; i--) {
                         if (links[i]) {
@@ -92,7 +77,7 @@ export default class About extends React.Component<AboutProps, {}> {
         const {
             title,
             left,
-            center
+            right
         } = this.props;
 
         return(
@@ -101,24 +86,11 @@ export default class About extends React.Component<AboutProps, {}> {
                 <article id="left">
                     { this.renderPara(left.para) }
                 </article>
-                <article id="center">
-                    { this.renderPara(center.para) }
-                </article>
                 <article id="right">
-                    <ul>
-                        <li className="odd">
-                            <a href="https://github.com/op1ekun">
-                                <img src="/static/img/github_250.png" alt="My profile on github" />
-                            </a>
-                        </li>
-                        <li className="even">
-                            <a href="http://stackoverflow.com/users/1595495/op1ekun">
-                                <img src="/static/img/stack_250.png" alt="My profile on stackoverflow" />
-                            </a>
-                        </li>
-                    </ul>
+                    { this.renderPara(right.para) }
                 </article>
             </section>
         );
+        
     }
 }
