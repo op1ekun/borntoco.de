@@ -1,7 +1,7 @@
 import * as React from 'react';
-import TabList, { TabsListProps } from '../tabList/tabList';
+import TabList, { ITabsListProps } from '../tabList/tabList';
 
-export default class Footer extends React.Component<TabsListProps, {}> {
+export default class Footer extends React.Component<ITabsListProps, {}> {
     
     public render() {
         const { tabs } = this.props;

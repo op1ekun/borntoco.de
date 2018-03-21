@@ -1,27 +1,13 @@
 import * as React from 'react';
-import { parsePath } from 'history/PathUtils';
-import { updatePartiallyEmittedExpression } from 'typescript';
+import { IParagraph, Paragraph } from '../para/para';
 
-// TODO extract to it's own component
-export interface ParaLink {
-    className?: string;
-    label: string;
-    href: string;
-    [key: string]: string | number | boolean;
-}
-
-export interface Para {
-    text: string;
-    links?: Array<ParaLink>;
-}
-
-export interface AboutProps {
+export interface IAboutProps {
     title: string;
     left: {
-        para: Array<Para>;
+        para: Array<IParagraph>;
     };
     center: {
-        para: Array<Para>;
+        para: Array<IParagraph>;
     };
     right: {
         links: [
@@ -33,59 +19,13 @@ export interface AboutProps {
     };
 }
 
-export default class About extends React.Component<AboutProps, {}> {
+export default class About extends React.Component<IAboutProps, {}> {
 
     componentDidMount() {
-        (window as any).twttr.widgets.load();
-    }
-
-    // TODO move it to a separate Paragraph component
-    /**
-     * Renders paragraphs with links as React components ()
-     * @param para
-     */
-    private renderPara(para: Array<Para>) {
-        return (
-            para.map((para, index) => {
-                const {
-                    text,
-                    links
-                } = para;
-
-                let processed: Array<any> = [];
-                const paraList = text.split(/{{link:\w+}}/);
-
-                if (links && paraList.length > 1) {
-                    // TODO improve this by matching links by label, array approach is a bit flaky
-                    // process backwards to avoid issues with the array changing size on fly
-                    for (let i = paraList.length - 1; i >= 0; i--) {
-                        if (links[i]) {
-                            const currentLink = links[i];
-                            const {
-                                label, href, className,
-                                ...rest
-                            } = currentLink;
-
-                            const linkElem = (
-                                <a
-                                    key={ i }
-                                    href={ href }
-                                    className={ className ? className : null }
-                                    { ...rest }
-                                >{ label }</a>
-                            );
-                            processed.unshift(linkElem);
-                        }
-
-                        processed.unshift(paraList[i]);
-                    }
-                } else {
-                    processed = [ text ];
-                }
-
-                return <p key={ index }>{ processed }</p>;
-            })
-        );
+        const mainWindow = (window as any);
+        if (mainWindow.twttr && mainWindow.twttr.widgets) {
+            mainWindow.twttr.widgets.load();
+        }
     }
 
     public render() {
@@ -99,10 +39,10 @@ export default class About extends React.Component<AboutProps, {}> {
             <section id="content">
                 <h2>{ title }</h2>
                 <article id="left">
-                    { this.renderPara(left.para) }
+                    { left.para.map((singlePara, index) => <Paragraph key={ index } { ...singlePara } />) }
                 </article>
                 <article id="center">
-                    { this.renderPara(center.para) }
+                    { center.para.map((singlePara, index) => <Paragraph key={ index } { ...singlePara } />) }
                 </article>
                 <article id="right">
                     <ul>

@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export interface TabProps {
+export interface ITabProps {
     label: string;
     url: string;
     classes?: Array<string>;
 }
 
-export interface TabsListProps {
-    tabs: Array<TabProps>;
+export interface ITabsListProps {
+    tabs: Array<ITabProps>;
 }
 
-export default class TabList extends React.Component<TabsListProps, {}> {
+export default class TabList extends React.Component<ITabsListProps, {}> {
 
     public render() {
         const  { tabs } = this.props;

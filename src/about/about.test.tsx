@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { assert } from 'chai';
-import { shallow, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 
-import About, { AboutProps } from './about';
+import About, { IAboutProps } from './about';
 import { aboutMeContent } from '../content';
+import { Paragraph } from '../para/para';
 
 describe('About component', () => {
 
     describe('render', () => {
-        let aboutComponent: ShallowWrapper;
+        let aboutComponent: ReactWrapper<IAboutProps, any>;
 
         beforeEach(() => {
-            aboutComponent = shallow(
+            aboutComponent = mount(
                 <About
                     { ...aboutMeContent }
                 />
@@ -33,19 +34,14 @@ describe('About component', () => {
             assert.equal(articles.length, 3);  
         });
         
-        it('renders left column as text', () => {
-            const leftContent = aboutComponent.find('#left > p');
-            assert(leftContent.length > 0);
+        it('renders left column as as paragraphs', () => {
+            const paragraphs = aboutComponent.find('#left .para');
+            assert.equal(paragraphs.length, aboutMeContent.left.para.length);
         });
         
         it('renders center column as paragraphs', () => {
-            const paragraphs = aboutComponent.find('#center p');
+            const paragraphs = aboutComponent.find('#center .para');
             assert.equal(paragraphs.length, aboutMeContent.center.para.length);
-
-            paragraphs.forEach((item) => {
-                assert.isString(item.text());
-                assert(item.text().length > 0);
-            });
         });
 
         it('renders links in the center column', () => {

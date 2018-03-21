@@ -1,8 +1,8 @@
-import { WorksProps } from './works/works';
-import { AboutProps } from './about/about';
-import { TabsListProps, TabProps } from './tabList/tabList';
+import { IWorksProps } from './works/works';
+import { IAboutProps } from './about/about';
+import { ITabsListProps, ITabProps } from './tabList/tabList';
 
-export const tabsContent: Array<TabProps> = [
+export const tabsContent: Array<ITabProps> = [
     {
         label: 'about me',
         url: '/about',
@@ -18,7 +18,7 @@ export const tabsContent: Array<TabProps> = [
     }
 ];
 
-export const worksContent: WorksProps = {
+export const worksContent: IWorksProps = {
     title: 'works',
     left: {
         para: [
@@ -35,7 +35,7 @@ export const worksContent: WorksProps = {
     }
 };
 
-export const aboutMeContent: AboutProps = {
+export const aboutMeContent: IAboutProps = {
     title: 'about me',
     left: {
         para: [
