@@ -3,7 +3,7 @@ import { HashRouter } from 'react-router-dom';
 import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
-import { tabs } from '../../test/dummies/tabProps.dummy';
+import { tabsContent } from '../content';
 
 import Footer from './footer';
 
@@ -15,12 +15,12 @@ describe('Footer component', () => {
         beforeEach(() =>
             hashRouterComponent = mount(
                 <HashRouter>
-                    <Footer tabs={ tabs } />
+                    <Footer tabs={ tabsContent } />
                 </HashRouter>)
         );
 
         it('renders the menu', () => {
-            assert.equal(hashRouterComponent.find('#footer_wrapper li.tab').length, tabs.length);
+            assert.equal(hashRouterComponent.find('#footer_wrapper li.tab').length, tabsContent.length);
         });
 
         it('renders paragraphs', () => {

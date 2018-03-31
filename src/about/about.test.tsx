@@ -12,6 +12,12 @@ describe('About component', () => {
         let aboutComponent: ReactWrapper<IAboutProps, any>;
 
         beforeEach(() => {
+            (window as any).twttr = {
+                widgets: {
+                    load: () => {}
+                }
+            };
+
             aboutComponent = mount(
                 <About { ...aboutMeContent } />
             );

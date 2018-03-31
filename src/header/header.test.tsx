@@ -3,7 +3,7 @@ import { HashRouter } from 'react-router-dom';
 import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
-import { tabs } from '../../test/dummies/tabProps.dummy';
+import { tabsContent } from '../content';
 import Header from './header';
 
 describe('Header component', () => {
@@ -14,7 +14,7 @@ describe('Header component', () => {
         beforeEach(() =>
             hashRouterComponent = mount(
                 <HashRouter>
-                    <Header tabs={ tabs } />
+                    <Header tabs={ tabsContent } />
                 </HashRouter>)
         );
 
@@ -34,7 +34,7 @@ describe('Header component', () => {
         });
 
         it('renders the nav menu', () => {
-            assert.equal(hashRouterComponent.find('nav ul.tabs li.tab').length, tabs.length);
+            assert.equal(hashRouterComponent.find('nav ul.tabs li.tab').length, tabsContent.length);
         });
     });
 });

@@ -4,7 +4,7 @@ import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
 import TabList, { ITabsListProps } from './tabList';
-import { tabs } from '../../test/dummies/tabProps.dummy';
+import { tabsContent } from '../content';
 
 describe('TabList component', () => {
     let hashRouterComponent: ReactWrapper<HashRouter>;
@@ -23,7 +23,7 @@ describe('TabList component', () => {
         beforeEach(() => {
             hashRouterComponent = mount(
                 <HashRouter>
-                    <TabList tabs={ tabs } />
+                    <TabList tabs={ tabsContent } />
                 </HashRouter>
             );
         });
@@ -33,29 +33,29 @@ describe('TabList component', () => {
         });
 
         it('renders correct number of tabs', () => {
-            assert.equal(hashRouterComponent.find('li.tab').length, tabs.length);
+            assert.equal(hashRouterComponent.find('li.tab').length, tabsContent.length);
         });
 
         it('renders the first tab link', () => {
             const {
                 label,
                 url
-            } = tabs[0];
+            } = tabsContent[0];
             
-            const firstTab = hashRouterComponent.find('li.tab.one a');
+            const firstTab = hashRouterComponent.find('li.tab a').first();
             assert.equal(firstTab.text(), label);
-            assert.equal(firstTab.props().href, `#/${ url }`);
+            assert.equal(firstTab.props().href, `#${ url }`);
         });
 
-        it('renders the second tab link', () => {
+        it('renders the last tab link', () => {
             const {
                 label,
                 url
-            } = tabs[1];
+            } = tabsContent[2];
             
-            const firstTab = hashRouterComponent.find('li.tab.two a');
-            assert.equal(firstTab.text(), label);
-            assert.equal(firstTab.props().href, `#/${ url }`);
+            const lastTab = hashRouterComponent.find('li.tab a').last();
+            assert.equal(lastTab.text(), label);
+            assert.equal(lastTab.props().href, `#${ url }`);
         });
     });
 });
