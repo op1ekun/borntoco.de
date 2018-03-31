@@ -4,7 +4,7 @@ import { mount, ReactWrapper } from 'enzyme';
 
 import About, { IAboutProps } from './about';
 import { aboutMeContent } from '../content';
-import { Paragraph } from '../para/para';
+import { Paragraph, IParagraph } from '../para/para';
 
 describe('About component', () => {
 
@@ -13,9 +13,7 @@ describe('About component', () => {
 
         beforeEach(() => {
             aboutComponent = mount(
-                <About
-                    { ...aboutMeContent }
-                />
+                <About { ...aboutMeContent } />
             );
         });
 
@@ -46,7 +44,12 @@ describe('About component', () => {
 
         it('renders links in the center column', () => {
             const links = aboutComponent.find('#center a');
-            assert.equal(links.length, 3);
+            const linksCount = aboutMeContent.center.para
+                .reduce((acc, curr, index, para) => {
+                    return acc + (curr.links ? curr.links.length : 0);
+                }, 0);
+
+            assert.equal(links.length, linksCount);
         });
         
         it('renders right column as list of links', () => {

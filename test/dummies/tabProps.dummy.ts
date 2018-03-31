@@ -1,6 +1,6 @@
-import { TabProps } from '../../src/tabList/tabList';
+import { ITabProps } from '../../src/tabList/tabList';
 
-export const tabs: Array<TabProps> = [
+export const tabs: Array<ITabProps> = [
     {
         label: 'tab1',
         url: 'dummy.url1',

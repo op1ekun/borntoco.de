@@ -10,7 +10,7 @@ export interface IAboutProps {
         para: Array<IParagraph>;
     };
     right: {
-        links: [
+        links?: [
             {
                 href: string;
                 imagePath: string;

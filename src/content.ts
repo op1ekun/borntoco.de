@@ -31,7 +31,11 @@ export const worksContent: IWorksProps = {
         ]
     },
     right: {
-        para: []
+        para: [
+            {
+                text: 'test3'
+            }
+        ]
     }
 };
 
@@ -47,23 +51,29 @@ export const aboutMeContent: IAboutProps = {
             },
             {
                 text: `Every day I\u00A0try to learn something new to improve my skills, 
-                and to stay in touch with the latest\u00A0technologies.`
+                and to stay in touch with the latest\u00A0technologies. You can find, a part of these journey on this website.`
             }
         ],
     },
     center: {
         para: [
             {
-                text: `As a big fan of social media I\u00A0have 
-                created a {{link:github}} account.
-                There you can find projects I\u00A0have started, mostly, 
-                for the purpose of using them in my job. 
-                From time to time 
-                I\u00A0contribute to {{link:stackoverflow}}.`,
+                text: `I'm a proud owner of a {{link:github}} account.
+                There you can find my pet projects, and other things I\u00A0accumulated while working for numerous parties.
+                These same goes for {{link:replit}}, and {{link:gist}} accounts.
+                From time to\u00A0time I\u00A0also contribute to {{link:stackoverflow}}.`,
                 links: [
                     {
                         label: 'github',
                         href: 'https://github.com/op1ekun',
+                    },
+                    {
+                        label: 'repl.it',
+                        href: 'https://repl.it/@op1ekun',
+                    },
+                    {
+                        label: 'gist',
+                        href: 'https://gist.github.com/op1ekun',
                     },
                     {
                         label: 'stackoverflow',
@@ -90,12 +100,5 @@ export const aboutMeContent: IAboutProps = {
             }
         ]
     },
-    right: {
-        links: [
-            {
-                href: 'dummy.url',
-                imagePath: 'dummy.path'
-            }
-        ]
-    }
+    right: {}
 };
