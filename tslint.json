@@ -9,6 +9,7 @@
             "spaces",
             4
         ],
+        "no-unused-variable": true,
         "eofline": true,
         "no-var-keyword": true,
         "prefer-const": true,

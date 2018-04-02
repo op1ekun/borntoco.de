@@ -3,7 +3,7 @@ import { HashRouter } from 'react-router-dom';
 import { assert } from 'chai';
 import { mount, ReactWrapper } from 'enzyme';
 
-import TabList, { ITabsListProps } from './tabList';
+import TabList from './tabList';
 import { tabsContent } from '../content';
 
 describe('TabList component', () => {

@@ -1,6 +1,6 @@
 import { IWorksProps } from './works/works';
 import { IAboutProps } from './about/about';
-import { ITabsListProps, ITabProps } from './tabList/tabList';
+import { ITabProps } from './tabList/tabList';
 
 export const tabsContent: Array<ITabProps> = [
     {

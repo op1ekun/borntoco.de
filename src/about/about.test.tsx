@@ -58,6 +58,7 @@ describe('About component', () => {
             assert.equal(links.length, linksCount);
         });
         
+        // FIXME make links column dynamic
         it('renders right column as list of links', () => {
             const listItems = aboutComponent.find('#right > ul li');
             assert.equal(listItems.length, 2);
