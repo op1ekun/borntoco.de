@@ -9,19 +9,19 @@ describe('Paragraph component', () => {
     let paragraphComponent: ReactWrapper<Paragraph>;
     const paraProps: IParagraph = {
         className: 'testPara',
-        text: `some {{link:test}} with
+        text: `some {{link:test1}} with
             moar {{link:test2}}`,
-        links: [
-            {
-                label: 'test',
+        links: {
+            'test1': {
+                label: 'test one',
                 href: 'test.url'
             },
-            {
-                label: 'test2',
+            'test2': {
+                label: 'test two',
                 href: 'test2.url',
                 className: 'test2'
             }
-        ]
+        }
     };
 
     describe('render', () => {
@@ -40,14 +40,14 @@ describe('Paragraph component', () => {
         });
 
         it('renders the first link', () => {
-            const firstLinkText = paraProps.links[0].label;
+            const firstLinkText = paraProps.links['test1'].label
             const firstLink = paragraphComponent.find('a').first();
             assert.equal(firstLink.length, 1);
             assert.equal(firstLink.text(), firstLinkText);
         });
 
         it('renders the last link', () => {
-            const lastLinkText = paraProps.links[1].label;
+            const lastLinkText = paraProps.links['test2'].label;
             const lastLink = paragraphComponent.find('a').last();
             assert.equal(lastLink.length, 1);
             assert.equal(lastLink.text(), lastLinkText);

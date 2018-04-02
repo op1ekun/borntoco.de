@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export interface IParagraphLink {
     className?: string;
-    label: string;
+    label?: string;
     href: string;
     [key: string]: string | number | boolean;
 }
@@ -10,7 +10,9 @@ export interface IParagraphLink {
 export interface IParagraph {
     text: string;
     className?: string;
-    links?: Array<IParagraphLink>;
+    links?: {
+        [key: string]: IParagraphLink;
+    };
 }
 
 export class Paragraph extends React.Component<IParagraph, any> {
@@ -26,37 +28,46 @@ export class Paragraph extends React.Component<IParagraph, any> {
             className: paraClassName
         } = this.props;
 
-        const paraList = text.split(/{{link:\w+}}/);
-        let processed: Array<any> = [];
+        const processed: Array<any | React.Component > = [ ];
 
-        if (links && paraList.length > 1) {
-            // process backwards to avoid issues with the array changing size on fly
-            for (let i = paraList.length - 1; i >= 0; i--) {
-                if (links[i]) {
-                    const currentLink = links[i];
+        if (links) {
+            const anyLink = /{{link:(\w+)}}/;
+            const contentParts = text.split(/\s+/);
+
+            contentParts.forEach((part, index) => {
+                const matched = part.match(anyLink);
+
+                if (matched) {
+                    const linkId = matched[1];
+
                     const {
-                        label, href, className,
+                        href,
+                        label,
+                        className: currClassName,
                         ...rest
-                    } = currentLink;
+                    } = links[ linkId ];
 
                     const linkElem = (
                         <a
-                            key={ i }
+                            key={ index }
                             href={ href }
-                            className={ className ? className : null }
+                            className={ currClassName }
                             { ...rest }
-                        >{ label }</a>
+                        >{ label || linkId }</a>
                     );
-                    
-                    processed.unshift(linkElem);
+
+                    processed.push(' ', linkElem);
+                }
+                else {
+                    processed.push(' ', part);
                 }
 
-                processed.unshift(paraList[i]);
-            }
-        } else {
-            processed = [ text ];
+            });
+        }
+        else {
+            processed.push(text);
         }
 
-        return (<p className={ [ 'para', paraClassName ].join(' ') } >{ processed }</p>);
+        return (<p className={ [ 'para', paraClassName ].join(' ') }>{ processed }</p>);
     }
 }

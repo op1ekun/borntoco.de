@@ -52,7 +52,7 @@ describe('About component', () => {
             const links = aboutComponent.find('#center a');
             const linksCount = aboutMeContent.center.para
                 .reduce((acc, curr, index, para) => {
-                    return acc + (curr.links ? curr.links.length : 0);
+                    return acc + (curr.links ? Object.keys(curr.links).length : 0);
                 }, 0);
 
             assert.equal(links.length, linksCount);

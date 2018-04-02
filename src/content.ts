@@ -61,25 +61,25 @@ export const aboutMeContent: IAboutProps = {
                 text: `I'm a proud owner of a {{link:github}} account.
                 There you can find my pet projects, and other things I\u00A0accumulated while working for numerous parties.
                 These same goes for {{link:replit}}, and {{link:gist}} accounts.
-                From time to\u00A0time I\u00A0also contribute to {{link:stackoverflow}}.`,
-                links: [
-                    {
+                From time to\u00A0time I\u00A0also contribute to {{link:so}}.`,
+                links: {
+                    'github': {
                         label: 'github',
                         href: 'https://github.com/op1ekun',
                     },
-                    {
+                    'replit': {
                         label: 'repl.it',
                         href: 'https://repl.it/@op1ekun',
                     },
-                    {
+                    'gist': {
                         label: 'gist',
                         href: 'https://gist.github.com/op1ekun',
                     },
-                    {
+                    'so': {
                         label: 'stackoverflow',
                         href: 'http://stackoverflow.com/users/1595495/op1ekun'
                     }
-                ]
+                }
             },
             {
                 text: `I always like to be a team player in both my professional, and private life 
@@ -88,15 +88,14 @@ export const aboutMeContent: IAboutProps = {
             },
             {
                 text: `Don't forget to {{link:follow}} me!`,
-                links: [
-                    {
+                links: {
+                    'follow': {
                         className: 'twitter-follow-button',
-                        label: 'Follow @op1ekun',
                         href: 'https://twitter.com/op1ekun',
                         'data-show-count': false,
                         'data-show-screen-name': false
                     }
-                ]
+                }
             }
         ]
     },
