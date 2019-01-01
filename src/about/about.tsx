@@ -21,13 +21,6 @@ export interface IAboutProps {
 
 export default class About extends React.Component<IAboutProps, {}> {
 
-    componentDidMount() {
-        const mainWindow = (window as any);
-        if (mainWindow.twttr && mainWindow.twttr.widgets) {
-            mainWindow.twttr.widgets.load();
-        }
-    }
-
     public render() {
         const {
             title,

@@ -10,7 +10,7 @@ describe('Paragraph component', () => {
     const paraProps: IParagraph = {
         className: 'testPara',
         text: `some {{link:test1}} with
-            moar {{link:test2}}`,
+            moar {{link:test2}} {{link:test3}}`,
         links: {
             'test1': {
                 label: 'test one',
@@ -20,6 +20,10 @@ describe('Paragraph component', () => {
                 label: 'test two',
                 href: 'test2.url',
                 className: 'test2'
+            },
+            'test3': {
+                href: 'test3.url',
+                className: 'test3'
             }
         }
     };
@@ -39,6 +43,11 @@ describe('Paragraph component', () => {
             assert.equal(para.length, 1);
         });
 
+        it('renders correct number of links', () => {
+            const links = paragraphComponent.find('a');
+            assert.equal(links.length, Object.keys(paraProps.links).length);
+        });
+
         it('renders the first link', () => {
             const firstLinkText = paraProps.links['test1'].label
             const firstLink = paragraphComponent.find('a').first();
@@ -47,7 +56,7 @@ describe('Paragraph component', () => {
         });
 
         it('renders the last link', () => {
-            const lastLinkText = paraProps.links['test2'].label;
+            const lastLinkText = 'test3';
             const lastLink = paragraphComponent.find('a').last();
             assert.equal(lastLink.length, 1);
             assert.equal(lastLink.text(), lastLinkText);

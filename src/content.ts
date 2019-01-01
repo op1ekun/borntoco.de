@@ -45,13 +45,13 @@ export const aboutMeContent: IAboutProps = {
         para: [
             {
                 text: `Hello! My name is Lukasz. 
-                I\u00A0live,\u00A0and\u00A0work in United Kingdom, in\u00A0the\u00A0beautiful city of\u00A0London. 
-                I\u00A0am\u00A0a\u00A0passionate front-end developer, and a\u00A0web standards enthusiast
+                I live, and work in United Kingdom, in the beautiful city of London. 
+                I am a passionate front-end developer, and a web standards enthusiast
                  with a major focus on Javascript.`
             },
             {
-                text: `Every day I\u00A0try to learn something new to improve my skills, 
-                and to stay in touch with the latest\u00A0technologies. You can find, a part of these journey on this website.`
+                text: `Every day I try to learn something new to improve my skills, 
+                and to stay in touch with the latest technologies. You can find, a part of these journey on this website.`
             }
         ],
     },
@@ -59,9 +59,9 @@ export const aboutMeContent: IAboutProps = {
         para: [
             {
                 text: `I'm a proud owner of a {{link:github}} account.
-                There you can find my pet projects, and other things I\u00A0accumulated while working for numerous parties.
+                There you can find my pet projects, and other things I accumulated while working for numerous parties.
                 These same goes for {{link:replit}}, and {{link:gist}} accounts.
-                From time to\u00A0time I\u00A0also contribute to {{link:so}}.`,
+                From time to time I also contribute to {{link:so}}.`,
                 links: {
                     'github': {
                         label: 'github',
@@ -83,19 +83,8 @@ export const aboutMeContent: IAboutProps = {
             },
             {
                 text: `I always like to be a team player in both my professional, and private life 
-                because I\u00A0believe in the spirit of
+                because I believe in the spirit of
                 cooperation, and that great things can be achieved together.`
-            },
-            {
-                text: `Don't forget to {{link:follow}} me!`,
-                links: {
-                    'follow': {
-                        className: 'twitter-follow-button',
-                        href: 'https://twitter.com/op1ekun',
-                        'data-show-count': false,
-                        'data-show-screen-name': false
-                    }
-                }
             }
         ]
     },

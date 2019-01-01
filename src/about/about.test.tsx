@@ -38,7 +38,7 @@ describe('About component', () => {
             assert.equal(articles.length, 3);  
         });
         
-        it('renders left column as as paragraphs', () => {
+        it('renders left column as paragraphs', () => {
             const paragraphs = aboutComponent.find('#left .para');
             assert.equal(paragraphs.length, aboutMeContent.left.para.length);
         });

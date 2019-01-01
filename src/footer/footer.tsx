@@ -15,7 +15,7 @@ export default class Footer extends React.Component<ITabsListProps, {}> {
                     <p><a href="mailto:lukasz@borntoco.de">lukasz @borntoco.de</a></p>
                     <p><a href="">+44 747 7050 023</a></p>
 
-                    <p>copyright &copy;2018 borntoco.de</p>            
+                    <p>copyright &copy;2019 borntoco.de</p>            
                 </div>
             </footer>
         );
