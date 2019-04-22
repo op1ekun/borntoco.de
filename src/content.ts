@@ -59,17 +59,13 @@ export const aboutMeContent: IAboutProps = {
         para: [
             {
                 text: `I'm a proud owner of a {{link:github}} account.
-                There you can find my pet projects, and other things I accumulated while working for numerous parties.
-                These same goes for {{link:replit}}, and {{link:gist}} accounts.
-                From time to time I also contribute to {{link:so}}.`,
+                There you can find my pet projects, and other things I accumulated while working on numerous projects.
+                These same goes for {{link:gist}} page.
+                I also like to contribute to {{link:so}} from time to time.`,
                 links: {
                     'github': {
                         label: 'github',
                         href: 'https://github.com/op1ekun',
-                    },
-                    'replit': {
-                        label: 'repl.it',
-                        href: 'https://repl.it/@op1ekun',
                     },
                     'gist': {
                         label: 'gist',

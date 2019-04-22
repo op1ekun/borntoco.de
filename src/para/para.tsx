@@ -31,7 +31,7 @@ export class Paragraph extends React.Component<IParagraph, any> {
         const processed: Array<any | React.Component > = [ ];
 
         if (links) {
-            const anyLink = /{{link:(\w+)}}/;
+            const anyLink = /{{link:(\w+)}}(\.)?/;
             const contentParts = text.split(/\s+/);
 
             contentParts.forEach((part, index) => {
@@ -39,6 +39,7 @@ export class Paragraph extends React.Component<IParagraph, any> {
 
                 if (matched) {
                     const linkId = matched[1];
+                    const fullStop = matched[2];
 
                     const {
                         href,
@@ -55,8 +56,9 @@ export class Paragraph extends React.Component<IParagraph, any> {
                             { ...rest }
                         >{ label || linkId }</a>
                     );
-
-                    processed.push(' ', linkElem);
+                    
+                    // TODO the link should finish the chunk of the paragraph to limit the amount of rendered HTML elements
+                    processed.push(' ', linkElem, fullStop || '');
                 }
                 else {
                     processed.push(' ', part);

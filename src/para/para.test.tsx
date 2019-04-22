@@ -10,7 +10,8 @@ describe('Paragraph component', () => {
     const paraProps: IParagraph = {
         className: 'testPara',
         text: `some {{link:test1}} with
-            moar {{link:test2}} {{link:test3}}`,
+            moar {{link:test2}},
+            and {{link:test3}}.`,
         links: {
             'test1': {
                 label: 'test one',
@@ -41,6 +42,8 @@ describe('Paragraph component', () => {
         it('renders paragraph element', () => {
             const para = paragraphComponent.find('.testPara');
             assert.equal(para.length, 1);
+            // TODO building a paragraph should be optmized better
+            assert.exists(para.html().match(/<\/a>.+?\..+?<\/p>$/))
         });
 
         it('renders correct number of links', () => {
