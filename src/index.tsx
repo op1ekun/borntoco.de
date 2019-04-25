@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
+// import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import Header from './header/header';
-import About from './about/about';
-import Works from './works/works';
-import Footer from './footer/footer';
+import { HeaderView } from './header/header';
+// import About from './about/about';
+// import Works from './works/works';
+// import Footer from './footer/footer';
 
-import { worksContent, aboutMeContent, tabsContent } from './content';
+// import { worksContent, aboutMeContent, tabsContent } from './content';
+import myStore from './store';
 
 export class Noop extends React.Component<{ label: string }, {}> {
     public render() {
@@ -16,21 +18,24 @@ export class Noop extends React.Component<{ label: string }, {}> {
 }
 
 render(
-    <HashRouter>
-        <div id="wrapper">
-            <Header
-                tabs={ tabsContent } 
-            />
-            <Switch>
-                <Redirect exact={ true } path="/" to="/about" />
-                <Route path="/about" render={ () => <About { ...aboutMeContent } /> } />
-                <Route path="/works" render={ () => <Works { ...worksContent } /> } />
-                <Route path="/contact" render={ () => <Noop label="contact" /> } />
-            </Switch>
-            <Footer
-                tabs={ tabsContent }
-            />
-        </div>
+    <Provider store={myStore}>
+        <HeaderView />
+    </Provider>,
+    // <HashRouter>
+    //     <div id="wrapper">
+    //         <Header
+    //             tabs={ tabsContent } 
+    //         />
+    //         <Switch>
+    //             <Redirect exact={ true } path="/" to="/about" />
+    //             <Route path="/about" render={ () => <About { ...aboutMeContent } /> } />
+    //             <Route path="/works" render={ () => <Works { ...worksContent } /> } />
+    //             <Route path="/contact" render={ () => <Noop label="contact" /> } />
+    //         </Switch>
+    //         <Footer
+    //             tabs={ tabsContent }
+    //         />
+    //     </div>
 
-    </HashRouter>,
+    // </HashRouter>,
 document.getElementById('root'));
