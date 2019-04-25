@@ -31,58 +31,58 @@ import { createContentChangeAction } from '../store/content/content-action';
 // }
 
 export interface IHeaderProps {
-    // switchToAboutMe: () => void;
-    // switchToWorks: () => void;
-    // switchToContact: () => void;
-    // changeContent: () => void;
-    createPageChangeAction: (page: Pages) => void;
-    createContentChangeAction: (content: string) => void;
+    switchToAboutMe: () => void;
+    switchToWorks: () => void;
+    switchToContact: () => void;
+    changeContent: () => void;
+    // createPageChangeAction: (page: Pages) => void;
+    // createContentChangeAction: (content: string) => void;
 }
 
 export const Header: React.SFC<IHeaderProps> = (props: IHeaderProps) => {
     return (
-        // <header>
-        //     <li><a href="#aboutMe" onClick={() => {}}>About Me</a></li>
-        //     <li><a href="#works" onClick={props.switchToWorks}>Works</a></li>
-        //     <li><a href="#contact" onClick={props.switchToContact}>Contact</a></li>
-        //     <li><a href="#content" onClick={props.changeContent}>Content</a></li>
-        // </header>
         <header>
-            <li><a href="#aboutMe" onClick={() => {
-                props.createPageChangeAction(Pages.ABOUT_ME);
-            }}>About Me</a></li>
-            <li><a href="#works" onClick={() => {
-                props.createPageChangeAction(Pages.WORKS);
-            }}>Works</a></li>
-            <li><a href="#contact" onClick={() => {
-                props.createPageChangeAction(Pages.CONTACT);
-            }}>Contact</a></li>
-            <li><a href="#content" onClick={() => {
-                props.createContentChangeAction('trollolo');
-            }}>Content</a></li>
+            <li><a href="#aboutMe" onClick={() => {}}>About Me</a></li>
+            <li><a href="#works" onClick={props.switchToWorks}>Works</a></li>
+            <li><a href="#contact" onClick={props.switchToContact}>Contact</a></li>
+            <li><a href="#content" onClick={props.changeContent}>Content</a></li>
         </header>
+        // <header>
+        //     <li><a href="#aboutMe" onClick={() => {
+        //         props.createPageChangeAction(Pages.ABOUT_ME);
+        //     }}>About Me</a></li>
+        //     <li><a href="#works" onClick={() => {
+        //         props.createPageChangeAction(Pages.WORKS);
+        //     }}>Works</a></li>
+        //     <li><a href="#contact" onClick={() => {
+        //         props.createPageChangeAction(Pages.CONTACT);
+        //     }}>Contact</a></li>
+        //     <li><a href="#content" onClick={() => {
+        //         props.createContentChangeAction('trollolo');
+        //     }}>Content</a></li>
+        // </header>
     );
 }
 
 const mapDispatchToProps = (dispatch: any): IHeaderProps => {
-    return bindActionCreators({
-        createPageChangeAction,
-        createContentChangeAction
-    }, dispatch);
-    // return {
-    //     switchToAboutMe: () => {
-    //         dispatch(createPageChangeAction(Pages.ABOUT_ME));
-    //     },
-    //     switchToWorks: () => {
-    //         dispatch(createPageChangeAction(Pages.WORKS));
-    //     },
-    //     switchToContact: () => {
-    //         dispatch(createPageChangeAction(Pages.CONTACT));
-    //     },
-    //     changeContent: () => {
-    //         dispatch(createContentChangeAction('trollolo'));
-    //     }
-    // }
+    // return bindActionCreators({
+    //     createPageChangeAction,
+    //     createContentChangeAction
+    // }, dispatch);
+    return {
+        switchToAboutMe: () => {
+            dispatch(createPageChangeAction(Pages.ABOUT_ME));
+        },
+        switchToWorks: () => {
+            dispatch(createPageChangeAction(Pages.WORKS));
+        },
+        switchToContact: () => {
+            dispatch(createPageChangeAction(Pages.CONTACT));
+        },
+        changeContent: () => {
+            dispatch(createContentChangeAction('trollolo'));
+        }
+    }
 }
 
 export const HeaderView = connect(null, mapDispatchToProps)(Header);
