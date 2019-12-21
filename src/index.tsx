@@ -8,7 +8,6 @@ import { HeaderView } from './header/header';
 // import Works from './works/works';
 // import Footer from './footer/footer';
 
-// import { worksContent, aboutMeContent, tabsContent } from './content';
 import myStore from './store';
 
 export class Noop extends React.Component<{ label: string }, {}> {
@@ -21,21 +20,4 @@ render(
     <Provider store={myStore}>
         <HeaderView />
     </Provider>,
-    // <HashRouter>
-    //     <div id="wrapper">
-    //         <Header
-    //             tabs={ tabsContent } 
-    //         />
-    //         <Switch>
-    //             <Redirect exact={ true } path="/" to="/about" />
-    //             <Route path="/about" render={ () => <About { ...aboutMeContent } /> } />
-    //             <Route path="/works" render={ () => <Works { ...worksContent } /> } />
-    //             <Route path="/contact" render={ () => <Noop label="contact" /> } />
-    //         </Switch>
-    //         <Footer
-    //             tabs={ tabsContent }
-    //         />
-    //     </div>
-
-    // </HashRouter>,
 document.getElementById('root'));
