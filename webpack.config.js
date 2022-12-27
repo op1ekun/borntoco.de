@@ -13,11 +13,18 @@ module.exports = {
         ]
     },
     module: {
-        loaders: [
-            { 
-                test: /\.(tsx|ts)$/, 
-                loader: 'ts-loader'
-            }
-        ]
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        },
+      ],
+    },
+    devServer: {
+      static: {
+        directory: path.resolve(__dirname)
+      },
+      port: 8888
     }
 }
