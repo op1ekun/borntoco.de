@@ -54,7 +54,7 @@ html {
                 width: 65em;
                 margin: 0 auto;
 
-                background: transparent url(../static/img/header2.jpg) 6.875em 7.375em no-repeat;
+                background: transparent url(../static/img/header3.jpg) 6.875em 7.375em no-repeat;
                 background-size: 23.25em auto;
             }
             
@@ -69,12 +69,12 @@ html {
                     width: 28.875em; /* ~462px */
                     height: 6.3125em; /* ~101px */
 
-                    background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
+                    background: transparent url(../static/img/logotype3.png) 0 0 no-repeat;
                     background-size: 28.875em auto;
                     text-indent: -5000em;
                 }
                 
-                h1 span {
+                /* h1 span {
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -82,7 +82,7 @@ html {
                     width: 100%;
                     height: 6.25em;
 
-                    background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
+                    background: transparent url(../static/img/logotype2.jpg) 0 -6.3125em no-repeat;
                     background-size: 28.875em auto;
                     opacity: 0;
 
@@ -94,7 +94,7 @@ html {
                 
                 h1 a:hover span {
                     opacity: 1;
-                }
+                } */
 
                 header q {
                     position: absolute;
