@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es6",
+        "lib": [
+          "dom",
+          "dom.iterable",
+          "esnext"
+        ],
+        "jsx": "react-jsx",
+        "noImplicitAny": true,
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "test",
+        "**/*.test.tsx"
+    ]
+}

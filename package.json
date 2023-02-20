@@ -1,0 +1,51 @@
+{
+  "name": "borntoco.de",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --hot",
+    "watch-test": "NODE_ENV=test watch 'npm test && npm run lint' --wait=3 ./src",
+    "watch": "NODE_ENV=test watch 'npm run build' --wait=3 ./src",
+    "build": "webpack",
+    "lint": "tslint --project ./tsconfig.json",
+    "lint:fix": "tslint --project ./tsconfig.json --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/op1ekun/borntoco.de.git"
+  },
+  "keywords": [
+    "personal",
+    "cv",
+    "portfolio",
+    "website"
+  ],
+  "author": "op1ekun@borntoco.de",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/op1ekun/borntoco.de/issues"
+  },
+  "homepage": "https://github.com/op1ekun/borntoco.de#readme",
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-router-dom": "^5",
+    "express": "^4.16.1",
+    "react-test-renderer": "^18",
+    "ts-loader": "^8",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "tslint-react": "^3.2.0",
+    "typescript": "^4",
+    "watch": "^1.0.2",
+    "webpack": "^4",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "react-router-dom": "^5"
+  }
+}

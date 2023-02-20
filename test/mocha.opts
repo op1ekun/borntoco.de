@@ -1,0 +1,5 @@
+--require test/dom.js
+--full-trace
+--bail
+--ui tdd
+src/**/*.test.tsx

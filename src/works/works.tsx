@@ -1,43 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
+import * as React from 'react';
+import { IParagraph, Paragraph } from '../para/para';
 
-        <title>borntoco.de</title>
-        <meta name="description" content="" />
-        <meta name="author" content="op1ekun" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-        <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+export interface IWorksProps {
+    title: string;
+    left: {
+        para: Array<IParagraph>;
+    };
+    right: {
+        para: Array<IParagraph>;
+    };
+}
 
-        <link rel="stylesheet" href="/css/borntocode.css" />
-        <!-- <link rel="stylesheet" href="/css/transitions.css" /> -->
-        <link rel="stylesheet" href="/css/works.css" />
-        <link rel="stylesheet" href="/css/fonts.css" />
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Gilda+Display" />
-    </head>
+export default class Works extends React.Component<IWorksProps, {}> {
 
-    <body>
-        <div id="wrapper">
-            <header>
-                <h1>
-                    <a href="/about">borntoco.de<span></span></a>
-                </h1>
-                
-                <q>
-                    <a href="http://www.codinghorror.com/blog/2004/08/why-im-the-best-programmer-in-the-world.html">But it's not our job to be better than anyone else; we&nbsp;just need to be better than we were a year ago.
-                    <strong>-&nbsp;Jeff&nbsp;Atwood</strong></a>
-                </q>
-                               
-                <!-- for backwards compatibility HTML5 elements are given id/class attribute -->
-                
-                <nav id="nav">
-                    <ul>
-                        <li class="first"><a href="/about">about me</a></li><li class="active"><a href="/works">works</a></li><li><a href="/contact">contact</a></li>
-                    </ul>
-                </nav>
-                               
-            </header>
-    
+    public render() {
+        const {
+            title,
+            left,
+            right
+        } = this.props;
+
+        return(    
             <section id="content">
                 <h2>Works</h2>
                 <article id="left">
@@ -67,22 +50,17 @@
                     </p>
                 </article>
             </section>
-        </div>
+            
+            // <section id="content">
+            //     <h2>{ title }</h2>
+            //     <article id="left">
+            //         { left.para.map((singlePara, index) => <Paragraph key={ index } { ...singlePara } />) }
+            //     </article>
+            //     <article id="right">
+            //         { right.para.map((singlePara, index) => <Paragraph key={ index } { ...singlePara } />) }
+            //     </article>
+            // </section>
+        );
         
-        <footer>
-            <div id="footer_wrapper">
-                <ul>
-                    <li><a href="/about">about me</a></li>
-                    <li><a href="/works">works</a></li>
-                    <li><a href="/contact">contact</a></li>
-                    <!-- <li><a href="/tweets">tweets</a></li> -->
-                </ul>
-                
-                <p><a href="mailto:lukasz@borntoco.de">lukasz @borntoco.de</a></p>
-                <p><a href="">+44 747 7050 023</a></p>
-                
-                <p>Copyright &copy;2017 borntoco.de</p>
-            </div>
-        </footer>
-    </body>
-</html>
+    }
+}

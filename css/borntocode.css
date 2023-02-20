@@ -30,6 +30,7 @@ a:active {
 html { 
     height: 100%;
     font-size: 100%; /* ~16px */
+    scroll-behavior: smooth;
 }
 
     body, footer {
@@ -44,25 +45,17 @@ html {
         
         min-height: 100%;
     }
-
-        #wrapper, #footer_wrapper {
-            /* 32/1040 = 0.030769231 */
-            padding: 0 3.0769231%;
-        }
         
         #footer_wrapper {
             padding-top: 1.5em;
         }
-              
-        #wrapper, #footer_wrapper {
-            max-width: 65em; /* ~1040px */
-            margin: 0 auto;
-        }
 
             header {
                 position: relative;
+                width: 65em;
+                margin: 0 auto;
 
-                background: transparent url(../static/img/header2.jpg) 6.875em 7.375em no-repeat;
+                background: transparent url(../static/img/header3.jpg) 6.875em 7.375em no-repeat;
                 background-size: 23.25em auto;
             }
             
@@ -77,31 +70,9 @@ html {
                     width: 28.875em; /* ~462px */
                     height: 6.3125em; /* ~101px */
 
-                    background: transparent url(../static/img/logotype.jpg) 0 -6.3125em no-repeat;
+                    background: transparent url(../static/img/logotype3.png) 0 0 no-repeat;
                     background-size: 28.875em auto;
                     text-indent: -5000em;
-                }
-                
-                h1 span {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-
-                    width: 100%;
-                    height: 6.25em;
-
-                    background: transparent url(../static/img/logotype.jpg) 0 0 no-repeat;
-                    background-size: 28.875em auto;
-                    opacity: 0;
-
-                    -webkit-transition:opacity 0.6s ease 0.1s;
-                       -moz-transition:opacity 0.6s ease 0.1s;
-                         -o-transition:opacity 0.6s ease 0.1s;
-                            transition:opacity 0.6s ease 0.1s;
-                }
-                
-                h1 a:hover span {
-                    opacity: 1;
                 }
 
                 header q {
@@ -113,6 +84,10 @@ html {
 
                     font-style: italic;
                     text-align: right;
+                }
+
+                header q strong {
+                    display: inline-block;
                 }
 
                 header q a:link,
@@ -140,6 +115,7 @@ html {
                             }
 
                             #nav a {
+                                position: relative;
                                 border-right: 1px solid #000;
                                 padding: 0.85em 1.4em 1em 1.25em;
                                 
@@ -147,47 +123,54 @@ html {
                                 font-size: 1.25em; /* ~ 20px */
                                 text-transform: uppercase;
                                 letter-spacing: -0.15em;
-                                color: #abb0aa;
+                                color: #797572;
 
                                 /* SHAME, necessary for win browsers */
                                 line-height: 1.6em;
                             }
                         
-                        #nav li.active {
-                            height: 5em;
-
+                        #nav li a.active {
+                            color: #754628;
                             background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;
-                            background-size: 12.5em auto;
+                        }
+
+                        #nav li a.active:after {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 110%;
+                            background: transparent url(../static/img/linkLeft.jpg) 0 0 no-repeat;
+                            content: ' ';
+                            z-index: -1;
                         }
                             
-                            #nav li.active a {
-                                color: #754628;
-                            }
                             
-                            #nav a:hover {
-                                color: #797572;
-                            }
+                        #nav a:hover {
+                            color: #abb0aa;
+                        }
                 
                 #content {
                     text-align: justify;
-                    padding: 0 0 12em 0;
+                    padding: 3em 0 12em 0;
                     font-size: 1.25em; /* ~20px */
                     color: #222;
                     margin: 0 auto;
-                }
-
-                #content:after {
-                    display: inline-block;
-                    width: 100%;
-                    content: ' ';
+                    width: 52em;
+                    display: flex;
+                    justify-content: space-between;
                 }
                 
                     #content h2 {
-                        padding: 0.5em 0 0 0;
+                        /* padding: 0.4em 0 0 0; */
                         font-family: 'sawasdeebold', sans-serif;
                         font-size: 2em;
                         text-transform: uppercase;
                         letter-spacing: -0.15em;
+                        width: 3em;
+                        text-align: right;
+                        line-height: 1em;
+                        margin-top: -0.25em;
                     }
                     
                     #content p { 
@@ -207,13 +190,19 @@ html {
                     }
 
                 #left, #center, #right {
-                    padding: 1em 0 0 0;
+                    /* padding: 1em 0 0 0; */
                     vertical-align: top;        
+                }
+
+                #footer_wrapper {
+                    width: 65em;
+                    margin: 0 auto;
                 }
                     
                 footer {
                     position: absolute;
                     bottom: 0;
+                    left: 0;
 
                     background: transparent url(../static/img/footer.jpg) 0 0 repeat-x;
                     background-size: 60em auto;
@@ -222,21 +211,10 @@ html {
                     height: 12.75em;
                     color: #999;
                 }
-
-                    footer ul {
-                        width: 40%;
-                        min-width: 28em;
-                        text-align: justify;
-                    }
-
-                    footer ul:after {
-                        content: '';
-                        width: 100%;
-                        display: inline-block;
-                    }
                 
                         footer li {
                             width: auto;
+                            padding-right: 1em;
                         }
                     
                             footer li a:link,
@@ -258,8 +236,121 @@ html {
                         color: #aaa;
                     }
 
+
+.slide {
+    background-image: url("../static/img/profile.webp");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 25%;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+}
+
+.slide .mainNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 40%;
+}
+
+.mainNav ul {
+    position: relative;
+    /* border: 1px solid red; */
+    width: 6em;
+}
+
+.mainNav ul:before {
+    position: absolute;
+    top: -1.4em;
+    left: -0.15em;
+    display: block;
+    content: "\21E9";
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    font-size: 6em;
+    line-height: 1em;
+    transition: left 0.4s cubic-bezier(0.1, 0.1, 1, 0.1) 0s;
+    width: 1em;
+    height: 1em;
+    /* border: 1px solid blue; */
+    text-align: center;
+}
+
+.mainNav ul:hover:before {
+    transition: left 0.3s ease-in-out 0s;
+    left: -0.9em;
+    color: #f00;
+}
+
+.mainNav ul:after {
+    position: absolute;
+    bottom: -1.1em;
+    right: -2.85em;
+    display: block;
+    content: "\21E9";
+    color: rgb(255, 255, 255);
+    font-size: 6em;
+    line-height: 1em;
+    transform: rotate(180deg);
+    transition: right 0.4s cubic-bezier(0.1, 0.1, 1, 0.1) 0s;
+    width: 1em;
+    height: 1em;
+    /* border: 1px solid blue; */
+    text-align: center;
+}
+
+.mainNav ul:hover:after {
+    transition: right 0.3s ease-in-out 0s;
+    right: -4.9em;
+    color: #f00;
+}
+
+.mainNav li {
+    line-height: 1em;
+    font-size: 7em;
+    /* font-weight: bold; */
+    font-family: 'sawasdeebold', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    /* border: 1px solid red; */
+}
+
+.mainNav ul:hover li {
+    color: #333;
+}
+
+.mainNav .specialElem {
+    color: #333;
+}
+
+.mainNav .navLabelHover {
+    display: none;
+}
+
+.mainNav .navLabelHover a {
+    color: #f00;
+}
+
+.mainNav .navLabelHover.aboutLabel {
+    margin-left: -0.67em;
+}
+
+.mainNav .navLabelHover.worksLabel {
+    margin-left: -0.51em;
+}
+
+.mainNav li:hover .navLabel {
+    display: none;
+}
+
+.mainNav li:hover .navLabelHover {
+    display: block;
+}
+
 /* 1052px / 16px */
-@media screen and (max-width: 65.75em) {
+/* @media screen and (max-width: 65.75em) {
 
     header {
         background-position: -50em 8em;
@@ -272,18 +363,18 @@ html {
         #nav {
             padding-bottom: 0;
         }
-}
+} */
 
 /* 935px */
-@media screen and (max-width: 58.4375em) {
+/* @media screen and (max-width: 58.4375em) {
     header q {
         width: 16em;
         font-size: 0.9em;
     }
-}
+} */
 
 /* 768px */
-@media screen and (max-width: 48em) {
+/* @media screen and (max-width: 48em) {
 
     body {
         background-size: 40em auto;
@@ -324,32 +415,32 @@ html {
         footer li a:active {
             font-size: 2em;
         }
-}
+} */
 
 /* 640px */
-@media screen and (max-width: 40em) {
+/* @media screen and (max-width: 40em) {
     #content h2 {
         font-size: 0;
     }
-}
+} */
 
 /* 590px */
-@media screen and (max-width: 36.875em) {
+/* @media screen and (max-width: 36.875em) {
     header q {
         width: 13em;
         font-size: 0.6em;
     }
-}
+} */
 
 /* 500 */
-@media screen and (max-width: 31.25em) {
+/* @media screen and (max-width: 31.25em) {
     header q {
         font-size: 0;
     }
-}
+} */
 
 /* 480px */
-@media screen and (max-width: 30em) {
+/* @media screen and (max-width: 30em) {
 
     body {
         background-position: 0 -2em;
@@ -380,4 +471,4 @@ html {
     footer li a:active {
         font-size: 1.5em;
     }
-}
+} */
