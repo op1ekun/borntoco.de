@@ -50,6 +50,7 @@ export default class Works extends React.Component<IWorksProps, {}> {
                     </p>
                 </article>
             </section>
+            
             // <section id="content">
             //     <h2>{ title }</h2>
             //     <article id="left">

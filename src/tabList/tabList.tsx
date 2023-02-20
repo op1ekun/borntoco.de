@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 export interface ITabProps {
     label: string;
@@ -24,7 +24,8 @@ export default class TabList extends React.Component<ITabsListProps, {}> {
                         tab.classes.join(' ') : '';
 
                     return  <li key={ index } className={ `tab ${ classes }` }>
-                                <NavLink to={ tab.url } activeClassName="active">{ tab.label }</NavLink>
+                                {/* <NavLink to={ tab.url } activeClassName="active">{ tab.label }</NavLink> */}
+                                <a href={`#${tab.url}` }>{ tab.label }</a>
                             </li>;
                 })
                 : null }

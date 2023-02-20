@@ -1,10 +1,11 @@
 var path = require('path');
 
 module.exports = {
+    devtool: 'source-map',
     mode: 'production',
     entry: './src/index.tsx',
     output: {
-        filename: './dist/bundle.js'
+        filename: 'bundle.js'
     },
     resolve: {
         extensions: [
@@ -19,7 +20,7 @@ module.exports = {
           test: /\.tsx?$/,
           use: 'ts-loader',
           exclude: /node_modules/,
-        },
+        }
       ],
     },
     devServer: {

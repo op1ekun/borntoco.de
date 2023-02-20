@@ -1,13 +1,13 @@
 #left {
     width: 16em;
-    margin-top: -2em;
+    margin-top: -1em;
 }
 
 #center {
     /* 350/1040 = 0.336538462 */
     /* width: 33.6538462%; */
     width: 16em;
-    margin-top: -4em;
+    margin-top: -3em;
 }
 
 #right {
@@ -15,7 +15,7 @@
     /* width: 24.0384615%; */
     text-align: center;
     width: 10em;
-    margin-top: -4em;
+    margin-top: -3em;
 }
 
     /* #center iframe {

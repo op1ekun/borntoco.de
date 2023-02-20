@@ -30,6 +30,7 @@ a:active {
 html { 
     height: 100%;
     font-size: 100%; /* ~16px */
+    scroll-behavior: smooth;
 }
 
     body, footer {
@@ -73,28 +74,6 @@ html {
                     background-size: 28.875em auto;
                     text-indent: -5000em;
                 }
-                
-                /* h1 span {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-
-                    width: 100%;
-                    height: 6.25em;
-
-                    background: transparent url(../static/img/logotype2.jpg) 0 -6.3125em no-repeat;
-                    background-size: 28.875em auto;
-                    opacity: 0;
-
-                    -webkit-transition:opacity 0.6s ease 0.1s;
-                       -moz-transition:opacity 0.6s ease 0.1s;
-                         -o-transition:opacity 0.6s ease 0.1s;
-                            transition:opacity 0.6s ease 0.1s;
-                }
-                
-                h1 a:hover span {
-                    opacity: 1;
-                } */
 
                 header q {
                     position: absolute;
@@ -183,14 +162,15 @@ html {
                 }
                 
                     #content h2 {
-                        padding: 0.4em 0 0 0;
+                        /* padding: 0.4em 0 0 0; */
                         font-family: 'sawasdeebold', sans-serif;
                         font-size: 2em;
                         text-transform: uppercase;
                         letter-spacing: -0.15em;
                         width: 3em;
                         text-align: right;
-                        line-height: 1.6em;
+                        line-height: 1em;
+                        margin-top: -0.25em;
                     }
                     
                     #content p { 
@@ -210,7 +190,7 @@ html {
                     }
 
                 #left, #center, #right {
-                    padding: 1em 0 0 0;
+                    /* padding: 1em 0 0 0; */
                     vertical-align: top;        
                 }
 
@@ -255,6 +235,119 @@ html {
                         padding-bottom: 0.5em;
                         color: #aaa;
                     }
+
+
+.slide {
+    background-image: url("../static/img/profile.webp");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 25%;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+}
+
+.slide .mainNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin-left: 40%;
+}
+
+.mainNav ul {
+    position: relative;
+    /* border: 1px solid red; */
+    width: 6em;
+}
+
+.mainNav ul:before {
+    position: absolute;
+    top: -1.4em;
+    left: -0.15em;
+    display: block;
+    content: "\21E9";
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    font-size: 6em;
+    line-height: 1em;
+    transition: left 0.4s cubic-bezier(0.1, 0.1, 1, 0.1) 0s;
+    width: 1em;
+    height: 1em;
+    /* border: 1px solid blue; */
+    text-align: center;
+}
+
+.mainNav ul:hover:before {
+    transition: left 0.3s ease-in-out 0s;
+    left: -0.9em;
+    color: #f00;
+}
+
+.mainNav ul:after {
+    position: absolute;
+    bottom: -1.1em;
+    right: -2.85em;
+    display: block;
+    content: "\21E9";
+    color: rgb(255, 255, 255);
+    font-size: 6em;
+    line-height: 1em;
+    transform: rotate(180deg);
+    transition: right 0.4s cubic-bezier(0.1, 0.1, 1, 0.1) 0s;
+    width: 1em;
+    height: 1em;
+    /* border: 1px solid blue; */
+    text-align: center;
+}
+
+.mainNav ul:hover:after {
+    transition: right 0.3s ease-in-out 0s;
+    right: -4.9em;
+    color: #f00;
+}
+
+.mainNav li {
+    line-height: 1em;
+    font-size: 7em;
+    /* font-weight: bold; */
+    font-family: 'sawasdeebold', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    /* border: 1px solid red; */
+}
+
+.mainNav ul:hover li {
+    color: #333;
+}
+
+.mainNav .specialElem {
+    color: #333;
+}
+
+.mainNav .navLabelHover {
+    display: none;
+}
+
+.mainNav .navLabelHover a {
+    color: #f00;
+}
+
+.mainNav .navLabelHover.aboutLabel {
+    margin-left: -0.67em;
+}
+
+.mainNav .navLabelHover.worksLabel {
+    margin-left: -0.51em;
+}
+
+.mainNav li:hover .navLabel {
+    display: none;
+}
+
+.mainNav li:hover .navLabelHover {
+    display: block;
+}
 
 /* 1052px / 16px */
 /* @media screen and (max-width: 65.75em) {

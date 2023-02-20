@@ -5,16 +5,19 @@ import { ITabProps } from './tabList/tabList';
 export const tabsContent: Array<ITabProps> = [
     {
         label: 'about me',
-        url: '/about',
+        // url: '/about',
+        url: 'about',
         classes: [ 'first' ]
     },
     {
         label: 'works',
-        url: '/works'
+        // url: '/works'
+        url: 'works'
     },
     {
         label: 'contact',
-        url: '/contact'
+        // url: '/contact'
+        url: 'contact'
     }
 ];
 
